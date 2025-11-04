@@ -2,27 +2,30 @@
  */
 
 class World {
-  Space entry;
+  Space strand;
   
   public World () {
-    Space entry    = new Space("Entry");
-    Space corridor = new Space("Corridor");
-    Space cave     = new Space("Cave");
-    Space pit      = new Space("Darkest Pit");
+    Space strand    = new Space("Strand");
+    Space coralrevet = new Space("Coralrevet");
+    Space dybhavet     = new Space("Dybhavet");
+    Space vandoverfladen      = new Space("Vandoverfladen");
     Space outside  = new Space("Outside");
-    
-    entry.AddEdge("door", corridor);
-    corridor.AddEdge("door", cave);
-    cave.AddEdge("north", pit);
-    cave.AddEdge("south", outside);
-    pit.AddEdge("door", cave);
-    outside.AddEdge("door", cave);
-    
-    this.entry = entry;
+
+
+    strand.AddEdge("Coralrevet", coralrevet);
+    coralrevet.AddEdge("Strand", strand);
+    coralrevet.AddEdge("Dybhavet", dybhavet);
+    dybhavet.AddEdge("Vandoverfladen", vandoverfladen);
+    strand.AddEdge("Strand", strand);
+
+    this.strand = strand;
+
+    Space strand = new DescribedSpace("strand", "Der ligger en saks, affaldsæk og sæk");
+
   }
   
   public Space GetEntry () {
-    return entry;
+    return strand;
   }
 }
 
