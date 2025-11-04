@@ -2,6 +2,9 @@
  */
 
 class Space : Node {
+
+  Dictionary<string, int> items = new Dictionary<string, int>();
+
   public Space (String name) : base(name)
   {
   }
@@ -9,17 +12,32 @@ class Space : Node {
   public virtual void Welcome () {
     Console.WriteLine("You are now at "+name);
     HashSet<string> exits = edges.Keys.ToHashSet();
+
     Console.WriteLine("Current exits are:");
     foreach (String exit in exits) {
       Console.WriteLine(" - "+exit);
     }
+
+    Console.WriteLine("You see the following items on the floor:");
+    foreach (var pair in items){
+      Console.WriteLine($"{pair.Value} {pair.Key}");
+    }
+
+    Console.WriteLine();
+
   }
-  
+
   public void Goodbye () {
   }
   
   public override Space FollowEdge (string direction) {
     return (Space) (base.FollowEdge(direction));
+  }
+
+  public void AddItem(string name, int value){
+
+    items.Add(name, value);
+
   }
 
   // Opret en ny fil: DescribedSpace.cs (eller i Space.cs under klassens slutning)

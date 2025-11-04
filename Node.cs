@@ -18,7 +18,14 @@ class Node {
   }
   
   public virtual Node FollowEdge (string direction) {
-    return edges[direction];
+    if (edges.ContainsKey(direction))
+    {
+      return edges[direction];
+    }
+    else
+    {
+      return null!;
+    }
   }
 }
 
