@@ -2,6 +2,7 @@
  */
 
 class Game {
+  public static Inventory inventory = new Inventory();
   static World    world    = new World();
   static Context  context  = new Context(world.GetEntry());
   static ICommand fallback = new CommandUnknown();
@@ -9,6 +10,7 @@ class Game {
   
   private static void InitRegistry () {
     ICommand cmdExit = new CommandExit();
+    registry.Register("take", new CommandTake());
     registry.Register("exit", cmdExit);
     registry.Register("quit", cmdExit);
     registry.Register("bye", cmdExit);
@@ -18,6 +20,7 @@ class Game {
   
   static void Main (string[] args) {
     Console.WriteLine("Welcome to the World of Zuul!");
+    inventory.ShowInventory();
     
     InitRegistry();
     context.GetCurrent().Welcome();
