@@ -1,25 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Asiel\\Documents\\1.-semesterproject\\cs.csproj": {}
+    "/Users/maltepedersen/1.-semesterproject/cs.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Asiel\\Documents\\1.-semesterproject\\cs.csproj": {
+    "/Users/maltepedersen/1.-semesterproject/cs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Asiel\\Documents\\1.-semesterproject\\cs.csproj",
+        "projectUniqueName": "/Users/maltepedersen/1.-semesterproject/cs.csproj",
         "projectName": "cs",
-        "projectPath": "C:\\Users\\Asiel\\Documents\\1.-semesterproject\\cs.csproj",
-        "packagesPath": "C:\\Users\\Asiel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Asiel\\Documents\\1.-semesterproject\\obj\\",
+        "projectPath": "/Users/maltepedersen/1.-semesterproject/cs.csproj",
+        "packagesPath": "/Users/maltepedersen/.nuget/packages/",
+        "outputPath": "/Users/maltepedersen/1.-semesterproject/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Asiel\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/maltepedersen/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -37,8 +38,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -59,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.414/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -16,11 +16,11 @@ class Game {
     registry.Register("bye", cmdExit);
     registry.Register("go", new CommandGo());
     registry.Register("help", new CommandHelp(registry));
+    registry.Register("show", new CommandShowInventory());
   }
   
   static void Main (string[] args) {
     Console.WriteLine("Welcome to the World of Zuul!");
-    inventory.ShowInventory();
     
     InitRegistry();
     context.GetCurrent().Welcome();
