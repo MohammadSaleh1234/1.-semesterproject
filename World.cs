@@ -20,8 +20,6 @@ class World {
 
     this.strand = strand;
 
-    Space strand = new DescribedSpace("strand", "Der ligger en saks, affaldsæk og sæk");
-
   }
   
   public Space GetEntry () {
