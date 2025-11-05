@@ -19,8 +19,9 @@ class CommandCollect : BaseCommand, ICommand {
             return;
         }
 
+        context.GetCurrent().RemoveItem(parameters[0]);
+
         if (items.Count >= 1) {
-            context.GetCurrent().RemoveItem(parameters[0]);
             Console.WriteLine("You see the following items on the floor: ");
             foreach (var pair in items){
                 Console.WriteLine($"{pair.Value} {pair.Key}");
