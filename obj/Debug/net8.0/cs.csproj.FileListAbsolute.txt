@@ -1,0 +1,15 @@
+/Users/maltepedersen/1.-semesterproject/bin/Debug/net8.0/cs
+/Users/maltepedersen/1.-semesterproject/bin/Debug/net8.0/cs.deps.json
+/Users/maltepedersen/1.-semesterproject/bin/Debug/net8.0/cs.runtimeconfig.json
+/Users/maltepedersen/1.-semesterproject/bin/Debug/net8.0/cs.dll
+/Users/maltepedersen/1.-semesterproject/bin/Debug/net8.0/cs.pdb
+/Users/maltepedersen/1.-semesterproject/obj/Debug/net8.0/cs.GeneratedMSBuildEditorConfig.editorconfig
+/Users/maltepedersen/1.-semesterproject/obj/Debug/net8.0/cs.AssemblyInfoInputs.cache
+/Users/maltepedersen/1.-semesterproject/obj/Debug/net8.0/cs.AssemblyInfo.cs
+/Users/maltepedersen/1.-semesterproject/obj/Debug/net8.0/cs.csproj.CoreCompileInputs.cache
+/Users/maltepedersen/1.-semesterproject/obj/Debug/net8.0/cs.sourcelink.json
+/Users/maltepedersen/1.-semesterproject/obj/Debug/net8.0/cs.dll
+/Users/maltepedersen/1.-semesterproject/obj/Debug/net8.0/refint/cs.dll
+/Users/maltepedersen/1.-semesterproject/obj/Debug/net8.0/cs.pdb
+/Users/maltepedersen/1.-semesterproject/obj/Debug/net8.0/cs.genruntimeconfig.cache
+/Users/maltepedersen/1.-semesterproject/obj/Debug/net8.0/ref/cs.dll

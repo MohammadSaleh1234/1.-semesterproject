@@ -18,6 +18,8 @@ class Game {
     registry.Register("go", new CommandGo());
     registry.Register("help", new CommandHelp(registry));
     registry.Register("show", new CommandShowInventory());
+    registry.Register("collect", new CommandCollect());
+
   }
 
   static void Main (string[] args) {
