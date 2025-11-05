@@ -18,9 +18,11 @@ class Space : Node {
       Console.WriteLine(" - "+exit);
     }
 
-    Console.WriteLine("You see the following items on the floor:");
+    Console.WriteLine();
+
+    Console.WriteLine("You see the following items on the ground:");
     foreach (var pair in items){
-      Console.WriteLine($"{pair.Value} {pair.Key}");
+      Console.WriteLine($"- {pair.Value} {pair.Key}");
     }
 
     Console.WriteLine();
@@ -42,8 +44,14 @@ class Space : Node {
 
   public void RemoveItem(string name){
 
-    items[name]--;
+    if (items.ContainsKey(name))
+    {
+      items[name]--;
 
+      if (items[name] <= 0) {
+        items.Remove(name);
+      }
+    }
   }
 
 

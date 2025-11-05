@@ -19,8 +19,8 @@ class World {
 
     this.strand = strand;
 
-    strand.AddItem("plastik", 5);
-    coralrevet.AddItem("fiskenet", 5);
+    strand.AddItem("plastic", 5);
+    coralrevet.AddItem("fish net", 5);
 
   }
   
