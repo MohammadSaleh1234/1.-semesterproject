@@ -22,7 +22,7 @@ class CommandCollect : BaseCommand, ICommand {
         context.GetCurrent().RemoveItem(parameters[0]);
 
         if (items.Count >= 1) {
-            Console.WriteLine("You see the following items on the floor: ");
+            Console.WriteLine("You see the following:: ");
             foreach (var pair in items){
                 Console.WriteLine($"{pair.Value} {pair.Key}");
             }
