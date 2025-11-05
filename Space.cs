@@ -3,7 +3,7 @@
 
 class Space : Node {
 
-  Dictionary<string, int> items = new Dictionary<string, int>();
+  public Dictionary<string, int> items = new Dictionary<string, int>();
 
   public Space (String name) : base(name)
   {
@@ -39,6 +39,13 @@ class Space : Node {
     items.Add(name, value);
 
   }
+
+  public void RemoveItem(string name){
+
+    items[name]--;
+
+  }
+
 
   // Opret en ny fil: DescribedSpace.cs (eller i Space.cs under klassens slutning)
   class DescribedSpace : Space
