@@ -19,7 +19,6 @@ class World {
 
     this.strand = strand;
 
-
     // tilføj items til et rum
     strand.AddItem("plastik", 5);
     coralrevet.AddItem("fiskenet", 5);

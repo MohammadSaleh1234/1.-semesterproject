@@ -6,22 +6,31 @@ class CommandCollect : BaseCommand, ICommand {
 
     public void Execute (Context context, string command, string[] parameters) {
 
-        if (GuardEq(parameters, 1)) {
-
-            Console.WriteLine("Please specify what to collect!");
-
+        if (parameters.Length != 1) {
+            Console.WriteLine($"Collect what?");
+            return;
         }
-        else {
 
+        var items = context.GetCurrent().items;
+        string itemName = parameters[0];
+
+        if (!items.ContainsKey(itemName)){
+            Console.WriteLine($"You couldn't seem to find '{itemName}'");
+            return;
+        }
+
+        if (items.Count >= 1) {
             context.GetCurrent().RemoveItem(parameters[0]);
-            Console.WriteLine("You see the following items on the floor:");
-
-            foreach (var pair in context.GetCurrent().items){
+            Console.WriteLine("You see the following items on the floor: ");
+            foreach (var pair in items){
                 Console.WriteLine($"{pair.Value} {pair.Key}");
-
             }
+        }
 
-       }
-
-   }
+        else {
+            Console.WriteLine("This area is empty now");
+        }
+    }
 }
+
+
