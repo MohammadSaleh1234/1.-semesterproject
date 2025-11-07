@@ -1,29 +1,33 @@
-/* Main class for launching the game
- */
+using System;
 
 class Game {
   public static Inventory inventory = new Inventory();
-  static World    world    = new World();
-  static Context  context  = new Context(world.GetEntry());
+  static World world = new World();
+  static Context context = new Context(world.GetEntry());
   static ICommand fallback = new CommandUnknown();
   static Registry registry = new Registry(context, fallback);
   static Player player = new Player(context, registry);
 
-  private static void InitRegistry () {
+
+  private static void InitRegistry() {
+
+
+
     ICommand cmdExit = new CommandExit();
-    registry.Register("take", new CommandTake());
     registry.Register("exit", cmdExit);
     registry.Register("quit", cmdExit);
     registry.Register("bye", cmdExit);
     registry.Register("go", new CommandGo());
     registry.Register("help", new CommandHelp(registry));
+    registry.Register("take", new CommandTake());
     registry.Register("show", new CommandShowInventory());
-    registry.Register("collect", new CommandCollect());
 
+    // Registrer den opdaterede CommandInventory, kaldet "inventory"
+    registry.Register("inventory", new CommandInventory());
   }
 
-  static void Main (string[] args) {
-    Console.WriteLine("Welcome to the World of Zuul!");
+  static void Main(string[] args) {
+    Console.WriteLine("Welcome to the Ocean Code!");
 
     InitRegistry();
     context.GetCurrent().Welcome();
@@ -35,4 +39,8 @@ class Game {
     }
     Console.WriteLine("Game Over 😥");
   }
+
 }
+
+
+
