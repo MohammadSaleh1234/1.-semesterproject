@@ -1,0 +1,5 @@
+/Users/maltepedersen/Desktop/1.-semesterproject/obj/Debug/net8.0/cs.GeneratedMSBuildEditorConfig.editorconfig
+/Users/maltepedersen/Desktop/1.-semesterproject/obj/Debug/net8.0/cs.AssemblyInfoInputs.cache
+/Users/maltepedersen/Desktop/1.-semesterproject/obj/Debug/net8.0/cs.AssemblyInfo.cs
+/Users/maltepedersen/Desktop/1.-semesterproject/obj/Debug/net8.0/cs.csproj.CoreCompileInputs.cache
+/Users/maltepedersen/Desktop/1.-semesterproject/obj/Debug/net8.0/cs.sourcelink.json
