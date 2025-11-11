@@ -11,8 +11,11 @@ class World {
     Space vandoverfladen      = new Space("Vandoverfladen");
     Space outside  = new Space("Outside");
 
+    Quiz beach = new Quiz("Beachquiz");
 
-    strand.AddEdge("Coralrevet", coralrevet);
+
+    strand.AddEdge("Beachquiz", beach);
+    beach.AddEdge("Coralrevet", coralrevet);
     coralrevet.AddEdge("Strand", strand);
     coralrevet.AddEdge("Dybhavet", dybhavet);
     dybhavet.AddEdge("Vandoverfladen", vandoverfladen);

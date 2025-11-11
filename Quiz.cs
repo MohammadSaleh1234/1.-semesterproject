@@ -1,8 +1,13 @@
 
-class QuizBeach
+class Quiz : Space
 {
-    static void Main(string[] args)
+
+    public Quiz (String name) : base(name)
     {
+    }
+
+    public override void Welcome () {
+
         string[] questions =
         {
             "How long does it take for a plastic-bottle to decompose on the beach?",
@@ -71,5 +76,13 @@ class QuizBeach
         Console.WriteLine();
         Console.WriteLine("You completed the quiz!");
         Console.WriteLine("Your score is: " + playerScore + " / " + questions.Length);
+
+        HashSet<string> exits = edges.Keys.ToHashSet();
+        Console.WriteLine("Current exits are:");
+        foreach (String exit in exits) {
+            Console.WriteLine(" - "+exit);
+        }
     }
-}
+
+    }
+
