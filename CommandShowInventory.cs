@@ -1,27 +1,9 @@
 
-// Klassen skal have et meningsfuldt navn, f.eks. CommandInventory
-class CommandInventory : BaseCommand, ICommand {
-    public CommandInventory() {
-        description = "Show the contents of your inventory";
-    }
-
-    public void Execute(Context context, string command, string[] parameters) {
-        // Tjekker for overflødige parametre, selvom det ikke er strengt nødvendigt for "inventory"
-        if (parameters.Length > 0) {
-            Console.WriteLine("The 'inventory' command takes no parameters.");
-            return;
-        }
-
-        Game.inventory.ShowInventory();
-    }
-}
-
-
 class CommandShowInventory : BaseCommand, ICommand {
 
 
     public CommandShowInventory () {
-        description = "Follow an exit";
+        description = "Show the contents of your inventory";
     }
 
     public void Execute (Context context, string command, string[] parameters) {

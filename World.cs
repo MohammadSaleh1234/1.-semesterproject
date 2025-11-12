@@ -5,23 +5,23 @@ class World {
   Space strand;
   
   public World () {
-    Space strand    = new Space("Strand");
-    Space coralrevet = new Space("Coralrevet");
-    Space dybhavet     = new Space("Dybhavet");
-    Space vandoverfladen      = new Space("Vandoverfladen");
-    Space outside  = new Space("Outside");
+    Space strand = new Space("beach");
+    Space coralrevet = new Space("coralreef");
+    Space dybhavet = new Space("ocean");
+    Space vandoverfladen  = new Space("surface");
 
 
-    strand.AddEdge("Coralrevet", coralrevet);
-    coralrevet.AddEdge("Strand", strand);
-    coralrevet.AddEdge("Dybhavet", dybhavet);
-    dybhavet.AddEdge("Vandoverfladen", vandoverfladen);
+
+    strand.AddEdge("coralreef", coralrevet);
+    coralrevet.AddEdge("beach", strand);
+    coralrevet.AddEdge("ocean", dybhavet);
+    dybhavet.AddEdge("surface", vandoverfladen);
 
     this.strand = strand;
 
     // tilføj items til et rum
     strand.AddItem("plastic", 5);
-    coralrevet.AddItem("net", 5);
+    coralrevet.AddItem("algae covered corals", 5);
 
   }
   

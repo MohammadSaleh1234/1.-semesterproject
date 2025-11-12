@@ -10,7 +10,8 @@ class Space : Node {
   }
   
   public virtual void Welcome () {
-    Console.WriteLine("You are now at "+name);
+    Console.Clear();
+    Console.WriteLine("You are now at the "+name);
     HashSet<string> exits = edges.Keys.ToHashSet();
 
     Console.WriteLine("Current exits are:");
@@ -18,9 +19,12 @@ class Space : Node {
       Console.WriteLine(" - "+exit);
     }
 
-    Console.WriteLine();
 
-    Console.WriteLine("You see the following items on the ground:");
+    if (items.Count < 1){
+      return;
+    }
+
+    Console.WriteLine("You see the following:");
     foreach (var pair in items){
       Console.WriteLine($"- {pair.Value} {pair.Key}");
     }

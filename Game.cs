@@ -15,15 +15,11 @@ class Game {
 
     ICommand cmdExit = new CommandExit();
     registry.Register("exit", cmdExit);
-    registry.Register("quit", cmdExit);
-    registry.Register("bye", cmdExit);
     registry.Register("go", new CommandGo());
     registry.Register("help", new CommandHelp(registry));
     registry.Register("take", new CommandTake());
     registry.Register("show", new CommandShowInventory());
-
-    // Registrer den opdaterede CommandInventory, kaldet "inventory"
-    registry.Register("inventory", new CommandInventory());
+    registry.Register("brush", new CommandBrush());
   }
 
   static void Main(string[] args) {
@@ -34,7 +30,7 @@ class Game {
 
     while (context.IsDone()==false) {
       Console.Write("> ");
-      string? line = Console.ReadLine();
+      string? line = Console.ReadLine().ToLower();
       if (line!=null) player.ExecuteCommand(line);
     }
     Console.WriteLine("Game Over 😥");
