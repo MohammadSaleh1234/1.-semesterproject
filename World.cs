@@ -2,31 +2,32 @@
  */
 
 class World {
-  Space strand;
+  Space beach;
   
   public World () {
-    Space strand = new Space("beach");
-    Space coralrevet = new Space("coralreef");
-    Space dybhavet = new Space("ocean");
-    Space vandoverfladen  = new Space("surface");
+    Space beach = new Space("beach");
+    Space coralreef = new Space("coralreef");
+    Space ocean = new Space("ocean");
+    Space surface  = new Space("surface");
 
 
 
-    strand.AddEdge("coralreef", coralrevet);
-    coralrevet.AddEdge("beach", strand);
-    coralrevet.AddEdge("ocean", dybhavet);
-    dybhavet.AddEdge("surface", vandoverfladen);
+    beach.AddEdge("coralreef", coralreef);
+    coralreef.AddEdge("beach", beach);
+    coralreef.AddEdge("ocean", ocean);
+    ocean.AddEdge("surface", surface);
 
-    this.strand = strand;
+    this.beach = beach;
 
     // tilføj items til et rum
-    strand.AddItem("plastic", 5);
-    coralrevet.AddItem("algae covered corals", 5);
+    beach.AddItem("plastic", 5);
+    coralreef.AddItem("algae covered corals", 5);
+    ocean.AddItem("illegal fishing boats", 5);
 
   }
   
   public Space GetEntry () {
-    return strand;
+    return beach;
   }
 }
 

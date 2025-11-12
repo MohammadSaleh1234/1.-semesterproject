@@ -20,6 +20,8 @@ class Game {
     registry.Register("take", new CommandTake());
     registry.Register("show", new CommandShowInventory());
     registry.Register("brush", new CommandBrush());
+    registry.Register("activate", new CommandActivate());
+    registry.Register("cut", new CommandCut());
   }
 
   static void Main(string[] args) {
