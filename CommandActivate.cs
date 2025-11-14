@@ -23,7 +23,7 @@ class CommandActivate : BaseCommand, ICommand {
         context.GetCurrent().items.Remove("illegal fishing boats");
         context.GetCurrent().AddItem("fishing nets", 5);
 
-        Console.WriteLine("You successfully scare away the fishermen, but they left behind their nets. I should cut them away");
+        Console.WriteLine("You successfully scare away the fishermen, but they left behind their nets. ");
 
         if (items.Count >= 1) {
             Console.WriteLine("You see the following: ");
