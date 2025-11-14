@@ -337,9 +337,7 @@ var answerKey = new Dictionary<string, int>
         Console.WriteLine();
         Console.WriteLine("You completed the quiz!");
         Console.WriteLine("Your score is: " + playerScore + " / " + quizData.Count * 2);
-       Console.WriteLine("Your overall highscore is: " +
-        Game.player.highscore(Quiz.playerScore, Quiz2.playerScore, Quiz3.playerScore));
-
+       Console.WriteLine("Your overall highscore is: " + Game.player.highscore(Quiz.playerScore, Quiz2.playerScore, Quiz3.playerScore) + " / 30");
 
         HashSet<string> exits = edges.Keys.ToHashSet();
         Console.WriteLine("Current exits are:");

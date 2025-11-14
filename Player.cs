@@ -6,8 +6,6 @@ class Player
     Context context;
     Registry registry;
 
-
-
     public Player(Context context, Registry registry)
     {
 

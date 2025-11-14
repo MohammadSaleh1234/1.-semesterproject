@@ -1,7 +1,7 @@
 /* Node class for modeling graphs
  */
 
-class Node {
+public class Node {
   protected string name;
   protected Dictionary<string, Node> edges = new Dictionary<string, Node>();
   
