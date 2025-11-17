@@ -7,7 +7,7 @@ class Game {
   static ICommand fallback = new CommandUnknown();
   static Registry registry = new Registry(context, fallback);
   static Player player = new Player(context, registry);
-
+  public static TrashManager trashManager = new TrashManager(); // <--- Denne er den korrekte instans, som du bruger.
 
   private static void InitRegistry() {
 
@@ -21,6 +21,7 @@ class Game {
     registry.Register("help", new CommandHelp(registry));
     registry.Register("take", new CommandTake());
     registry.Register("show", new CommandShowInventory());
+    registry.Register("collect", new CommandCollect());
 
     // Registrer den opdaterede CommandInventory, kaldet "inventory"
     registry.Register("inventory", new CommandInventory());

@@ -11,7 +11,8 @@ class CommandCollect : BaseCommand, ICommand {
             return;
         }
 
-        var items = context.GetCurrent().items;
+        Space current = context.GetCurrent();
+        var items = current.items;
         string itemName = parameters[0];
 
         if (!items.ContainsKey(itemName)){
@@ -19,19 +20,19 @@ class CommandCollect : BaseCommand, ICommand {
             return;
         }
 
-        context.GetCurrent().RemoveItem(parameters[0]);
+        // Spilleren samler skrald op -> fjern det fra rummet
+        current.RemoveItem(itemName);
+
+        // 🔹 NYT: vis et tilfældigt fun fact, hvis vi er på stranden
+        Game.trashManager.CollectTrash(current.GetName());
 
         if (items.Count >= 1) {
-            Console.WriteLine("You see the following:: ");
+            Console.WriteLine("You see the following: ");
             foreach (var pair in items){
                 Console.WriteLine($"{pair.Value} {pair.Key}");
             }
-        }
-
-        else {
+        } else {
             Console.WriteLine("This area is empty now");
         }
     }
 }
-
-

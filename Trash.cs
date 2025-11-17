@@ -1,6 +1,10 @@
 using System;
 using System.Collections.Generic;
 
+// ====================================================================
+// 1. TRASH DATAKLASSEN (NY)
+//    Definerer strukturen for et stykke affald
+// ====================================================================
 public class Trash
 {
     public string Name { get; }
@@ -15,6 +19,10 @@ public class Trash
     }
 }
 
+// ====================================================================
+// 2. TRASHMANAGER LOGIKKLASSEN (OPDATERET)
+//    Håndterer listen over affald og fun facts
+// ====================================================================
 public class TrashManager
 {
     private List<Trash> trashList = new List<Trash>()
@@ -48,18 +56,23 @@ public class TrashManager
 
     private Random random = new Random();
 
-    public void CollectTrash(string currentRoom)
+    // KALDES når spilleren samler skrald op
+    public void CollectTrash(string currentRoomName)
     {
-        if (currentRoom.ToLower() == "stranden")
+        // World bruger "Strand" som navn
+        if (currentRoomName.ToLower() == "strand")
         {
             Trash randomTrash = trashList[random.Next(trashList.Count)];
-            Console.WriteLine($"🗑️ Du samler en {randomTrash.Name} op!");
-            Console.WriteLine($"{randomTrash.Description}");
-            Console.WriteLine($"{randomTrash.FunFact}\n");
+
+            // OPDATERET OUTPUT: Fremhæver navnet og "Fun Fact"
+            Console.WriteLine($"🗑️ Du samler en **{randomTrash.Name}** op!");
+
+            Console.WriteLine(randomTrash.Description);
+
+            Console.WriteLine("**Fun Fact:** " + randomTrash.FunFact);
+
+            Console.WriteLine();
         }
-        else
-        {
-            Console.WriteLine("Godt gået! Der er ikke mere skrald at samle op på stranden for i dag. ");
-        }
+        // ellers: ikke noget output – det er ikke en strand
     }
 }
