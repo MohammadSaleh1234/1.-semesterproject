@@ -2,12 +2,13 @@ using System;
 
 class Game {
   public static Inventory inventory = new Inventory();
+  public static TrashManager trashManager = new TrashManager();
   static World world = new World();
   static Context context = new Context(world.GetEntry());
   static ICommand fallback = new CommandUnknown();
   static Registry registry = new Registry(context, fallback);
   static Player player = new Player(context, registry);
-  public static TrashManager trashManager = new TrashManager(); // <--- Denne er den korrekte instans, som du bruger.
+
 
   private static void InitRegistry() {
 
@@ -28,7 +29,7 @@ class Game {
   }
 
   static void Main(string[] args) {
-    Console.WriteLine("Welcome to the Ocean Code!");
+    Console.WriteLine("Welcome to The Ocean Code!");
 
     InitRegistry();
     context.GetCurrent().Welcome();
