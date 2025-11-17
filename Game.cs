@@ -24,6 +24,8 @@ class Game {
     registry.Register("show", new CommandShowInventory());
     registry.Register("collect", new CommandCollect());
 
+    registry.Register("clean", new CommandClean());
+
     // Registrer den opdaterede CommandInventory, kaldet "inventory"
     registry.Register("inventory", new CommandInventory());
   }

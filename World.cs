@@ -20,9 +20,15 @@ class World {
     this.strand = strand;
 
     // tilføj items til et rum
-    strand.AddItem("plastic", 5);
-    coralrevet.AddItem("net", 5);
+    strand.AddItem("Affaldssæk", 1);
+    strand.AddItem("Plastik", 3);
 
+    coralrevet.AddItem("Børste", 1);
+    coralrevet.SetDirty(true); //metoden laver vi om lidt i Space.cs
+
+    // Lav dine tools (brug jeres Tool-konstruktør/GetName)
+    var affaldssaek   = new Tool("Affaldssæk");
+    var plastikflaske = new Tool("Plastikflaske");
   }
   
   public Space GetEntry () {
