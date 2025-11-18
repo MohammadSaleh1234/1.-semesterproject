@@ -11,6 +11,17 @@ class CommandGo : BaseCommand, ICommand {
       Console.WriteLine("I don't seem to know where that is 🤔");
       return;
     }
+
+    // Hent nuværende rum
+    var currentSpace = context.CurrentSpace;
+
+    // Hvis der stadig ligger skrald i rummet, må spilleren ikke gå videre
+    if (currentSpace.HasTrash()) {
+      Console.WriteLine("You cannot leave the area until you have picked up all the trash.");
+      return;
+    }
+
+    // Ellers må man godt gå
     context.Transition(parameters[0]);
   }
 }

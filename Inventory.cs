@@ -33,4 +33,8 @@ public class Inventory {
         return tools.Any(t => t.GetName().Equals(toolName, StringComparison.OrdinalIgnoreCase));
     }
 
+    public bool HasType(ToolType type)
+    {
+        return tools.Any(t => t.Type == type);
+    }
 }

@@ -2,6 +2,7 @@ using System;
 
 class Game {
   public static Inventory inventory = new Inventory();
+  public static TrashManager trashManager = new TrashManager();
   static World world = new World();
   static Context context = new Context(world.GetEntry());
   static ICommand fallback = new CommandUnknown();
@@ -19,13 +20,15 @@ class Game {
     registry.Register("help", new CommandHelp(registry));
     registry.Register("take", new CommandTake());
     registry.Register("show", new CommandShowInventory());
-    registry.Register("brush", new CommandBrush());
     registry.Register("activate", new CommandActivate());
     registry.Register("cut", new CommandCut());
+    registry.Register("collect", new CommandCollect());
+    registry.Register("clean", new CommandClean());
+
   }
 
   static void Main(string[] args) {
-    Console.WriteLine("Welcome to the Ocean Code!");
+    Console.WriteLine("Welcome to The Ocean Code!");
 
     InitRegistry();
     context.GetCurrent().Welcome();
