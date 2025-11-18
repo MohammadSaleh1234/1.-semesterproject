@@ -2,42 +2,36 @@
  */
 
 class World {
-  Space beach;
-  
+  Space strand;
+
   public World () {
-    Space beach = new Space("beach");
-    Space coralreef = new Space("coralreef");
-    Space ocean = new Space("ocean");
-    Space surface  = new Space("surface");
+    Space strand    = new Space("Strand");
+    Space coralrevet = new Space("Coralrevet");
+    Space dybhavet     = new Space("Dybhavet");
+    Space vandoverfladen      = new Space("Vandoverfladen");
+    Space outside  = new Space("Outside");
 
 
+    strand.AddEdge("Coralrevet", coralrevet);
+    coralrevet.AddEdge("Strand", strand);
+    coralrevet.AddEdge("Dybhavet", dybhavet);
+    dybhavet.AddEdge("Vandoverfladen", vandoverfladen);
 
-    beach.AddEdge("coralreef", coralreef);
-    coralreef.AddEdge("beach", beach);
-    coralreef.AddEdge("ocean", ocean);
-    ocean.AddEdge("surface", surface);
+    this.strand = strand;
 
-    this.beach = beach;
+    // tilføj items til et rum
+    strand.AddItem("affaldssæk", 1);
+    strand.AddItem("plastik", 5);
 
-
-    beach.AddItem("plastic", 5);
-    coralreef.AddItem("algae covered corals", 5);
-    ocean.AddItem("illegal fishing boats", 5);
-
-    beach.AddItem("Affaldssæk", 1);
-    beach.AddItem("Plastik", 3);
-
-
-    coralreef.AddItem("Børste", 1);
-    coralreef.SetDirty(true); //metoden laver vi om lidt i Space.cs
+    coralrevet.AddItem("Børste", 1);
+    coralrevet.SetDirty(true); //metoden laver vi om lidt i Space.cs
 
     // Lav dine tools (brug jeres Tool-konstruktør/GetName)
     var affaldssaek   = new Tool("Affaldssæk");
     var plastikflaske = new Tool("Plastikflaske");
   }
-  
+
   public Space GetEntry () {
-    return beach;
+    return strand;
   }
 }
-
