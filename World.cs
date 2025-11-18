@@ -16,14 +16,11 @@ class World {
     Quiz3 oceanquiz = new Quiz3("Oceanquiz");
 
 
-    strand.AddEdge("Beachquiz", beachquiz);
+    strand.AddEdge("beachquiz", beachquiz);
     beachquiz.AddEdge("Coralrevet", coralrevet);
     coralrevet.AddEdge("Coralquiz", coralquiz);
     coralquiz.AddEdge("Ocean", dybhavet);
-    coralrevet.AddEdge("Strand", strand);
-    coralrevet.AddEdge("Dybhavet", dybhavet);
     dybhavet.AddEdge("Oceanquiz", oceanquiz);
-    dybhavet.AddEdge("Vandoverfladen", vandoverfladen);
 
     this.strand = strand;
 
