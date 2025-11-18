@@ -2,9 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-class Space : Node
+
+public class Space : Node
 {
   public Dictionary<string,int> items = new Dictionary<string,int>();
+
 
   public Space(string name) : base(name) { }
 
