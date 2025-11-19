@@ -5,10 +5,10 @@ class World {
   Space strand;
 
   public World () {
-    Space strand    = new Space("Strand");
-    Space coralrevet = new Space("Coralrevet");
-    Space dybhavet     = new Space("Dybhavet");
-    Space vandoverfladen      = new Space("Vandoverfladen");
+    Space strand    = new Space("Beach");
+    Space coralrevet = new Space("Coralreef");
+    Space dybhavet     = new Space("Ocean");
+    Space vandoverfladen      = new Space("Watersurface");
     Space outside  = new Space("Outside");
 
     Quiz beachquiz = new Quiz("Beachquiz");
@@ -16,8 +16,8 @@ class World {
     Quiz3 oceanquiz = new Quiz3("Oceanquiz");
 
 
-    strand.AddEdge("beachquiz", beachquiz);
-    beachquiz.AddEdge("Coralrevet", coralrevet);
+    strand.AddEdge("Beachquiz", beachquiz);
+    beachquiz.AddEdge("Coralreef", coralrevet);
     coralrevet.AddEdge("Coralquiz", coralquiz);
     coralquiz.AddEdge("Ocean", dybhavet);
     dybhavet.AddEdge("Oceanquiz", oceanquiz);
@@ -25,15 +25,15 @@ class World {
     this.strand = strand;
 
     // tilføj items til et rum
-    strand.AddItem("affaldssæk", 1);
-    strand.AddItem("plastik", 5);
+    strand.AddItem("trashbag", 1);
+    strand.AddItem("plastic", 5);
 
-    coralrevet.AddItem("Børste", 1);
+    coralrevet.AddItem("Brush", 1);
     coralrevet.SetDirty(true); //metoden laver vi om lidt i Space.cs
 
     // Lav dine tools (brug jeres Tool-konstruktør/GetName)
-    var affaldssaek   = new Tool("Affaldssæk");
-    var plastikflaske = new Tool("Plastikflaske");
+    var affaldssaek   = new Tool("Trashbag");
+    var plastikflaske = new Tool("Plastic bottle");
   }
 
   public Space GetEntry () {

@@ -17,33 +17,33 @@ public class TrashManager
     {
         // Item/Fun Fact 1
         new Trash(
-            "Plastikflaske",
-            "Du finder en tom plastikflaske i sandet.",
-            "💡 Plastik tager flere hundrede år at nedbryde! (400-500 år) Det er længere tid, end jeg kan bruge på at spise pomfritter! HaHa!"
-        ),
+            "Plastic bottle",
+            "You find an empty plasticbottle in the sand.",
+            "💡 Plastic takes hundreds of years to decompose! (400-500 years) That is even longer than i can spend eating french fries! Teehee"
+        ),  
         // Item/Fun Fact 2
         new Trash(
-            "Slikpapir",
-            "Et farverigt slikpapir flyver hen over stranden.",
-            "💡 Vidste du, at over 80% af alt affald i havet kommer fra landjorden?"
+            "Candywrapper",
+            "A colorful candywrapper flies across the beach.",
+            "💡 Did you know, that over 80% of all the waste in the ocean is from the surface?"
         ),
         // Item/Fun Fact 3
         new Trash(
-            "Plastiksugerør",
-            "Et bøjet sugerør ligger halvt dækket i sandet.",
-            "💡 90% af marine affald på strande er plastik"
+            "Plastic straw",
+            "A plastic straw lies half-covered in the sand." ,
+            "💡 90% of marine waste on the beaches is plastic"
         ),
         // Item/Fun Fact 4
         new Trash(
-            "Cigaretfilter",
-            "Et cigaretskod er halvt begravet i sandet.",
-            "💡 Plastik på stranden kan optages i havets fødekæde"
+            "Cigarette filter",
+            "A cigarette lies half-buried in the sand.",
+            "💡 Plastic on beaches can be absorbed into the oceans food chains"
         ),
         // Item/Fun Fact 5
         new Trash(
-            "Plastikpose",
-            "En plastikpose blafrer i vinden og sætter sig fast i tang.",
-            "💡 Hjælp med at holde stranden ren ved at smide affald i skraldespande og genbruge plast"
+            "Plastic bag",
+            "A plastic bag flutters in the wind, and gets stuck in some seaweed.",
+            "💡 Help keeping the beaches clean by throwing waste into trash cans, and by recycling plastic"
         )
     };
 
@@ -54,33 +54,33 @@ public class TrashManager
     {
         // Item/Fun Fact 1
         new Trash(
-            "Fiskenet-stykke",
-            "Et stykke slidt fiskenet hænger fast i korallen.",
-            "💡 Vidste du, at koralrevet ikke er en plante, men består af tusindvis af små levende dyr kaldet koralpolypper"
+            "Fishing net",
+            "A piece of worn fishing net is stuck on a coral.",
+            "💡 Did you know, that coral reefs are not made of plants, but rather consist of thousands of tiny living animals called coral polyps"
         ),
         // Item/Fun Fact 2
         new Trash(
-            "Rusten dåse",
-            "En rusten dåse ligger mellem anemoner.",
-            "💡 Vidste du, at koralrev kun dækker mindre end 1 % af havbunden, men de huser over 25 % af alt havliv?"
+            "Rusty can",
+            "A rusty can lies among some sea anemones.",
+            "💡 Did you know, that coral reefs only cover less than 1% of the sea floor, but they house over 25% of all sea life?"
         ),
         // Item/Fun Fact 3
         new Trash(
-            "Plastikfragment",
-            "Et lille, hvidt plastikfragment er svøbt om en koralgren.",
-            "💡 Kun ca. 10% af verdenshavene er beskyttet som MPA (Marine Protected Areas) – resten er som at spille uden skjold, hvor havdyrene står helt ubeskyttede."
+            "Plastic fragment",
+            "A small white plastic fragment is wrapped around a coral branch.",
+            "💡 Only about 10% of the worlds oceans, are protected as MPA (Marine Protected Areas) – the rest are vulnerable, and the sea life are completely unprotected."
         ),
         // Item/Fun Fact 4
         new Trash(
-            "Gammel line",
-            "En lang nylonline svæver dovent over revet.",
-            "💡 Halvdelen af verdens koralrev er allerede forsvundet, og op til 90% af koralrev kan forsvinde inden 2050 uden øjeblikkelig hjælp"
+            "Old fishing line",
+            "A long nylon line floats lazily above the reef.",
+            "💡 Half of the worlds coral reefs have disappeared already, and up to 90% of coral reefs can disappear before 2050 without immediate help"
         ),
         // Item/Fun Fact 5
         new Trash(
-            "Engangshandske",
-            "En engangshandske ligger fanget i tangen.",
-            "💡 For at beskytte koralrev kan vi reducere co2 udledning, undgå forurening og støtte bæredygtig fiskeri"
+            "Disposable glove",
+            "A disposable glove lies trapped in the seaweed.",
+            "💡 To protect the coral reefs, we can reduce our CO2 emission. Avoid polluting, and support sustainable fishing!"
         )
     };
 
@@ -91,33 +91,33 @@ public class TrashManager
     {
         // Item/Fun Fact 1
         new Trash(
-            "Tungt reb",
-            "Et stykke tykt, tungt reb ligger på bunden.",
-            "💡 Cirka 30% af fiskene i verden bliver overfisket – det er som hvis nogen spiser dine snacks hurtigere, end du kunne købe nye."
+            "Heavy rope",
+            "A piece of thick, heavy rope lies at the bottom.",
+            "💡 About 30% of fish in the world are overfished – that is like if someone is eating your snacks faster than you can buy new ones."
         ),
         // Item/Fun Fact 2
         new Trash(
-            "Gammel støvle",
-            "Du ser omridset af en gammel gummistøvle.",
-            "💡 Hvert minut ryger der en hel lastbil af plast ud i havet - på en dag svarer det til 1.440 lastbiler."
+            "Old boot",
+            "You see the outline of an old boot.",
+            "💡 Every minute, about a truckload of plastic ends up in the ocean - in a day, that is the equivalent of 1.440 trucks."
         ),
         // Item/Fun Fact 3
         new Trash(
-            "Flaske-hals",
-            "En knækket flaske-hals stikker op af sedimentet.",
-            "💡 Der er i gennemsnit 13.000 stykker plastikaffald pr. kvadratkilometer i havet – det er som at svømme i vand fyldt med plastikposer og flasker."
+            "Bottleneck",
+            "A broken off bottleneck sticks out of the sediment.",
+            "💡 There is on average 13.000 pieces of plastic waste per square kilometer in the ocean – it is like swimming in water filled with plastic bags and bottles."
         ),
         // Item/Fun Fact 4
         new Trash(
             "Net-fragment",
-            "Et lille, tungt net-fragment ligger på bunden.",
-            "💡 Nogle fiskere bliver så fiske-glade, at de fanger alt for mange fisk! For at tjene penge. Men så løber havet tør for fiskevenner, og balancen vælter!"
+            "A heavy piece of net-fragment lies at the bottom.",
+            "💡 Some fishermen get so excited about selling fishing that they catch way too many! But then the ocean will run out of fish friends, and the balance will fall!"
         ),
         // Item/Fun Fact 5
         new Trash(
-            "Plastikpose",
-            "En hvid plastikpose er dalet ned fra overfladen.",
-            "💡 Skildpadder forveksler ofte plastikposer med vandmænd, som er deres livret. Men når de spiser plastik i stedet for rigtig mad, kan de blive syge eller endda dø."
+            "Plastic bag",
+            "A white plastic bag has descended from the surface.",
+            "💡 Sea turtles often confuse plastic bags for jellyfish, which are their favorite food. But when they eat plastic, they can get sick and even die."
         )
     };
 
@@ -126,15 +126,15 @@ public class TrashManager
     {
         currentRoomName = currentRoomName.ToLower();
 
-        if (currentRoomName == "strand")
+        if (currentRoomName == "beach")
         {
             DisplaySequentialFact(beachTrashList, ref strandFunFactIndex);
         }
-        else if (currentRoomName == "coralrevet")
+        else if (currentRoomName == "coral reef")
         {
             DisplaySequentialFact(coralReefTrashList, ref coralReefFunFactIndex);
         }
-        else if (currentRoomName == "dybhavet")
+        else if (currentRoomName == "ocean")
         {
             DisplaySequentialFact(deepSeaTrashList, ref deepSeaFunFactIndex);
         }
@@ -149,7 +149,7 @@ public class TrashManager
 
         Trash currentTrash = trashList[indexToShow];
 
-        Console.WriteLine($"🗑️ Du samler en *{currentTrash.Name}* op!");
+        Console.WriteLine($"🗑️ You pick *{currentTrash.Name}* up!");
         Console.WriteLine(currentTrash.Description);
         Console.WriteLine("*Fun Fact:* " + currentTrash.FunFact);
         Console.WriteLine();

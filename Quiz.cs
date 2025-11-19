@@ -10,7 +10,7 @@ public class Quiz : Space
     public override void Welcome()
     {
 
-        Dictionary<string, string> quizData = new Dictionary<string, string>()
+        Dictionary<string, string> quizData = new Dictionary<string, string>() //dictionary med spm og svar under
 {
     { "How long does it take for a plastic-bottle to decompose?",
       "A. 10 Years \nB. 450 Years \nC. 100 Years" },
@@ -38,7 +38,7 @@ var answerKey = new Dictionary<string, int>
 };
 
        
-        var random = new Random();
+        var random = new Random(); //tilfældiggører spørgsmålenes rækkefølge
         var randomizedQuiz = quizData.ToList()
                              .OrderBy(x => random.Next())
                              .ToList();
@@ -164,7 +164,7 @@ public class Quiz2 : Space
 
 
 
-        Console.WriteLine("Welcome to the beach quiz! Test your knowledge about beach pollution! :)");
+        Console.WriteLine("Welcome to the coral quiz! Test your knowledge about beach pollution! :)");
 
         int questionNumber = 1;
         foreach (var entry in randomizedQuiz)
@@ -280,7 +280,7 @@ var answerKey = new Dictionary<string, int>
     
 
 
-        Console.WriteLine("Welcome to the beach quiz! Test your knowledge about beach pollution! :)");
+        Console.WriteLine("Welcome to the ocean quiz! Test your knowledge about beach pollution! :)");
         int questionNumber = 1;
         foreach (var entry in randomizedQuiz)
         {

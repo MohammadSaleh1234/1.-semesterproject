@@ -6,12 +6,12 @@ static class ToolRegistry
     private static readonly Dictionary<string, ToolType> toolCatalog =
     new(StringComparer.OrdinalIgnoreCase)  // ← korrekt stavning
     {
-        ["Affaldssæk"]    = ToolType.Bag,
-        ["Plastik"]       = ToolType.Trash,
-        ["Plastikflaske"] = ToolType.Trash,
-        ["Cigaretskod"]   = ToolType.Trash,
+        ["Trashbag"]    = ToolType.Bag,
+        ["Plastic"]       = ToolType.Trash,
+        ["Plasticbottle"] = ToolType.Trash,
+        ["Cigarette"]   = ToolType.Trash,
 
-        ["Børste"] = ToolType.Brush,
+        ["Brush"] = ToolType.Brush,
     };
 
     public static Tool CreateTool(string name)

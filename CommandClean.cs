@@ -29,7 +29,7 @@ class CommandClean : BaseCommand, ICommand
         // Tjek om Coralrevet allerede er rent
         if (!space.IsDirty)
         {
-            Console.WriteLine("The Coral Reeve is already clean.");
+            Console.WriteLine("The Coral Reef is already clean.");
             return;
         }
 

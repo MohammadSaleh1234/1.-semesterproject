@@ -42,12 +42,12 @@ public class Space : Node
     Console.WriteLine();
 
     //Koden for Koralrevet og dets egenskab. Altså først "Dirty", dermed "cleaner" man, det ville resultere i nogle forskellige Console.WriteLine, outputs.
-    if (string.Equals(spaceName, "Coralrevet", StringComparison.OrdinalIgnoreCase))
+    if (string.Equals(spaceName, "Coralreef", StringComparison.OrdinalIgnoreCase))
     {
       if (IsDirty)
-        Console.WriteLine("The Coralrevet is dirty – use the brush to clean the corals.");
+        Console.WriteLine("The Coralreef is dirty – use the brush to clean the corals.");
       else
-        Console.WriteLine("The Coralrevet is now clean and shiny.");
+        Console.WriteLine("The Coralreef is now clean and shiny.");
 
       Console.WriteLine();
     }
