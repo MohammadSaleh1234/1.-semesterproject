@@ -2,9 +2,10 @@
  */
 
 class World {
-  Space strand;
+  Space entry;
 
   public World () {
+    Space entry = new Space("Entry");
     Space strand    = new Space("Beach");
     Space coralrevet = new Space("Coralreef");
     Space dybhavet     = new Space("Ocean");
@@ -15,14 +16,14 @@ class World {
     Quiz2 coralquiz = new Quiz2("Coralquiz");
     Quiz3 oceanquiz = new Quiz3("Oceanquiz");
 
-
+    entry.AddEdge("Beach", strand);
     strand.AddEdge("Beachquiz", beachquiz);
     beachquiz.AddEdge("Coralreef", coralrevet);
     coralrevet.AddEdge("Coralquiz", coralquiz);
     coralquiz.AddEdge("Ocean", dybhavet);
     dybhavet.AddEdge("Oceanquiz", oceanquiz);
 
-    this.strand = strand;
+    this.entry = entry;
 
     // tilføj items til et rum
     strand.AddItem("trashbag", 1);
@@ -37,6 +38,6 @@ class World {
   }
 
   public Space GetEntry () {
-    return strand;
+    return entry;
   }
 }
