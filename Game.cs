@@ -45,8 +45,18 @@ class Game {
     foreach (var line in lines)
     {
       int x = ((Console.WindowWidth - line.Length) / 2);
-      Console.SetCursorPosition(x, Console.CursorTop);
-      Console.WriteLine(line);
+        if (x > 0)
+        {
+          Console.SetCursorPosition(x, Console.CursorTop);
+          Console.WriteLine(line);
+        }
+        else{
+          string welcomeLine = "Welcome to the Ocean Code! For the best experience, please rerun the game in fullscreen! Type 'exit' to exit the game";
+          Console.WriteLine(welcomeLine);
+          break;;
+        }
+
+
     }
 
 
