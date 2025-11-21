@@ -28,7 +28,28 @@ class Game {
   }
 
   static void Main(string[] args) {
-    Console.WriteLine("Welcome to The Ocean Code!");
+
+    Console.Clear();
+
+    string welcomeArt = @"
+    _       __     __                             __           __  __            ____                                          __     __
+   | |     / /__  / /________  ____ ___  ___     / /_____     / /_/ /_  ___     / __ \________  ____ _____     _________  ____/ /__  / /
+   | | /| / / _ \/ / ___/ __ \/ __ `__ \/ _ \   / __/ __ \   / __/ __ \/ _ \   / / / / ___/ _ \/ __ `/ __ \   / ___/ __ \/ __  / _ \/ /
+ | |/ |/ /  __/ / /__/ /_/ / / / / / /  __/  / /_/ /_/ /  / /_/ / / /  __/  / /_/ / /__/  __/ /_/ / / / /  / /__/ /_/ / /_/ /  __/_/
+|__/|__/\___/_/\___/\____/_/ /_/ /_/\___/   \__/\____/   \__/_/ /_/\___/   \____/\___/\___/\__,_/_/ /_/   \___/\____/\__,_/\___(_)
+    ";
+
+    string[] lines = welcomeArt.Split("\n");
+    int windowWidth = Console.WindowWidth;
+
+    foreach (var line in lines)
+    {
+      int x = ((Console.WindowWidth - line.Length) / 2);
+      Console.SetCursorPosition(x, Console.CursorTop);
+      Console.WriteLine(line);
+    }
+
+
 
     InitRegistry();
     context.GetCurrent().Welcome();
