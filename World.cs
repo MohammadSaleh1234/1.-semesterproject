@@ -5,7 +5,7 @@ class World {
   Space entry;
 
   public World () {
-    Space entry = new Space("Entry");
+    StartRoom entry = new StartRoom("Entry");
     Space strand    = new Space("Beach");
     Space coralrevet = new Space("Coralreef");
     Space dybhavet     = new Space("Ocean");
@@ -30,6 +30,7 @@ class World {
     strand.AddItem("plastic", 5);
 
     coralrevet.AddItem("Brush", 1);
+    coralrevet.AddItem("algae covered corals", 5);
     coralrevet.SetDirty(true); //metoden laver vi om lidt i Space.cs
 
     // Lav dine tools (brug jeres Tool-konstruktør/GetName)
