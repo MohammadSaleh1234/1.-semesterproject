@@ -12,13 +12,23 @@ public class Space : Node
 
   public virtual void Welcome()
   {
+    Console.Clear();
     var spaceName = GetName();
+    string line = "You are now at the "+name;
 
-    Console.WriteLine("You are now at " + name);
+    int windowWidth = Console.WindowWidth;
+    int x = ((Console.WindowWidth - line.Length) / 2);
+    Console.SetCursorPosition(x, Console.CursorTop);
+    Console.WriteLine(line);
+
+
 
     var exits = edges.Keys.ToHashSet();
-    Console.WriteLine("Current exits are:");
-    foreach (var exit in exits) Console.WriteLine(" - " + exit);
+    Console.SetCursorPosition(x, Console.CursorTop);
+    Console.WriteLine("You can continue to: ");
+    foreach (var exit in exits) {
+      Console.SetCursorPosition(x, Console.CursorTop);
+      Console.WriteLine(" - " + exit);}
     Console.WriteLine();
 
 
@@ -26,17 +36,17 @@ public class Space : Node
     // Items på gulvet
     if (items.Count == 0)
     {
-      Console.WriteLine("You see nothing particular on the ground.");
+      Console.WriteLine("You see nothing particular.");
     }
     else if (items.Count == 1)
     {
       var kv = items.First();
-      Console.WriteLine("You see the following item on the ground:");
+      Console.WriteLine("You see the following items:");
       Console.WriteLine($" - {kv.Value} {kv.Key}");
     }
     else
     {
-      Console.WriteLine("You see the following items on the ground:");
+      Console.WriteLine("You see the following items:");
       foreach (var pair in items) Console.WriteLine($" - {pair.Value} {pair.Key}");
     }
     Console.WriteLine();

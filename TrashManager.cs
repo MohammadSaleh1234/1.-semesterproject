@@ -18,7 +18,7 @@ public class TrashManager
         // Item/Fun Fact 1
         new Trash(
             "Plastic bottle",
-            "You find an empty plasticbottle in the sand.",
+            "You find an empty plastic bottle in the sand.",
             "💡 Plastic takes hundreds of years to decompose! (400-500 years) That is even longer than i can spend eating french fries! Teehee"
         ),  
         // Item/Fun Fact 2
@@ -149,8 +149,8 @@ public class TrashManager
 
         Trash currentTrash = trashList[indexToShow];
 
-        Console.WriteLine($"🗑️ You pick *{currentTrash.Name}* up!");
         Console.WriteLine(currentTrash.Description);
+        Console.WriteLine($"🗑️  You pick *{currentTrash.Name}* up!");
         Console.WriteLine("*Fun Fact:* " + currentTrash.FunFact);
         Console.WriteLine();
 

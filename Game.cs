@@ -37,6 +37,7 @@ class Game {
     | | /| / / _ \/ / ___/ __ \/ __ `__ \/ _ \   / __/ __ \   / __/ __ \/ _ \   / / / / ___/ _ \/ __ `/ __ \   / ___/ __ \/ __  / _ \/ /
     | |/ |/ /  __/ / /__/ /_/ / / / / / /  __/  / /_/ /_/ /  / /_/ / / /  __/  / /_/ / /__/  __/ /_/ / / / /  / /__/ /_/ / /_/ /  __/_/
    |__/|__/\___/_/\___/\____/_/ /_/ /_/\___/   \__/\____/   \__/_/ /_/\___/   \____/\___/\___/\__,_/_/ /_/   \___/\____/\__,_/\___(_)
+
     ";
 
     string[] lines = welcomeArt.Split("\n");
@@ -45,9 +46,22 @@ class Game {
     foreach (var line in lines)
     {
       int x = ((Console.WindowWidth - line.Length) / 2);
-      Console.SetCursorPosition(x, Console.CursorTop);
-      Console.WriteLine(line);
+
+
+        if (x > 0)
+        {
+          Console.SetCursorPosition(x, Console.CursorTop);
+          Console.WriteLine(line);
+        }
+        else{
+          string welcomeLine = "Welcome to the Ocean Code! For the best experience, please rerun the game in fullscreen! Type 'exit' to exit the game";
+          Console.WriteLine(welcomeLine);
+          break;;
+        }
+
+
     }
+
 
     InitRegistry();
     context.GetCurrent().Welcome();
