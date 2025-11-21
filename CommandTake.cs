@@ -51,8 +51,11 @@ class CommandTake : BaseCommand, ICommand
 
         if (newTool.Type == ToolType.Trash)
         {
+
             Console.WriteLine($"You pick up {actualName} and put it in the trashbag.");
 
+            Space current = context.GetCurrent();
+            Game.trashManager.CollectTrash(current.GetName());
             // Efter skraldet er fjernet → tjek om der er mere tilbage i rummet
             if (!space.HasTrash())
             {
