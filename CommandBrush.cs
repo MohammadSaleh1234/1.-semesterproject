@@ -26,13 +26,7 @@ class CommandBrush : BaseCommand, ICommand {
         if (items.Count >= 1) {
             Console.WriteLine("You see the following: ");
             foreach (var pair in items){
-                string itemKey = pair.Key;
-                string[] itemKeyArray = itemKey.Split("s");
 
-                if (pair.Value == 1 && itemKeyArray.Length > 1){
-                    Console.WriteLine($"{pair.Value} {itemKeyArray[0]}");
-                    return;
-                }
                 Console.WriteLine($"{pair.Value} {pair.Key}");
             }
         }

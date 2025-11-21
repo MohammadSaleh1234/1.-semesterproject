@@ -1,7 +1,7 @@
 class CommandActivate : BaseCommand, ICommand {
 
     public CommandActivate() {
-        description = "activates sirens";
+        description = "activates the sirens on your boat";
     }
 
     public void Execute(Context context, string command, string[] parameters){

@@ -10,7 +10,8 @@ static class ToolRegistry
         ["Plastic"]       = ToolType.Trash,
         ["Plasticbottle"] = ToolType.Trash,
         ["Cigarette"]   = ToolType.Trash,
-
+        ["Algae covered corals"] = ToolType.Trash,
+        ["Coral"] = ToolType.Trash,
         ["Brush"] = ToolType.Brush,
     };
 

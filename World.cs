@@ -12,14 +12,14 @@ class World {
     Space vandoverfladen      = new Space("Watersurface");
     Space outside  = new Space("Outside");
 
-    Quiz beachquiz = new Quiz("Beachquiz");
-    Quiz2 coralquiz = new Quiz2("Coralquiz");
-    Quiz3 oceanquiz = new Quiz3("Oceanquiz");
+    Quiz beachquiz = new Quiz("Quiz");
+    Quiz2 coralquiz = new Quiz2("Quiz");
+    Quiz3 oceanquiz = new Quiz3("Quiz");
 
     entry.AddEdge("Beach", strand);
-    strand.AddEdge("Beachquiz", beachquiz);
+    strand.AddEdge("Quiz", beachquiz);
     beachquiz.AddEdge("Coralreef", coralrevet);
-    coralrevet.AddEdge("Coralquiz", coralquiz);
+    coralrevet.AddEdge("Quiz", coralquiz);
     coralquiz.AddEdge("Ocean", dybhavet);
     dybhavet.AddEdge("Oceanquiz", oceanquiz);
 
@@ -30,7 +30,7 @@ class World {
     strand.AddItem("plastic", 5);
 
     coralrevet.AddItem("Brush", 1);
-    coralrevet.AddItem("algae covered corals", 5);
+    coralrevet.AddItem("Algae covered corals", 5);
     coralrevet.SetDirty(true); //metoden laver vi om lidt i Space.cs
 
     // Lav dine tools (brug jeres Tool-konstruktør/GetName)

@@ -130,7 +130,7 @@ public class TrashManager
         {
             DisplaySequentialFact(beachTrashList, ref strandFunFactIndex);
         }
-        else if (currentRoomName == "coral reef")
+        else if (currentRoomName == "coralreef")
         {
             DisplaySequentialFact(coralReefTrashList, ref coralReefFunFactIndex);
         }

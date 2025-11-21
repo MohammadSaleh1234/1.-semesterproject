@@ -9,39 +9,48 @@ class CommandClean : BaseCommand, ICommand
 
     public void Execute(Context context, string command, string[] parameters)
     {
-        // Vi forventer ingen parametre: bare 'clean'
-        if (!GuardEq(parameters, 0))
+
+        if (GuardEq(parameters, 1))
         {
-            Console.WriteLine("Just type 'clean' to clean the area.");
+            Console.WriteLine("Type 'clean coral' to clean the area.");
             return;
         }
 
-        var space = context.CurrentSpace;
+        var wanted = parameters[0];
         var inventory = context.Inventory;
 
-        // Tjek at vi står i Coralrevet
-        if (!string.Equals(space.GetName(), "Coralrevet", StringComparison.OrdinalIgnoreCase))
+        if (ToolRegistry.IsTrash(wanted) && !inventory.HasType(ToolType.Brush))
         {
-            Console.WriteLine("There is nothing special to clean here.");
+            Console.WriteLine("You need a brush to clean corals!");
             return;
         }
 
-        // Tjek om Coralrevet allerede er rent
-        if (!space.IsDirty)
-        {
-            Console.WriteLine("The Coral Reef is already clean.");
+
+        var items = context.GetCurrent().items;
+
+        if (!wanted.Equals("coral") || !items.ContainsKey("Algae covered corals")) {
+
+            Console.WriteLine($"You couldn't seem to find '{wanted}'.");
             return;
+
         }
 
-        // Tjek at spilleren har en børste
-        if (!inventory.HasType(ToolType.Brush))
-        {
-            Console.WriteLine("You will need a brush to clean the coral reef.");
-            return;
+        context.GetCurrent().RemoveItem("Algae covered corals");
+        Console.WriteLine();
+        Space current = context.GetCurrent();
+        Game.trashManager.CollectTrash(current.GetName());
+
+        if (items.Count >= 1) {
+
+            Console.WriteLine("You see the following: ");
+            foreach (var pair in items){
+
+                Console.WriteLine($"{pair.Value} {pair.Key}");
+            }
         }
 
-        // Selve rengøringen
-        space.SetDirty(false);
-        Console.WriteLine("You use the brush to clean the coral reef. The coral reef is now clean! 🌊✨");
+        else {
+            Console.WriteLine("All corals are clean!");
+}
     }
 }

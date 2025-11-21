@@ -66,6 +66,11 @@ var answerKey = new Dictionary<string, int>
                     continue;
                 }
 
+                if (playerAnswer == "exit"){
+                    Game.player.ExecuteCommand(playerAnswer);
+                    return;
+                }
+
                 char c = char.ToUpperInvariant(playerAnswer.Trim()[0]);
                 int answerIndex;
                 if (c == 'A') answerIndex = 0;
@@ -73,6 +78,7 @@ var answerKey = new Dictionary<string, int>
                 else if (c == 'C') answerIndex = 2;
                 else
                 {
+
                     Console.WriteLine("Invalid input. Enter A, B or C.");
                     continue;
                 }
