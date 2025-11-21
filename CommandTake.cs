@@ -52,7 +52,8 @@ class CommandTake : BaseCommand, ICommand
         if (newTool.Type == ToolType.Trash)
         {
             Console.WriteLine($"Du samler {actualName} op og smider det i affaldssækken.");
-
+            Space current = context.GetCurrent();
+            Game.trashManager.CollectTrash(current.GetName());
             // Efter skraldet er fjernet → tjek om der er mere tilbage i rummet
             if (!space.HasTrash())
             {
