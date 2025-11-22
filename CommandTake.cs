@@ -24,7 +24,7 @@ class CommandTake : BaseCommand, ICommand
         var wanted = parameters[0];
 
         var space = context.CurrentSpace;
-        var inventory = context.Inventory;
+        var inventory = Player.inventory;
 
         // (valgfri whitelist – kan fjernes hvis I kun vil styre via rummet)
         if (!allowedTools.Contains(wanted)) {
@@ -59,13 +59,15 @@ class CommandTake : BaseCommand, ICommand
             // Efter skraldet er fjernet → tjek om der er mere tilbage i rummet
             if (!space.HasTrash())
             {
-                Console.WriteLine("✨You picked up all the waste in the area! You may now move on. ✨");
+                Console.WriteLine("✨You picked up all the waste in the area! You may now move on to the quiz. ✨");
+                Console.WriteLine();
             }
         }
         else
         {
             inventory.AddTool(newTool);
             Console.WriteLine($"You take {newTool.GetName()}.");
+            Console.WriteLine();
         }
     }
 }

@@ -36,7 +36,7 @@ public class Space : Node
     // Items på gulvet
     if (items.Count == 0)
     {
-      Console.WriteLine("You see nothing particular.");
+      Console.WriteLine();
     }
     else if (items.Count == 1)
     {

@@ -10,6 +10,7 @@ public class Quiz : Space
     public override void Welcome()
     {
 
+    Console.Clear();
         Dictionary<string, string> quizData = new Dictionary<string, string>() //dictionary med spm og svar under
 {
     { "How long does it take for a plastic-bottle to decompose?",

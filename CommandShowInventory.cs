@@ -21,10 +21,10 @@ class CommandShowInventory : BaseCommand, ICommand {
         context.GetCurrent().Welcome();
 
         Console.WriteLine("=== Inventory ===");
-        if (Game.inventory.tools.Count == 0) {
+        if (Player.inventory.tools.Count == 0) {
             Console.WriteLine("(empty)");
         } else {
-            foreach (Tool tool in Game.inventory.tools) {
+            foreach (Tool tool in Player.inventory.tools) {
                 Console.WriteLine("- " + tool.GetName());
             }
         }

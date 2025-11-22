@@ -17,7 +17,7 @@ class CommandClean : BaseCommand, ICommand
         }
 
         var wanted = parameters[0];
-        var inventory = context.Inventory;
+        var inventory = Player.inventory;
 
         if (ToolRegistry.IsTrash(wanted) && !inventory.HasType(ToolType.Brush))
         {
@@ -40,17 +40,6 @@ class CommandClean : BaseCommand, ICommand
         Space current = context.GetCurrent();
         Game.trashManager.CollectTrash(current.GetName());
 
-        if (items.Count >= 1) {
 
-            Console.WriteLine("You see the following: ");
-            foreach (var pair in items){
-
-                Console.WriteLine($"{pair.Value} {pair.Key}");
-            }
-        }
-
-        else {
-            Console.WriteLine("All corals are clean!");
-}
     }
 }

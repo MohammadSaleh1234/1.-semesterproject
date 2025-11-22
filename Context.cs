@@ -38,6 +38,6 @@ class Context {
   public Space GetCurrentSpace() => CurrentSpace;
 
   // Gør inventory let tilgængelig via Context
-  public Inventory Inventory => Game.inventory;
+  //public Inventory Inventory => Player.inventory;
 }
 

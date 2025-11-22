@@ -2,7 +2,7 @@
 
 class Player
 {
-
+    public static Inventory inventory = new Inventory();
     Context context;
     Registry registry;
 

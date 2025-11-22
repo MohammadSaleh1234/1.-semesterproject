@@ -16,7 +16,7 @@ class CommandActivate : BaseCommand, ICommand {
 
         if (!itemName.Equals("sirens") || !items.ContainsKey("illegal fishing boats")) {
 
-            Console.WriteLine($"You couldn't seem to activate '{itemName}'. Maybe i should try activating the sirens?");
+            Console.WriteLine($"You couldn't seem to activate '{itemName}'. Make sure you are out on the oceans and try to 'activate sirens");
             return;
 
         }

@@ -1,10 +1,9 @@
 using System;
 
 class Game {
-  public static Inventory inventory = new Inventory();
   public static TrashManager trashManager = new TrashManager();
   static World world = new World();
-  static Context context = new Context(world.GetEntry());
+  public static Context context = new Context(world.GetEntry());
   static ICommand fallback = new CommandUnknown();
   static Registry registry = new Registry(context, fallback);
   public static Player player = new Player(context, registry);

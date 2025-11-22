@@ -143,14 +143,19 @@ public class TrashManager
     // Hjælpemetoden: Håndterer den sekventielle visning
     private void DisplaySequentialFact(List<Trash> trashList, ref int funFactIndex)
     {
+
+        Console.Clear();
+        Game.context.GetCurrent().Welcome();
         if (trashList.Count == 0) return;
 
         int indexToShow = funFactIndex % trashList.Count;
 
         Trash currentTrash = trashList[indexToShow];
 
+        Console.WriteLine();
         Console.WriteLine(currentTrash.Description);
         Console.WriteLine($"🗑️  You pick *{currentTrash.Name}* up!");
+        Console.WriteLine();
         Console.WriteLine("*Fun Fact:* " + currentTrash.FunFact);
         Console.WriteLine();
 

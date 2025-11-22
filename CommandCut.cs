@@ -16,7 +16,7 @@ class CommandCut : BaseCommand, ICommand {
 
         if (!itemName.Contains("net") || !items.ContainsKey("fishing nets")) {
 
-            Console.WriteLine($"You couldn't seem to find '{itemName}'. Maybe i should try cutting a net?");
+            Console.WriteLine($"Do you want to cut '{itemName}'. Maybe you should try cutting a net.");
             return;
 
         }
