@@ -2,7 +2,7 @@ public class StartRoom : Space
 {
 
 
-    public StartRoom(string name) : base(name) { }
+    public StartRoom(string name, string description) : base(name, description) { }
 
     public override void Welcome()
     {

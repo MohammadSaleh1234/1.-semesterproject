@@ -17,8 +17,7 @@ class CommandShowInventory : BaseCommand, ICommand {
             return;
         }
 
-        Console.Clear();
-        context.GetCurrent().Welcome();
+        Console.WriteLine();
 
         Console.WriteLine("=== Inventory ===");
         if (Player.inventory.tools.Count == 0) {

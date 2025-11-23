@@ -13,6 +13,8 @@ static class ToolRegistry
         ["Algae covered corals"] = ToolType.Trash,
         ["Coral"] = ToolType.Trash,
         ["Brush"] = ToolType.Brush,
+        ["Scissors"] = ToolType.Scissors,
+        ["fishing nets"] = ToolType.Trash,
     };
 
     public static Tool CreateTool(string name)

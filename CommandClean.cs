@@ -40,6 +40,12 @@ class CommandClean : BaseCommand, ICommand
         Space current = context.GetCurrent();
         Game.trashManager.CollectTrash(current.GetName());
 
+        if (!context.GetCurrent().HasTrash())
+        {
+            Console.WriteLine("✨You cleaned all the corals in the area! You may now move on to the quiz. ✨");
+            Console.WriteLine();
+        }
+
 
     }
 }

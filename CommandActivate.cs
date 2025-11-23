@@ -22,19 +22,15 @@ class CommandActivate : BaseCommand, ICommand {
         }
         context.GetCurrent().items.Remove("illegal fishing boats");
         context.GetCurrent().AddItem("fishing nets", 5);
+        context.GetCurrent().AddItem("Scissors", 1);
 
-        Console.WriteLine("You successfully scare away the fishermen, but they left behind their nets. ");
+        Console.WriteLine("You successfully scare away the fishermen. They left behind their fishing nets, you need to cut them down. ");
+        Console.WriteLine();
 
         if (items.Count >= 1) {
             Console.WriteLine("You see the following: ");
             foreach (var pair in items){
                 string itemKey = pair.Key;
-                string[] itemKeyArray = itemKey.Split("s");
-
-                if (pair.Value == 1 && itemKeyArray.Length > 1){
-                    Console.WriteLine($"{pair.Value} {itemKeyArray[0]}");
-                    return;
-                }
                 Console.WriteLine($"{pair.Value} {pair.Key}");
             }
         }

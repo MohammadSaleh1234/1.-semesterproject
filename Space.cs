@@ -6,14 +6,19 @@ using System.Linq;
 public class Space : Node
 {
   public Dictionary<string,int> items = new Dictionary<string,int>();
+  private string description;
 
+  public Space(string name, string description) : base(name) { this.description = description; }
 
-  public Space(string name) : base(name) { }
+  public string GetDescription() {
+
+    return description;
+
+  }
 
   public virtual void Welcome()
   {
     Console.Clear();
-    var spaceName = GetName();
     string line = "You are now at the "+name;
 
     int windowWidth = Console.WindowWidth;
@@ -38,28 +43,55 @@ public class Space : Node
     {
       Console.WriteLine();
     }
-    else if (items.Count == 1)
-    {
-      var kv = items.First();
-      Console.WriteLine("You see the following items:");
-      Console.WriteLine($" - {kv.Value} {kv.Key}");
-    }
     else
     {
-      Console.WriteLine("You see the following items:");
+      Console.WriteLine("You see the following:");
       foreach (var pair in items) Console.WriteLine($" - {pair.Value} {pair.Key}");
     }
     Console.WriteLine();
 
     //Koden for Koralrevet og dets egenskab. Altså først "Dirty", dermed "cleaner" man, det ville resultere i nogle forskellige Console.WriteLine, outputs.
-    if (string.Equals(spaceName, "Coralreef", StringComparison.OrdinalIgnoreCase))
-    {
-      if (IsDirty)
-        Console.WriteLine("The Coralreef is dirty – use the brush to clean the corals.");
-      else
-        Console.WriteLine("The Coralreef is now clean and shiny.");
 
-      Console.WriteLine();
+
+    switch (name)
+    {
+      case "Coralreef":
+      {
+        if (IsDirty && items.Count > 0)
+        {
+          Console.WriteLine(Game.context.GetCurrent().GetDescription());
+        }
+        Console.WriteLine();
+        break;
+      }
+
+      case "Beach":
+      {
+        if (IsDirty && items.Count > 0)
+        {
+          Console.WriteLine(Game.context.GetCurrent().GetDescription());
+        }
+
+        Console.WriteLine();
+        break;
+      }
+
+      case "Ocean":
+      {
+        if (IsDirty && items.Count > 0)
+        {
+          Console.WriteLine(Game.context.GetCurrent().GetDescription());
+        }
+
+        Console.WriteLine();
+        break;
+      }
+
+      default:
+      {
+        Console.WriteLine("Nothing to be found here");
+        break;
+      }
     }
   }
 

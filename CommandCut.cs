@@ -1,46 +1,51 @@
-class CommandCut : BaseCommand, ICommand {
+using System;
 
-    public CommandCut () {
-        description = "Use scissors to cut open fishing nets";
+class CommandCut : BaseCommand, ICommand
+{
+    public CommandCut()
+    {
+        description = "cut down fishing net.";
     }
 
-    public void Execute (Context context, string command, string[] parameters) {
+    public void Execute(Context context, string command, string[] parameters)
+    {
 
-        if (parameters.Length < 1) {
-            Console.WriteLine($"Cut what?");
+        if (GuardEq(parameters, 1))
+        {
+            Console.WriteLine("Type 'cut net' to cut down fishing net.");
             return;
         }
 
+        var wanted = parameters[0];
+        var inventory = Player.inventory;
+
+        if (ToolRegistry.IsTrash(wanted) && !inventory.HasType(ToolType.Scissors))
+        {
+            Console.WriteLine("You need scissors to cut the nets!");
+            return;
+        }
+
+
         var items = context.GetCurrent().items;
-        string itemName = parameters[0];
 
-        if (!itemName.Contains("net") || !items.ContainsKey("fishing nets")) {
+        if (!wanted.Equals("net") || !items.ContainsKey("fishing nets")) {
 
-            Console.WriteLine($"Do you want to cut '{itemName}'. Maybe you should try cutting a net.");
+            Console.WriteLine($"You couldn't seem to find '{wanted}'.");
             return;
 
         }
 
         context.GetCurrent().RemoveItem("fishing nets");
+        Console.WriteLine();
+        Space current = context.GetCurrent();
+        Game.trashManager.CollectTrash(current.GetName());
 
-        if (items.Count >= 1) {
-            Console.WriteLine("You see the following: ");
-            foreach (var pair in items){
-                string itemKey = pair.Key;
-                string[] itemKeyArray = itemKey.Split("s");
-
-                if (pair.Value == 1 && itemKeyArray.Length > 1){
-                    Console.WriteLine($"{pair.Value} {itemKeyArray[0]}s{itemKeyArray[1]}");
-                    return;
-                }
-                Console.WriteLine($"{pair.Value} {pair.Key}");
-            }
+        if (!context.GetCurrent().HasTrash())
+        {
+            Console.WriteLine("✨You cut all the nets in the area! You may now move on to the quiz. ✨");
+            Console.WriteLine();
         }
 
-        else {
-            Console.WriteLine("All fishing nets are gone!");
-        }
+
     }
 }
-
-

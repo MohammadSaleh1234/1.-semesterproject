@@ -1,5 +1,5 @@
 /* Tool class for representing player tools */
-public enum ToolType {Generic, Bag, Trash, Brush};
+public enum ToolType {Generic, Bag, Trash, Brush, Scissors};
 
 public class Tool {
     private string name;

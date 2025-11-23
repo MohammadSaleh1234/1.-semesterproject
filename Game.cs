@@ -6,7 +6,7 @@ class Game {
   public static Context context = new Context(world.GetEntry());
   static ICommand fallback = new CommandUnknown();
   static Registry registry = new Registry(context, fallback);
-  public static Player player = new Player(context, registry);
+  public static Player player = new Player(registry);
 
 
 

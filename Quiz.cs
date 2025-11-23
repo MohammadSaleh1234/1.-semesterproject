@@ -2,10 +2,7 @@
 public class Quiz : Space
 {
     public static int playerScore = 0;
-    public Quiz (String name) : base(name)
-    {
-        
-    }
+    public Quiz (string name, string description) : base(name, description) {}
   
     public override void Welcome()
     {
@@ -127,10 +124,7 @@ var answerKey = new Dictionary<string, int>
 public class Quiz2 : Space
 {
     public static int playerScore = 0;
-    public Quiz2(String name) : base(name)
-    {
-        
-    }
+    public Quiz2(String name, string description) : base(name, description) {}
 
     public override void Welcome()
     {
@@ -243,10 +237,7 @@ public class Quiz2 : Space
 public class Quiz3 : Space
 {
     public static int playerScore = 0;
-    public Quiz3 (String name) : base(name)
-    {
-        
-    }
+    public Quiz3 (String name, string description) : base(name, description) {}
 
     public override void Welcome()
     {

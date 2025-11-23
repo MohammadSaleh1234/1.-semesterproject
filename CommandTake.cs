@@ -22,7 +22,6 @@ class CommandTake : BaseCommand, ICommand
         }
 
         var wanted = parameters[0];
-
         var space = context.CurrentSpace;
         var inventory = Player.inventory;
 
@@ -42,7 +41,7 @@ class CommandTake : BaseCommand, ICommand
         // Tingen SKAL ligge i rummet (case-insensitivt i Space.TryTakeItem)
         if (!space.TryTakeItem(wanted, out var actualName))
         {
-            Console.WriteLine($"You cant seem to find'{wanted}' here.");
+            Console.WriteLine($"You cant seem to find '{wanted}' here.");
             return;
         }
 
@@ -66,8 +65,6 @@ class CommandTake : BaseCommand, ICommand
         else
         {
             inventory.AddTool(newTool);
-            Console.WriteLine($"You take {newTool.GetName()}.");
-            Console.WriteLine();
         }
     }
 }
