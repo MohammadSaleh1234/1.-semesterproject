@@ -70,7 +70,36 @@ class Game {
       string? line = Console.ReadLine().ToLower();
       if (line!=null) player.ExecuteCommand(line);
     }
-    Console.WriteLine("Game Over 😥");
+    Console.Clear();
+
+    string ExitArt = @"
+    ___________.__                   __               _____                     .__                .__                
+    \__    ___/|  |__ _____    ____ |  | __  ______ _/ ____\___________  ______ |  | _____  ___.__.|__| ____    ____  
+      |    |   |  |  \\__  \  /    \|  |/ / /  ___/ \   __\/  _ \_  __ \ \____ \|  | \__  \<   |  ||  |/    \  / ___\ 
+      |    |   |   Y  \/ __ \|   |  \    <  \___ \   |  | (  <_> )  | \/ |  |_> >  |__/ __ \\___  ||  |   |  \/ /_/  >
+      |____|   |___|  (____  /___|  /__|_ \/____  >  |__|  \____/|__|    |   __/|____(____  / ____||__|___|  /\___  / 
+                    \/     \/     \/     \/     \/                       |__|             \/\/             \//_____/  
+
+    ";
+
+    string[] endlines = ExitArt.Split("\n");
+  
+
+foreach (var line in endlines)
+{
+    int x = ((Console.WindowWidth - line.Length) / 2);
+
+    if (x > 0)
+    {
+        Console.SetCursorPosition(x, Console.CursorTop);
+        Console.WriteLine(line);
+    }
+    else
+    {
+        Console.WriteLine(line);
+    }
+}
+
   }
 
 }
