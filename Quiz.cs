@@ -7,7 +7,6 @@ public class Quiz : Space
     public override void Welcome()
     {
 
-    Console.Clear();
         Dictionary<string, string> quizData = new Dictionary<string, string>() //dictionary med spm og svar under
 {
     { "How long does it take for a plastic-bottle to decompose?",
@@ -64,11 +63,6 @@ var answerKey = new Dictionary<string, int>
                     continue;
                 }
 
-                if (playerAnswer == "exit"){
-                    Game.player.ExecuteCommand(playerAnswer);
-                    return;
-                }
-
                 char c = char.ToUpperInvariant(playerAnswer.Trim()[0]);
                 int answerIndex;
                 if (c == 'A') answerIndex = 0;
@@ -76,7 +70,6 @@ var answerKey = new Dictionary<string, int>
                 else if (c == 'C') answerIndex = 2;
                 else
                 {
-
                     Console.WriteLine("Invalid input. Enter A, B or C.");
                     continue;
                 }
@@ -338,7 +331,7 @@ var answerKey = new Dictionary<string, int>
        Console.WriteLine("Your overall highscore is: " + Game.player.highscore(Quiz.playerScore, Quiz2.playerScore, Quiz3.playerScore) + " / 30");
 
         HashSet<string> exits = edges.Keys.ToHashSet();
-        Console.WriteLine("Current exits are:");
+    
         foreach (String exit in exits)
         {
             Console.WriteLine(" - " + exit);

@@ -19,7 +19,7 @@ class World {
     beachquiz.AddEdge("Coralreef", coralrevet);
     coralrevet.AddEdge("Quiz", coralquiz);
     coralquiz.AddEdge("Ocean", dybhavet);
-    dybhavet.AddEdge("Oceanquiz", oceanquiz);
+    dybhavet.AddEdge("Quiz", oceanquiz);
 
     entry.AddEdge("Ocean", dybhavet);
 
