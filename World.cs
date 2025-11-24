@@ -6,9 +6,9 @@ class World {
 
   public World () {
     StartRoom entry = new StartRoom("Entry", "ændre beskrivelsen her");
-    Space strand    = new Space("Beach", "Use the trashbag to collect plastic");
-    Space coralrevet = new Space("Coralreef", "The Coralreef is dirty – use the brush to clean the corals.");
-    Space dybhavet     = new Space("Ocean", "ændre beskrivelsen her");
+    Space strand    = new Space("Beach", "The beach is littered with trash - use the trashbag to collect plastic");
+    Space coralrevet = new Space("Coralreef", "The coralreef is dirty – use the brush to clean the corals.");
+    Space dybhavet     = new Space("Ocean", "The boats are not allowed to fish here - use your sirens to scare them away");
 
     Quiz beachquiz = new Quiz("Quiz", "");
     Quiz2 coralquiz = new Quiz2("Quiz", "");
@@ -20,8 +20,6 @@ class World {
     coralrevet.AddEdge("Quiz", coralquiz);
     coralquiz.AddEdge("Ocean", dybhavet);
     dybhavet.AddEdge("Quiz", oceanquiz);
-
-    entry.AddEdge("Ocean", dybhavet);
 
     this.entry = entry;
 
@@ -35,6 +33,7 @@ class World {
     coralrevet.SetDirty(true);
 
     dybhavet.AddItem("illegal fishing boats", 5);
+    dybhavet.SetDirty(true);
 
     // Lav dine tools
     var affaldssaek   = new Tool("Trashbag");
