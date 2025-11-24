@@ -42,7 +42,7 @@ class CommandClean : BaseCommand, ICommand
 
         if (!context.GetCurrent().HasTrash())
         {
-            Console.WriteLine("✨You cleaned all the corals in the area! You may now move on to the quiz. ✨");
+            Console.WriteLine("✨You cleaned all the corals in the area! You may now move on to the quiz. Type 'go quiz' to continue. ✨");
             Console.WriteLine();
         }
 

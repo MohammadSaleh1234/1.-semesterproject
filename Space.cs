@@ -28,13 +28,13 @@ public class Space : Node
 
 
 
-    var exits = edges.Keys.ToHashSet();
+    /*var exits = edges.Keys.ToHashSet();
     Console.SetCursorPosition(x, Console.CursorTop);
     Console.WriteLine("You can continue to: ");
     foreach (var exit in exits) {
       Console.SetCursorPosition(x, Console.CursorTop);
       Console.WriteLine(" - " + exit);}
-    Console.WriteLine();
+    Console.WriteLine();*/
 
 
 
@@ -78,9 +78,13 @@ public class Space : Node
 
       case "Ocean":
       {
-        if (IsDirty && items.Count > 0)
+        if (IsDirty && items.ContainsKey("illegal fishing boats"))
         {
           Console.WriteLine(Game.context.GetCurrent().GetDescription());
+        }
+        else if (items.ContainsKey("fishing net"))
+        {
+          Console.WriteLine("Use a pair of scissors to cut the net");
         }
 
         Console.WriteLine();

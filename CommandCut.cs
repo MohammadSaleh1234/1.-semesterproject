@@ -28,21 +28,21 @@ class CommandCut : BaseCommand, ICommand
 
         var items = context.GetCurrent().items;
 
-        if (!wanted.Equals("net") || !items.ContainsKey("fishing nets")) {
+        if (!wanted.Equals("net") || !items.ContainsKey("fishing net")) {
 
             Console.WriteLine($"You couldn't seem to find '{wanted}'.");
             return;
 
         }
 
-        context.GetCurrent().RemoveItem("fishing nets");
+        context.GetCurrent().RemoveItem("fishing net");
         Console.WriteLine();
         Space current = context.GetCurrent();
         Game.trashManager.CollectTrash(current.GetName());
 
         if (!context.GetCurrent().HasTrash())
         {
-            Console.WriteLine("✨You cut all the nets in the area! You may now move on to the quiz. ✨");
+            Console.WriteLine("✨You cut all the nets in the area! You may now move on to the quiz. Type 'go quiz' to continue. ✨");
             Console.WriteLine();
         }
 

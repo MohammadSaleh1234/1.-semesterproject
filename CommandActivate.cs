@@ -21,10 +21,13 @@ class CommandActivate : BaseCommand, ICommand {
 
         }
         context.GetCurrent().items.Remove("illegal fishing boats");
-        context.GetCurrent().AddItem("fishing nets", 5);
+        context.GetCurrent().AddItem("fishing net", 5);
         context.GetCurrent().AddItem("Scissors", 1);
+        Console.Clear();
 
-        Console.WriteLine("You successfully scare away the fishermen. They left behind their fishing nets, you need to cut them down. ");
+        Console.WriteLine("You successfully scare away the fishermen, but they left behind their fishing nets. You need to cut them down. ");
+        Console.WriteLine();
+        Console.WriteLine("Use a pair of scissors to cut the net");
         Console.WriteLine();
 
         if (items.Count >= 1) {

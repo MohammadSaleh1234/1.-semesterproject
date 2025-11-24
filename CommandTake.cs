@@ -58,7 +58,7 @@ class CommandTake : BaseCommand, ICommand
             // Efter skraldet er fjernet → tjek om der er mere tilbage i rummet
             if (!space.HasTrash())
             {
-                Console.WriteLine("✨You picked up all the waste in the area! You may now move on to the quiz. ✨");
+                Console.WriteLine("✨You picked up all the waste in the area! You may now move on to the quiz. Type 'go quiz' to continue. ✨");
                 Console.WriteLine();
             }
         }

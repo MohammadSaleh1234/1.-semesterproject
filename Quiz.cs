@@ -41,7 +41,7 @@ var answerKey = new Dictionary<string, int>
                              .ToList();
         
     
-
+        Console.Clear();
 
         Console.WriteLine("Welcome to the beach quiz! Test your knowledge about beach pollution! :)");
     
@@ -57,6 +57,12 @@ var answerKey = new Dictionary<string, int>
             {
                 Console.Write("Please enter your answer ('A','B', or 'C'): ");
                 string playerAnswer = Console.ReadLine();
+
+                if (playerAnswer == "exit"){
+                    Game.player.ExecuteCommand(playerAnswer);
+                    return;
+                }
+
                 if (string.IsNullOrWhiteSpace(playerAnswer))
                 {
                     Console.WriteLine("Please enter A, B or C.");
@@ -157,8 +163,8 @@ public class Quiz2 : Space
 
 
 
-
-        Console.WriteLine("Welcome to the coral quiz! Test your knowledge about beach pollution! :)");
+        Console.Clear();
+        Console.WriteLine("Welcome to the coral quiz! Test your knowledge about coralreef pollution! :)");
 
         int questionNumber = 1;
         foreach (var entry in randomizedQuiz)
@@ -270,8 +276,8 @@ var answerKey = new Dictionary<string, int>
         
     
 
-
-        Console.WriteLine("Welcome to the ocean quiz! Test your knowledge about beach pollution! :)");
+        Console.Clear();
+        Console.WriteLine("Welcome to the ocean quiz! Test your knowledge about ocean pollution! :)");
         int questionNumber = 1;
         foreach (var entry in randomizedQuiz)
         {
@@ -284,6 +290,10 @@ var answerKey = new Dictionary<string, int>
             {
                 Console.Write("Please enter your answer ('A','B', or 'C'): ");
                 string playerAnswer = Console.ReadLine();
+                if (playerAnswer == "exit"){
+                    Game.player.ExecuteCommand(playerAnswer);
+                    return;
+                }
                 if (string.IsNullOrWhiteSpace(playerAnswer))
                 {
                     Console.WriteLine("Please enter A, B or C.");
