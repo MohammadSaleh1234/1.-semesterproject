@@ -1,0 +1,53 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="Presentation.MainWindow"
+        Width="1920" Height="1080"
+        Title="The Ocean Code">
+
+  <!-- Define styles at the Window level -->
+  <Window.Styles>
+    <Style Selector="Button">
+      <Setter Property="Width" Value="200"/>
+      <Setter Property="HorizontalAlignment" Value="Center"/>
+      <Setter Property="HorizontalContentAlignment" Value="Center"/>
+      <Setter Property="CornerRadius" Value="8" />
+      <Setter Property="Background" Value="Blue" />
+    </Style>
+  </Window.Styles>
+
+  <Grid RowDefinitions="*,Auto" Margin="32">
+
+    <TextBlock x:Name="OutputTextBlock"
+               VerticalAlignment="Top"
+               HorizontalAlignment="Center"
+               FontSize="24"/>
+
+    <StackPanel Grid.Row="1"
+                Orientation="Vertical"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Bottom"
+                Margin="0,20,0,0"
+                Spacing="10">
+
+      <TextBlock x:Name="OutputTextInventory"
+               VerticalAlignment="Top"
+               HorizontalAlignment="Center"
+               FontSize="24"/>
+
+      <StackPanel x:Name="ExitsPanel"
+                  Orientation="Vertical"
+                  HorizontalAlignment="Center"
+                  Spacing="10"/>
+
+      <Button x:Name="ShowInventoryButton"
+                Content="Open inventory"
+                />
+
+
+      <Button x:Name="ExitGameButton"
+              Content="Quit"
+              />
+
+    </StackPanel>
+  </Grid>
+</Window>

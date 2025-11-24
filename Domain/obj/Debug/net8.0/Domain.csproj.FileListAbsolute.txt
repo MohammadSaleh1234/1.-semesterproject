@@ -1,0 +1,12 @@
+/Users/maltepedersen/Desktop/1.-semesterproject/Domain/bin/Debug/net8.0/Domain.deps.json
+/Users/maltepedersen/Desktop/1.-semesterproject/Domain/bin/Debug/net8.0/Domain.dll
+/Users/maltepedersen/Desktop/1.-semesterproject/Domain/bin/Debug/net8.0/Domain.pdb
+/Users/maltepedersen/Desktop/1.-semesterproject/Domain/obj/Debug/net8.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/maltepedersen/Desktop/1.-semesterproject/Domain/obj/Debug/net8.0/Domain.AssemblyInfoInputs.cache
+/Users/maltepedersen/Desktop/1.-semesterproject/Domain/obj/Debug/net8.0/Domain.AssemblyInfo.cs
+/Users/maltepedersen/Desktop/1.-semesterproject/Domain/obj/Debug/net8.0/Domain.csproj.CoreCompileInputs.cache
+/Users/maltepedersen/Desktop/1.-semesterproject/Domain/obj/Debug/net8.0/Domain.sourcelink.json
+/Users/maltepedersen/Desktop/1.-semesterproject/Domain/obj/Debug/net8.0/Domain.dll
+/Users/maltepedersen/Desktop/1.-semesterproject/Domain/obj/Debug/net8.0/refint/Domain.dll
+/Users/maltepedersen/Desktop/1.-semesterproject/Domain/obj/Debug/net8.0/Domain.pdb
+/Users/maltepedersen/Desktop/1.-semesterproject/Domain/obj/Debug/net8.0/ref/Domain.dll
