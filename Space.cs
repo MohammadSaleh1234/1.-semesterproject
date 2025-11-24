@@ -19,7 +19,7 @@ public class Space : Node
   public virtual void Welcome()
   {
     Console.Clear();
-    string line = "You are now at the "+name;
+    /*string line = "You are now at the "+name;
 
     int windowWidth = Console.WindowWidth;
     int x = ((Console.WindowWidth - line.Length) / 2);
@@ -28,7 +28,7 @@ public class Space : Node
 
 
 
-    /*var exits = edges.Keys.ToHashSet();
+    var exits = edges.Keys.ToHashSet();
     Console.SetCursorPosition(x, Console.CursorTop);
     Console.WriteLine("You can continue to: ");
     foreach (var exit in exits) {
@@ -36,21 +36,35 @@ public class Space : Node
       Console.WriteLine(" - " + exit);}
     Console.WriteLine();*/
 
-
-
-    // Items på gulvet
-    if (items.Count == 0)
-    {
-      Console.WriteLine();
-    }
-    else
-    {
-      Console.WriteLine("You see the following:");
-      foreach (var pair in items) Console.WriteLine($" - {pair.Value} {pair.Key}");
+    string line = "=";
+    int windowWidth = Console.WindowWidth;
+    for (int i = 0; i < windowWidth; i++){
+      Console.Write(line);
     }
     Console.WriteLine();
+    // ====================================
 
-    //Koden for Koralrevet og dets egenskab. Altså først "Dirty", dermed "cleaner" man, det ville resultere i nogle forskellige Console.WriteLine, outputs.
+    Console.WriteLine("You are now at the "+name);
+
+      // Items på gulvet
+      if (items.Count == 0)
+      {
+        Console.WriteLine();
+      }
+      else
+      {
+        Console.WriteLine("You see the following:");
+        Console.WriteLine();
+        foreach (var pair in items) Console.WriteLine($" - {pair.Value} {pair.Key}");
+      }
+      Console.WriteLine();
+
+    //=====================================
+    for (int i = 0; i < windowWidth; i++){
+      Console.Write(line);
+    }
+    Console.WriteLine();
+    Console.WriteLine();
 
 
     switch (name)
