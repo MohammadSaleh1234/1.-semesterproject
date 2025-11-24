@@ -4,9 +4,9 @@ namespace Domain {
 
 public class Space : Node {
   
-  public Dictionary<string,int> items = new Dictionary<string,int>();
-  private string description;
-  public Space (String name) : base(name)
+  public readonly Dictionary<string,int> Items = new Dictionary<string,int>();
+  
+  public Space (string name) : base(name)
   {
 
   }
@@ -37,30 +37,30 @@ public class Space : Node {
   {
     return edges.Keys.ToList();
   }
-  public void AddItem(string name, int value = 1)
+  public void AddItem(string itemName, int value = 1)
   {
-    var existing = items.Keys.FirstOrDefault(k =>
-      string.Equals(k, name, StringComparison.OrdinalIgnoreCase));
-    if (existing != null) items[existing] += value;
-    else items[name] = value;
+    var existing = Items.Keys.FirstOrDefault(k =>
+      string.Equals(k, itemName, StringComparison.OrdinalIgnoreCase));
+    if (existing != null) Items[existing] += value;
+    else Items[itemName] = value;
   }
 
-  public void RemoveItem(string name)
+  public void RemoveItem(string itemName)
   {
-    var key = items.Keys.FirstOrDefault(k =>
-      string.Equals(k, name, StringComparison.OrdinalIgnoreCase));
+    var key = Items.Keys.FirstOrDefault(k =>
+      string.Equals(k, itemName, StringComparison.OrdinalIgnoreCase));
     if (key == null) return;
-    items[key]--;
-    if (items[key] <= 0) items.Remove(key);
+    Items[key]--;
+    if (Items[key] <= 0) Items.Remove(key);
   }
 
   public bool TryTakeItem(string requestedName, out string actualName)
   {
-    var key = items.Keys.FirstOrDefault(k =>
+    var key = Items.Keys.FirstOrDefault(k =>
       string.Equals(k, requestedName, StringComparison.OrdinalIgnoreCase));
-    if (key == null) { actualName = null; return false; }
-    items[key]--;
-    if (items[key] <= 0) items.Remove(key);
+    if (key == null) { actualName = ""; return false; }
+    Items[key]--;
+    if (Items[key] <= 0) Items.Remove(key);
     actualName = key;
     return true;
   }

@@ -10,7 +10,7 @@ class CommandActivate : BaseCommand, ICommand
     public string Execute (Context context, string command, string[] parameters)
     {
         
-        context.GetCurrent().items.Remove("illegal fishing boats");
+        context.GetCurrent().Items.Remove("illegal fishing boats");
         context.GetCurrent().AddItem("fishing net", 5);
         context.GetCurrent().AddItem("Scissors", 1);
 
