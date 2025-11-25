@@ -23,7 +23,7 @@ class Game {
     registry.Register("activate", new CommandActivate());
     registry.Register("cut", new CommandCut());
     registry.Register("clean", new CommandClean());
-    registry.Register("logbog", new CommandLogbook());
+    registry.Register("logbook", new CommandLogbook());
 
 
   }

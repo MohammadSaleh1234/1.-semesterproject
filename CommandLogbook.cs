@@ -4,14 +4,14 @@ class CommandLogbook : BaseCommand, ICommand
 {
     public CommandLogbook()
     {
-        description = "Viser logbogen for det level du står i.";
+        description = "Shows the logbook for your current level";
     }
 
     public void Execute(Context context, string command, string[] parameters)
     {
         if (parameters.Length > 0)
         {
-            Console.WriteLine("Skriv blot 'logbog' uden ekstra ord.");
+            Console.WriteLine("Just type 'logbook");
             return;
         }
 
@@ -34,7 +34,7 @@ class CommandLogbook : BaseCommand, ICommand
         }
         else
         {
-            Console.WriteLine("Dette område har ingen logbog.");
+            Console.WriteLine("This area has no logbook.");
         }
     }
 }
