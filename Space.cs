@@ -43,7 +43,8 @@ public class Space : Node
     }
     Console.WriteLine();
     // ====================================
-
+    Console.WriteLine("Type 'help' to see the commands!");
+    Console.WriteLine( );
     Console.WriteLine("You are now at the "+name);
 
       // Items på gulvet

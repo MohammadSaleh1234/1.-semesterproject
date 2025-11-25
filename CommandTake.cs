@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 
 class CommandTake : BaseCommand, ICommand
 {
@@ -55,6 +56,19 @@ class CommandTake : BaseCommand, ICommand
 
             Space current = context.GetCurrent();
             Game.trashManager.CollectTrash(current.GetName());
+
+         if (string.Equals(actualName, "plastic", StringComparison.OrdinalIgnoreCase))
+    {
+        Random rng = new Random();
+        int chance = rng.Next(1, 101);
+
+        if (chance <= 20)
+        {
+            space.AddItem("plastic", 1);
+            Console.WriteLine("🌊 A bird steals a piece of your trash and throws it back on the beach");
+        }
+    }
+
             // Efter skraldet er fjernet → tjek om der er mere tilbage i rummet
             if (!space.HasTrash())
             {
