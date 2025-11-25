@@ -22,6 +22,8 @@ class Game {
     registry.Register("brush", new CommandBrush());
     registry.Register("activate", new CommandActivate());
     registry.Register("cut", new CommandCut());
+    registry.Register("logbog", new CommandLogbook());
+
   }
 
   static void Main(string[] args) {
