@@ -20,15 +20,15 @@ class CommandLogbook : BaseCommand, ICommand
         string location = currentSpace.GetName();
 
         // Vis logbog afhængigt af level
-        if (location == "beach")
+        if (location == "Beach")
         {
             LevelIntro.ShowBeachIntro();
         }
-        else if (location == "coralreef")
+        else if (location == "Coralreef")
         {
             LevelIntro.ShowCoralIntro();
         }
-        else if (location == "ocean")
+        else if (location == "Ocean")
         {
             LevelIntro.ShowDeepSeaIntro();
         }
