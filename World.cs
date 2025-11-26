@@ -21,6 +21,7 @@ class World {
     coralquiz.AddEdge("Ocean", dybhavet);
     dybhavet.AddEdge("Quiz", oceanquiz);
 
+
     this.entry = entry;
 
     // tilføj items til et rum
