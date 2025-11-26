@@ -2,7 +2,7 @@
  */
 namespace Domain {
 
-class Registry {
+public class Registry {
   Context context;
   ICommand fallback;
   Dictionary<string, ICommand> commands = new Dictionary<string, ICommand>();

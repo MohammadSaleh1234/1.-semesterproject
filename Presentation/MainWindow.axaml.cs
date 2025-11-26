@@ -12,7 +12,7 @@ namespace Presentation
         private CommandGo goCommand;
         private CommandShowInventory inventoryCommand;
         private CommandTake takeCommand;
-
+        
         private Tool bag;
 
 
@@ -29,7 +29,7 @@ namespace Presentation
             takeCommand = new CommandTake();
 
             bag = new Tool("bag");
-            Game.inventory.AddTool(bag);
+            Player.inventory.AddTool(bag);
 
 
 

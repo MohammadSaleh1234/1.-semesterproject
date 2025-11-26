@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/maltepedersen/Desktop/1.-semesterproject-Grafik/Domain/Domain.csproj",
+      "projectUniqueName": "/Users/maltepedersen/Desktop/grafik/1.-semesterproject/Domain/Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "/Users/maltepedersen/Desktop/1.-semesterproject-Grafik/Domain/Domain.csproj",
+      "projectPath": "/Users/maltepedersen/Desktop/grafik/1.-semesterproject/Domain/Domain.csproj",
       "packagesPath": "/Users/maltepedersen/.nuget/packages/",
-      "outputPath": "/Users/maltepedersen/Desktop/1.-semesterproject-Grafik/Domain/obj/",
+      "outputPath": "/Users/maltepedersen/Desktop/grafik/1.-semesterproject/Domain/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/maltepedersen/.nuget/NuGet/NuGet.Config"

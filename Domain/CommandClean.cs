@@ -1,4 +1,4 @@
-/*namespace Domain;
+namespace Domain;
 
 class CommandClean : BaseCommand, ICommand
 {
@@ -30,6 +30,8 @@ public string Execute(Context context, string command, string[] parameters)
         return "You may now move on to the quiz!";
     }
 
+    return "Not Empty";
+
 
 }
-}*/
+}

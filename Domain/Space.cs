@@ -2,14 +2,19 @@
  */
 namespace Domain {
 
-public class Space : Node {
-  
-  public readonly Dictionary<string,int> Items = new Dictionary<string,int>();
-  
-  public Space (string name) : base(name)
+  public class Space : Node
   {
+    public Dictionary<string,int> items = new Dictionary<string,int>();
+    private string description;
 
-  }
+    public Space(string name, string description) : base(name) { this.description = description; }
+
+    public string GetDescription() {
+
+      return description;
+
+    }
+
   
   public virtual string Welcome () {
 
@@ -39,31 +44,44 @@ public class Space : Node {
   }
   public void AddItem(string itemName, int value = 1)
   {
-    var existing = Items.Keys.FirstOrDefault(k =>
+    var existing = items.Keys.FirstOrDefault(k =>
       string.Equals(k, itemName, StringComparison.OrdinalIgnoreCase));
-    if (existing != null) Items[existing] += value;
-    else Items[itemName] = value;
+    if (existing != null) items[existing] += value;
+    else items[itemName] = value;
   }
 
   public void RemoveItem(string itemName)
   {
-    var key = Items.Keys.FirstOrDefault(k =>
+    var key = items.Keys.FirstOrDefault(k =>
       string.Equals(k, itemName, StringComparison.OrdinalIgnoreCase));
     if (key == null) return;
-    Items[key]--;
-    if (Items[key] <= 0) Items.Remove(key);
+    items[key]--;
+    if (items[key] <= 0) items.Remove(key);
   }
 
   public bool TryTakeItem(string requestedName, out string actualName)
   {
-    var key = Items.Keys.FirstOrDefault(k =>
+    var key = items.Keys.FirstOrDefault(k =>
       string.Equals(k, requestedName, StringComparison.OrdinalIgnoreCase));
     if (key == null) { actualName = ""; return false; }
-    Items[key]--;
-    if (Items[key] <= 0) Items.Remove(key);
+    items[key]--;
+    if (items[key] <= 0) items.Remove(key);
     actualName = key;
     return true;
   }
+  public bool HasTrash()
+  {
+    // true hvis der findes et item-navn i rummet som ToolRegistry kalder Trash
+    return items.Keys.Any(name => ToolRegistry.IsTrash(name));
+  }
+
+  //Kode som
+  private bool isDirty = false;
+
+  public void SetDirty(bool dirty) => isDirty = dirty;
+  public bool IsDirty => isDirty;
+}
 
 }
-}
+
+

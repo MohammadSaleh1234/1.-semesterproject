@@ -31,5 +31,9 @@ public class Context {
   public bool IsDone () {
     return done;
   }
+  public Space CurrentSpace => current;   // <- hvis dit felt hedder noget andet, brug det navn
+
+  // (valgfrit – hvis du vil have både property og metode)
+  public Space GetCurrentSpace() => CurrentSpace;
 }
 }

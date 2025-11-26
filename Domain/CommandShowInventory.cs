@@ -14,12 +14,12 @@ public class CommandShowInventory : BaseCommand, ICommand {
             System.Text.StringBuilder sb = new
             System.Text.StringBuilder("=== Inventory ==="+"\n");
 
-            if (Game.inventory.tools.Count == 0) {
+            if (Player.inventory.tools.Count == 0) {
                 sb.AppendLine("Empty");
             }
             else
             {
-                foreach (Tool tool in Game.inventory.tools) {
+                foreach (Tool tool in Player.inventory.tools) {
                     sb.AppendLine(string.Format(" - "+tool.GetName()));
                  }
             }

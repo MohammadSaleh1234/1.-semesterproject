@@ -1,26 +1,29 @@
-/* Main class for launching the game
- */
-namespace Domain {
+using System;
 
-public class Game {
-  public static Inventory inventory = new Inventory();
-  static World    world    = new World();
-  static Context  context  = new Context(world.GetEntry());
-  static ICommand fallback = new CommandUnknown();
-  static Registry registry = new Registry(context, fallback);
-  static Player player = new Player(context, registry);
+namespace Domain
+{
+  public class Game
+  {
+    public static TrashManager trashManager = new TrashManager();
+    static World world = new World();
+    public static Context context = new Context(world.GetEntry());
+    static ICommand fallback = new CommandUnknown();
+    static Registry registry = new Registry(context, fallback);
+    public static Player player = new Player(registry);
 
-  private static void InitRegistry () {
-    ICommand cmdExit = new CommandExit();
-    registry.Register("take", new CommandTake());
-    registry.Register("exit", cmdExit);
-    registry.Register("quit", cmdExit);
-    registry.Register("bye", cmdExit);
-    registry.Register("go", new CommandGo());
-    registry.Register("help", new CommandHelp(registry));
-    registry.Register("show", new CommandShowInventory());
+
+
+    private static void InitRegistry()
+    {
+      ICommand cmdExit = new CommandExit();
+      registry.Register("exit", cmdExit);
+      registry.Register("go", new CommandGo());
+      registry.Register("help", new CommandHelp(registry));
+      registry.Register("take", new CommandTake());
+      registry.Register("show", new CommandShowInventory());
+      registry.Register("activate", new CommandActivate());
+      registry.Register("cut", new CommandCut());
+      registry.Register("clean", new CommandClean());
+    }
   }
-
-
-}
-}
+}  

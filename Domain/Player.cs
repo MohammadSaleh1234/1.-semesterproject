@@ -1,22 +1,37 @@
 /* Player class for executing commands */
-namespace Domain {
+namespace Domain
+{
 
-class Player {
+    public class Player
+    {
+        public static Inventory inventory = new Inventory();
 
-    Context context;
-    Registry registry;
+        Registry registry;
 
-    public Player (Context context, Registry registry){
+        public Player(Registry registry)
+        {
 
-        this.context = context;
-        this.registry = registry;
+
+            this.registry = registry;
+
+        }
+
+
+        public void ExecuteCommand(string inputLine)
+        {
+            registry.Dispatch(inputLine);
+        }
+
+
+        public int highscore(int beachScore, int coralScore, int oceanScore)
+        {
+            int highscore = 0;
+
+            highscore = beachScore + coralScore + oceanScore;
+
+            return highscore;
+        }
+
 
     }
-
-
-    public void ExecuteCommand(string inputLine) {
-        registry.Dispatch(inputLine);
-    }
-
-}
 }
