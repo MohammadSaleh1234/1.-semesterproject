@@ -39,7 +39,6 @@ namespace Presentation
 
             //buttons
             ExitGameButton.Click += OnExitGameClicked;
-            ShowInventoryButton.Click += OnShowInventoryClicked;
         }
 
         //updates on room change
@@ -47,6 +46,10 @@ namespace Presentation
         {
 
             OutputTextBlock.Text = context.GetCurrent().Welcome();
+            
+            string inventoryContents = inventoryCommand.Execute(context, "show", new string[] { "inventory" });
+            InventoryTextBlock.Text = inventoryContents;
+                
             ExitsPanel.Children.Clear();
 
             foreach (string exit in context.GetCurrent().GetExits())
@@ -62,18 +65,7 @@ namespace Presentation
                 ExitsPanel.Children.Add(button);
             }
         }
-
-        //open inventory method
-        private void OnShowInventoryClicked(object? sender, RoutedEventArgs e)
-        {
-            inventoryCommand = new CommandShowInventory();
-            string result = inventoryCommand.Execute(context, "show", new string[] { "inventory" });
-            OutputTextInventory.Text = result;
-
-
-            UpdateUI();
-
-        }
+        
 
 
         //close game method

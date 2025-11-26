@@ -22,6 +22,12 @@
                HorizontalAlignment="Center"
                FontSize="24"/>
 
+    <TextBlock Grid.Row="0"
+               x:Name="InventoryTextBlock"
+               VerticalAlignment="Top"
+               HorizontalAlignment="Left"
+               FontSize="24"/>
+    
     <StackPanel Grid.Row="1"
                 Orientation="Vertical"
                 HorizontalAlignment="Center"
@@ -38,10 +44,6 @@
                   Orientation="Vertical"
                   HorizontalAlignment="Center"
                   Spacing="10"/>
-
-      <Button x:Name="ShowInventoryButton"
-                Content="Open inventory"
-                />
 
 
       <Button x:Name="ExitGameButton"

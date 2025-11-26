@@ -1437,11 +1437,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/maltepedersen/Desktop/1.-semesterproject/Presentation/Presentation.csproj",
+      "projectUniqueName": "/Users/maltepedersen/Desktop/1.-semesterproject-Grafik/Presentation/Presentation.csproj",
       "projectName": "Presentation",
-      "projectPath": "/Users/maltepedersen/Desktop/1.-semesterproject/Presentation/Presentation.csproj",
+      "projectPath": "/Users/maltepedersen/Desktop/1.-semesterproject-Grafik/Presentation/Presentation.csproj",
       "packagesPath": "/Users/maltepedersen/.nuget/packages/",
-      "outputPath": "/Users/maltepedersen/Desktop/1.-semesterproject/Presentation/obj/",
+      "outputPath": "/Users/maltepedersen/Desktop/1.-semesterproject-Grafik/Presentation/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/maltepedersen/.nuget/NuGet/NuGet.Config"
@@ -1457,8 +1457,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/Users/maltepedersen/Desktop/1.-semesterproject/Domain/Domain.csproj": {
-              "projectPath": "/Users/maltepedersen/Desktop/1.-semesterproject/Domain/Domain.csproj"
+            "/Users/maltepedersen/Desktop/1.-semesterproject-Grafik/Domain/Domain.csproj": {
+              "projectPath": "/Users/maltepedersen/Desktop/1.-semesterproject-Grafik/Domain/Domain.csproj"
             }
           }
         }
