@@ -4,7 +4,7 @@ class CommandCut : BaseCommand, ICommand
 {
     public CommandCut()
     {
-        description = "cut down fishing net.";
+        description = "cut net.";
     }
 
     public void Execute(Context context, string command, string[] parameters)
@@ -28,14 +28,14 @@ class CommandCut : BaseCommand, ICommand
 
         var items = context.GetCurrent().items;
 
-        if (!wanted.Equals("net") || !items.ContainsKey("fishing net")) {
+        if (!wanted.Equals("net") || !items.ContainsKey("Fishing net")) {
 
             Console.WriteLine($"You couldn't seem to find '{wanted}'.");
             return;
 
         }
 
-        context.GetCurrent().RemoveItem("fishing net");
+        context.GetCurrent().RemoveItem("Fishing net");
         Console.WriteLine();
         Space current = context.GetCurrent();
         Game.trashManager.CollectTrash(current.GetName());

@@ -4,7 +4,7 @@ class CommandClean : BaseCommand, ICommand
 {
     public CommandClean()
     {
-        description = "Clean the coral reef using a brush";
+        description = "Clean coral";
     }
 
     public void Execute(Context context, string command, string[] parameters)

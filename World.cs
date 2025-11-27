@@ -25,15 +25,15 @@ class World {
     this.entry = entry;
 
     // tilføj items til et rum
-    strand.AddItem("trashbag", 1);
-    strand.AddItem("plastic", 5);
+    strand.AddItem("Trashbag", 1);
+    strand.AddItem("Plastic", 5);
     strand.SetDirty(true);
 
     coralrevet.AddItem("Brush", 1);
     coralrevet.AddItem("Algae covered corals", 5);
     coralrevet.SetDirty(true);
 
-    dybhavet.AddItem("illegal fishing boats", 5);
+    dybhavet.AddItem("Illegal fishing boats", 5);
     dybhavet.SetDirty(true);
 
     // Lav dine tools
