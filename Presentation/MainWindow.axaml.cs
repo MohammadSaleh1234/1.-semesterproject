@@ -1,77 +1,22 @@
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Layout;
+using Avalonia.Rooms;
 using Domain;
 using System;
 
 namespace Presentation
 {
     public partial class MainWindow : Window
+{
+	public static MainWindow ActiveWindow;
+
+    public MainWindow()
     {
-        private Context context;
-        private CommandGo goCommand;
-        private CommandShowInventory inventoryCommand;
-        private CommandTake takeCommand;
-        
-        private Tool bag;
-
-
-        public MainWindow()
-        {
-            InitializeComponent();
-
-            World world = new World();
-            context = new Context(world.GetEntry());
-
-            //commands
-            goCommand = new CommandGo();
-            inventoryCommand = new CommandShowInventory();
-            takeCommand = new CommandTake();
-
-            bag = new Tool("bag");
-            Player.inventory.AddTool(bag);
-
-
-
-
-            UpdateUI();
-
-
-            //buttons
-            ExitGameButton.Click += OnExitGameClicked;
-        }
-
-        //updates on room change
-        private void UpdateUI()
-        {
-
-            OutputTextBlock.Text = context.GetCurrent().Welcome();
-            
-            string inventoryContents = inventoryCommand.Execute(context, "show", new string[] { "inventory" });
-            InventoryTextBlock.Text = inventoryContents;
-                
-            ExitsPanel.Children.Clear();
-
-            foreach (string exit in context.GetCurrent().GetExits())
-            {
-                var button = new Button { Content = $"Go to {exit}" };
-
-                void OnButtonClicked(object sender, RoutedEventArgs e){
-                    string result = goCommand.Execute(context, "go", new string[] { exit });
-                    OutputTextBlock.Text = result;
-                    UpdateUI();
-                }
-                button.Click += OnButtonClicked;
-                ExitsPanel.Children.Add(button);
-            }
-        }
-        
-
-
-        //close game method
-        private void OnExitGameClicked(object? sender, RoutedEventArgs e)
-        {
-            Close();
-        }
+        InitializeComponent();
+		ActiveWindow = this;
+        MainContent.Content = new Entry();
+    }		
+      
     }
 }
