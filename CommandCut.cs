@@ -4,7 +4,7 @@ class CommandCut : BaseCommand, ICommand
 {
     public CommandCut()
     {
-        description = "cut net.";
+        description = "Cut net";
     }
 
     public void Execute(Context context, string command, string[] parameters)
