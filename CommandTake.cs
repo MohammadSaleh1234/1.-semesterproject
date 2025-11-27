@@ -11,7 +11,7 @@ class CommandTake : BaseCommand, ICommand
     };
 
     public CommandTake() {
-        description = "Pick up a specific tool (trashbag, brush, scissors)";
+        description = "Pick up a specific tool (Trashbag, brush and scissors)";
     }
 
     public void Execute(Context context, string command, string[] parameters)

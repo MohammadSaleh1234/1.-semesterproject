@@ -16,6 +16,7 @@ static class ToolRegistry
         ["Scissors"] = ToolType.Scissors,
         ["net"] = ToolType.Trash,
         ["Illegal fishing boats"] = ToolType.Trash,
+        ["Fishing net"] = ToolType.Trash,
     };
 
     public static Tool CreateTool(string name)
