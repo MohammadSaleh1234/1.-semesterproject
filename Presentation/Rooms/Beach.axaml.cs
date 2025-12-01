@@ -41,6 +41,9 @@ namespace Avalonia.Rooms
        {
 	       //add tool
 	       Game.player.inventory.AddTool(trashbag);
+
+	       //fjerner knappen efter man har trykket
+	       ToolButton.IsVisible = false;
 	       
 	       //refresh inventory
 	       inventoryCommand = new CommandShowInventory();
