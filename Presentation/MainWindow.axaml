@@ -7,5 +7,6 @@
     <!-- Single Grid hosting room content -->
     <Grid>
         <ContentControl x:Name="MainContent"/>
+        
     </Grid>
 </Window>

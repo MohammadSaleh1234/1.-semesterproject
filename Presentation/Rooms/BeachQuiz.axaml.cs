@@ -12,6 +12,7 @@ namespace Avalonia.Rooms
         {
             InitializeComponent();
             GoCoralButton.Click += OnCoralClick;
+            
         }
 
         private void OnCoralClick(object? sender, RoutedEventArgs e)

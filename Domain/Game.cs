@@ -12,7 +12,6 @@ namespace Domain
     public static Player player = new Player(registry);
 
 
-
     private static void InitRegistry()
     {
       ICommand cmdExit = new CommandExit();

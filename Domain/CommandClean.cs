@@ -11,7 +11,7 @@ public string Execute(Context context, string command, string[] parameters)
 {
     
     var wanted = parameters[0];
-    var inventory = Player.inventory;
+    var inventory = Game.player.inventory;
 
     if (ToolRegistry.IsTrash(wanted) && !inventory.HasType(ToolType.Brush))
     {

@@ -8,10 +8,16 @@ namespace Avalonia.Rooms
 {
     public partial class Ocean : UserControl
     {
+        private Context context;
+        private CommandShowInventory inventoryCommand;
         public Ocean()
         {
             InitializeComponent();
             GoQuizButton.Click += OnQuizClick;
+            
+            inventoryCommand = new CommandShowInventory();
+            string result = inventoryCommand.Execute(context, "show", new string[] { "inventory" });
+            OutputTextInventory.Text = result;
         }
 		
         private void OnQuizClick (object? sender, RoutedEventArgs e) {

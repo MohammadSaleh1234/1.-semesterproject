@@ -9,6 +9,11 @@
                    VerticalAlignment="Center"
                    FontSize="48"
                    Grid.Row="0"/>
+
+        <TextBlock x:Name="OutputTextInventory"
+               VerticalAlignment="Top"
+               HorizontalAlignment="Center"
+               FontSize="24"/>
         
        
         <Button x:Name="GoQuizButton"
@@ -16,5 +21,11 @@
                 HorizontalAlignment="Center"
                 Margin="0,20"
                 Grid.Row="1"/>
+        
+        <Button x:Name="ToolButton"
+                Content="Take Trashbag"
+                HorizontalAlignment="Left"
+                Margin="0,20"
+                Grid.Row="0"/>
     </Grid>
 </UserControl>

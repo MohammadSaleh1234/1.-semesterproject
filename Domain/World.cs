@@ -29,6 +29,7 @@ namespace Domain {
       this.entry = entry;
 
       // tilføj items til et rum
+      entry.AddItem("trashbag", 1);
       strand.AddItem("trashbag", 1);
       strand.AddItem("plastic", 5);
       strand.SetDirty(true);

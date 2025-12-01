@@ -4,7 +4,7 @@ namespace Domain
 
     public class Player
     {
-        public static Inventory inventory = new Inventory();
+        public Inventory inventory = new Inventory();
 
         Registry registry;
 
@@ -17,9 +17,9 @@ namespace Domain
         }
 
 
-        public void ExecuteCommand(string inputLine)
+        public string ExecuteCommand(string inputLine)
         {
-            registry.Dispatch(inputLine);
+            return registry.Dispatch(inputLine);
         }
 
 

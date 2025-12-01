@@ -6,8 +6,6 @@ namespace Domain
 
     public class Inventory
     {
-
-
         public List<Tool> tools = new List<Tool>();
 
         public string AddTool(Tool tool)
@@ -17,6 +15,8 @@ namespace Domain
             {
                 return "You already have a that";
             }
+            
+                tools.Add(tool);
 
             return "added";
         }

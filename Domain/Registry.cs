@@ -16,11 +16,11 @@ public class Registry {
     commands.Add(name, command);
   }
 
-  public void Dispatch (string line) {
+  public string Dispatch (string line) {
     string[] elements = line.Split(" ");
     string command = elements[0];
     string[] parameters = GetParameters(elements);
-    (commands.ContainsKey(command) ? GetCommand(command) : fallback).Execute(context, command, parameters);
+    return (commands.ContainsKey(command) ? GetCommand(command) : fallback).Execute(context, command, parameters);
   }
 
   public ICommand GetCommand (string commandName) {

@@ -8,10 +8,16 @@ namespace Avalonia.Rooms
 {
     public partial class Entry : UserControl
     {
+        
+        private Context context;
+        private CommandShowInventory inventoryCommand;
+        
+        
         public Entry()
         {
             InitializeComponent();
             GoBeachButton.Click += OnBeachClick;
+
         }
 
         private void OnBeachClick(object? sender, RoutedEventArgs e)
@@ -20,5 +26,6 @@ namespace Avalonia.Rooms
             MainWindow.ActiveWindow.Content = new Beach();
             
         }
+        
     }
 }

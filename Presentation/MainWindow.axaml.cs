@@ -8,7 +8,12 @@ using System;
 namespace Presentation
 {
     public partial class MainWindow : Window
+    
+    
 {
+    private Context context;
+    
+    private CommandShowInventory inventoryCommand;
 	public static MainWindow ActiveWindow;
 
     public MainWindow()
@@ -16,7 +21,7 @@ namespace Presentation
         InitializeComponent();
 		ActiveWindow = this;
         MainContent.Content = new Entry();
-    }		
-      
+    }
+    
     }
 }

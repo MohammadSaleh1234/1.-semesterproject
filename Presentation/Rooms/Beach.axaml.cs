@@ -8,10 +8,26 @@ namespace Avalonia.Rooms
 {
     public partial class Beach : UserControl
     {
+	    private Context context;
+	    private CommandShowInventory inventoryCommand;
+	    
+	    private Tool trashbag;
         public Beach()
         {
             InitializeComponent();
-			 GoQuizButton.Click += OnQuizClick;
+            
+            //buttons
+	        GoQuizButton.Click += OnQuizClick;
+	        ToolButton.Click += OnToolClick;
+	        
+	        //tools in the room
+			trashbag = new Tool("trashbag");
+	        
+	        //shows inventory when entering room
+	        inventoryCommand = new CommandShowInventory();
+	        string result = inventoryCommand.Execute(context, "show", new string[] { "inventory" });
+	        OutputTextInventory.Text = result;
+
         }
 		
 		private void OnQuizClick (object? sender, RoutedEventArgs e) {
@@ -19,6 +35,19 @@ namespace Avalonia.Rooms
 			Game.player.ExecuteCommand("go quiz");
 			MainWindow.ActiveWindow.Content = new BeachQuiz();
 		
+       }
+		
+       private void OnToolClick(object? sender, RoutedEventArgs e)
+       {
+	       //add tool
+	       Game.player.inventory.AddTool(trashbag);
+	       
+	       //refresh inventory
+	       inventoryCommand = new CommandShowInventory();
+	       string result = inventoryCommand.Execute(context, "show", new string[] { "inventory" });
+	       OutputTextInventory.Text = result;                                                  
+
+            
        }
 	}
 }
