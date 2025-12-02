@@ -1,7 +1,7 @@
 namespace Domain
 {
     
-        class CommandCut : BaseCommand, ICommand
+        public class CommandCut : BaseCommand, ICommand
         {
             public CommandCut()
             {

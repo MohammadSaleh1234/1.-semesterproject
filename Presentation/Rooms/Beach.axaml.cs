@@ -9,30 +9,38 @@ namespace Avalonia.Rooms
     public partial class Beach : UserControl
     {
 	    private Context context;
-	    private CommandShowInventory inventoryCommand;
+
+	    private Game game;
 	    
 	    private Tool trashbag;
         public Beach()
         {
             InitializeComponent();
+
+            OutputTextFact.IsVisible = false;
             
             //buttons
 	        GoQuizButton.Click += OnQuizClick;
 	        ToolButton.Click += OnToolClick;
 	        
+	        //buttons til plastic
+	        Plastic1Button.Click += OnPlasticClick;
+	        Plastic2Button.Click += OnPlasticClick;
+	        Plastic3Button.Click += OnPlasticClick;
+	        Plastic4Button.Click += OnPlasticClick;
+	        Plastic5Button.Click += OnPlasticClick;
+	        
 	        //tools in the room
 			trashbag = new Tool("trashbag");
 	        
 	        //shows inventory when entering room
-	        inventoryCommand = new CommandShowInventory();
-	        string result = inventoryCommand.Execute(context, "show", new string[] { "inventory" });
+	        string result = Game.player.ExecuteCommand("show inventory");
 	        OutputTextInventory.Text = result;
 
         }
 		
 		private void OnQuizClick (object? sender, RoutedEventArgs e) {
-
-			Game.player.ExecuteCommand("go quiz");
+			
 			MainWindow.ActiveWindow.Content = new BeachQuiz();
 		
        }
@@ -46,11 +54,25 @@ namespace Avalonia.Rooms
 	       ToolButton.IsVisible = false;
 	       
 	       //refresh inventory
-	       inventoryCommand = new CommandShowInventory();
-	       string result = inventoryCommand.Execute(context, "show", new string[] { "inventory" });
+	       string result = Game.player.ExecuteCommand("show inventory");
 	       OutputTextInventory.Text = result;                                                  
 
             
+       }
+
+       private void OnPlasticClick(object? sender, RoutedEventArgs e)
+       {
+	       
+	       string result = Game.player.ExecuteCommand("take plastic");
+	       OutputTextFact.Text = result;
+	       
+	       if (sender is Button button)
+	       {
+		       button.IsVisible = false;
+	       }
+	       
+	       OutputTextFact.IsVisible = true;
+	       
        }
 	}
 }
