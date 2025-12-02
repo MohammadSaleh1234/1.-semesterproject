@@ -17,7 +17,6 @@ namespace Avalonia.Rooms
 
         private void OnCoralClick(object? sender, RoutedEventArgs e)
         {
-            Game.player.ExecuteCommand("go to the coralreef");
             MainWindow.ActiveWindow.Content = new Coralreef();
         }
     }

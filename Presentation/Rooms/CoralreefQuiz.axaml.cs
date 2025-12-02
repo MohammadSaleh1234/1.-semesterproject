@@ -16,7 +16,6 @@ namespace Avalonia.Rooms
 
         private void OnOceanClick(object? sender, RoutedEventArgs e)
         {
-            Game.player.ExecuteCommand("go to the ocean");
             MainWindow.ActiveWindow.Content = new Ocean();
         }
     }

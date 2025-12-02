@@ -1,7 +1,7 @@
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="Avalonia.Rooms.Beach">
-    <Grid RowDefinitions="*,Auto">
+    <Grid RowDefinitions="*,Auto, Auto, Auto">
        
 
         <TextBlock Text="Beach Room"
@@ -13,7 +13,44 @@
         <TextBlock x:Name="OutputTextInventory"
                VerticalAlignment="Top"
                HorizontalAlignment="Center"
-               FontSize="24"/>
+               FontSize="24"
+               Grid.Row="0"/>
+               
+
+        <TextBlock x:Name="OutputTextFact"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontSize="48"
+                Grid.Row="1"/>
+        
+               <Button x:Name="Plastic1Button"
+                Content="Plastic1"
+                HorizontalAlignment="Center"
+                Margin="150,20"
+                Grid.Row="2"/>
+                
+                <Button x:Name="Plastic2Button"
+                Content="Plastic2"
+                HorizontalAlignment="Left"
+                Margin="150,20"
+                Grid.Row="2"/>
+                
+                <Button x:Name="Plastic3Button"
+                Content="Plastic3"
+                HorizontalAlignment="Right"
+                Margin="150,20"
+                Grid.Row="2"/>
+            
+                <Button x:Name="Plastic4Button"
+                Content="Plastic4"
+                Margin="10,30"
+                Grid.Row="1"/>
+                   
+                <Button x:Name="Plastic5Button"
+                Content="Plastic5"
+                HorizontalAlignment="Right"
+                Margin="250,30"
+                Grid.Row="3"/>
         
        
         <Button x:Name="GoQuizButton"

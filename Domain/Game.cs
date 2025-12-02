@@ -11,6 +11,10 @@ namespace Domain
     static Registry registry = new Registry(context, fallback);
     public static Player player = new Player(registry);
 
+    static Game()
+    {
+      InitRegistry();
+    }
 
     private static void InitRegistry()
     {

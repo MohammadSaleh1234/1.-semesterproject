@@ -9,10 +9,12 @@ namespace Avalonia.Rooms
     public partial class Ocean : UserControl
     {
         private Context context;
-        private CommandShowInventory inventoryCommand;
+        private Game game;
+        
         public Ocean()
         {
             InitializeComponent();
+            
             GoQuizButton.Click += OnQuizClick;
             BoatButton.Click += OnBoatClick;
             
@@ -24,14 +26,12 @@ namespace Avalonia.Rooms
 
             HideNet();
             
-            inventoryCommand = new CommandShowInventory();
-            string result = inventoryCommand.Execute(context, "show", new string[] { "inventory" });
+            string result = Game.player.ExecuteCommand("show inventory");
             OutputTextInventory.Text = result;
         }
 		
         private void OnQuizClick (object? sender, RoutedEventArgs e) {
-
-            Game.player.ExecuteCommand("go quiz");
+            
             MainWindow.ActiveWindow.Content = new OceanQuiz();
 		
         }
@@ -45,9 +45,11 @@ namespace Avalonia.Rooms
 
         private void OnNetClick(object? sender, RoutedEventArgs e)
         {
-            if (sender is Button netButton)
+            
+            
+            if (sender is Button button)
             {
-                netButton.IsVisible = false;
+                button.IsVisible = false;
             }
         }
 

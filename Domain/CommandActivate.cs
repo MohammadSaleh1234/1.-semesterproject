@@ -1,6 +1,6 @@
 namespace Domain;
 
-class CommandActivate : BaseCommand, ICommand
+public class CommandActivate : BaseCommand, ICommand
 {
     public CommandActivate()
     {

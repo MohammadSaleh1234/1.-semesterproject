@@ -32,8 +32,7 @@ namespace Avalonia.Rooms
         }
 		
         private void OnQuizClick (object? sender, RoutedEventArgs e) {
-
-            Game.player.ExecuteCommand("go quiz");
+            
             MainWindow.ActiveWindow.Content = new CoralreefQuiz();
 		
         }
@@ -45,7 +44,7 @@ namespace Avalonia.Rooms
             
             //refresh inventory
             inventoryCommand = new CommandShowInventory();
-            string result = inventoryCommand.Execute(context, "show", new string[] { "inventory" });
+            string result = Game.player.ExecuteCommand("show inventory");
             OutputTextInventory.Text = result;
         }
     }
