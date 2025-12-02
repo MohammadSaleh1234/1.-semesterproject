@@ -5,9 +5,9 @@
         Title="The Ocean Code">
 
 
-        <Window.Background>
-            <ImageBrush Source="avares://Presentation/Assets/Rooms/Vandhavetsaleh.png"/>
-
+        <Window.Background> <!-- det her er skabelonen til at lave en baggrund -->
+            <ImageBrush Source="avares://Presentation/Assets/Rooms/Vandhavetsaleh.png"
+            Stretch="UniformToFill"/>
         </Window.Background>
 
     <!-- Single Grid hosting room content -->
