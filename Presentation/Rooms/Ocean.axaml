@@ -3,11 +3,19 @@
              x:Class="Avalonia.Rooms.Ocean">
     <Grid RowDefinitions="*,Auto, Auto, Auto">
         
-        <TextBlock Text="Ocean Room"
+        <TextBlock x:Name="room"
+                   Text="Ocean Room"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"
                    FontSize="48"
                    Grid.Row="0"/>
+
+        <TextBlock x:Name="OutputTextFact"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="48"
+                   Grid.Row="0"/>
+        
 
         <TextBlock x:Name="OutputTextInventory"
                VerticalAlignment="Top"
