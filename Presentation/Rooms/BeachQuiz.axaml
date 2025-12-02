@@ -2,6 +2,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="Avalonia.Rooms.BeachQuiz">
     <Grid RowDefinitions="*,Auto">
+
+    <Grid> <!-- det her er skabelonen til at lave et billede i et room -->
+    <Image Source="avares://Presentation/Assets/Rooms/strandskrald.jpg"
+           HorizontalAlignment="Center"
+           VerticalAlignment="Center"
+           Width="350"
+           Height="300"/>
+
+</Grid>
       
         <TextBlock Text="Quiz Room"
                    HorizontalAlignment="Center"

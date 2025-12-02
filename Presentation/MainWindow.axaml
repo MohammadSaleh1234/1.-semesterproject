@@ -6,6 +6,7 @@
 
 
         <Window.Background>
+            <ImageBrush Source="avares://Presentation/Assets/Rooms/Vandhavetsaleh.png"/>
         </Window.Background>
 
     <!-- Single Grid hosting room content -->
