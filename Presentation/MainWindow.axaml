@@ -4,6 +4,11 @@
         x:Class="Presentation.MainWindow"
         Title="The Ocean Code">
 
+
+        <Window.Background>
+            <ImageBrush Source=""
+        </Window.Background>
+
     <!-- Single Grid hosting room content -->
     <Grid>
         <ContentControl x:Name="MainContent"/>
