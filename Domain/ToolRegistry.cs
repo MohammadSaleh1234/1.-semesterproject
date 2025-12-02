@@ -16,8 +16,8 @@ namespace Domain
                 ["Coral"] = ToolType.Trash,
                 ["Brush"] = ToolType.Brush,
                 ["Scissors"] = ToolType.Scissors,
-                ["fishing net"] = ToolType.Trash,
-                ["illegal fishing boats"] = ToolType.Trash,
+                ["Fishing net"] = ToolType.Trash,
+                ["Illegal fishing boats"] = ToolType.Trash,
             };
 
         public static Tool CreateTool(string name)

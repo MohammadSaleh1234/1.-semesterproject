@@ -22,6 +22,7 @@ namespace Avalonia.Rooms
 
         private void OnBeachClick(object? sender, RoutedEventArgs e)
         {
+            Game.player.ExecuteCommand("go beach");
             MainWindow.ActiveWindow.Content = new Beach();
             
         }

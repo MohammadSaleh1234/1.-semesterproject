@@ -14,6 +14,7 @@ namespace Avalonia.Rooms
         public Ocean()
         {
             InitializeComponent();
+            OutputTextFact.IsVisible = false;
             
             GoQuizButton.Click += OnQuizClick;
             BoatButton.Click += OnBoatClick;
@@ -32,12 +33,14 @@ namespace Avalonia.Rooms
 		
         private void OnQuizClick (object? sender, RoutedEventArgs e) {
             
+			Game.player.ExecuteCommand("go quiz");
             MainWindow.ActiveWindow.Content = new OceanQuiz();
 		
         }
 
         private void OnBoatClick(object? sender, RoutedEventArgs e)
         {
+            Game.player.ExecuteCommand("activate sirens");
             BoatButton.IsVisible = false;
             ShowNet();
 
@@ -45,7 +48,11 @@ namespace Avalonia.Rooms
 
         private void OnNetClick(object? sender, RoutedEventArgs e)
         {
-            
+            room.IsVisible = false;
+
+            string result = Game.player.ExecuteCommand("cut net");
+            OutputTextFact.Text = result;
+            OutputTextFact.IsVisible = true;
             
             if (sender is Button button)
             {

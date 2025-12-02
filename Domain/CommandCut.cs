@@ -27,7 +27,7 @@ namespace Domain
 
                 var items = context.GetCurrent().items;
 
-                if (!wanted.Equals("net") || !items.ContainsKey("fishing net"))
+                if (!wanted.Equals("net") || !items.ContainsKey("Fishing net"))
                 {
 
                     return "You couldn't seem to find '{wanted}'.";

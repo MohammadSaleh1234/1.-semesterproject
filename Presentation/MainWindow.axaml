@@ -6,7 +6,6 @@
 
 
         <Window.Background>
-            <ImageBrush Source=""
         </Window.Background>
 
     <!-- Single Grid hosting room content -->

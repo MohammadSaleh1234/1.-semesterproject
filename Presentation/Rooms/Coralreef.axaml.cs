@@ -33,6 +33,7 @@ namespace Avalonia.Rooms
 		
         private void OnQuizClick (object? sender, RoutedEventArgs e) {
             
+			Game.player.ExecuteCommand("go quiz");
             MainWindow.ActiveWindow.Content = new CoralreefQuiz();
 		
         }

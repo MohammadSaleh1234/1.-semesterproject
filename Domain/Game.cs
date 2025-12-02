@@ -5,7 +5,7 @@ namespace Domain
   public class Game
   {
     public static TrashManager trashManager = new TrashManager();
-    static World world = new World();
+    public static World world = new World();
     public static Context context = new Context(world.GetEntry());
     static ICommand fallback = new CommandUnknown();
     static Registry registry = new Registry(context, fallback);
