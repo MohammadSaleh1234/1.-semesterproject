@@ -96,31 +96,31 @@ namespace Domain
             new Trash(
                 "Heavy rope",
                 "A piece of thick, heavy rope lies at the bottom.",
-                "💡 About 30% of fish in the world are overfished – that is like if someone is eating your snacks faster than you can buy new ones."
+                "💡 About 30% of fish in the world are overfished – that is like if someone is \n eating your snacks faster than you can buy new ones."
             ),
             // Item/Fun Fact 2
             new Trash(
                 "Old boot",
                 "You see the outline of an old boot.",
-                "💡 Every minute, about a truckload of plastic ends up in the ocean - in a day, that is the equivalent of 1.440 trucks."
+                "💡 Every minute, about a truckload of plastic ends up in the ocean. \n In a day, that is the equivalent of 1.440 trucks."
             ),
             // Item/Fun Fact 3
             new Trash(
                 "Bottleneck",
                 "A broken off bottleneck sticks out of the sediment.",
-                "💡 There is on average 13.000 pieces of plastic waste per square kilometer in the ocean – it is like swimming in water filled with plastic bags and bottles."
+                "💡 There is on average 13.000 pieces of plastic waste per square kilometer in the ocean. \n It is like swimming in water filled with plastic bags and bottles."
             ),
             // Item/Fun Fact 4
             new Trash(
                 "Net-fragment",
                 "A heavy piece of net-fragment lies at the bottom.",
-                "💡 Some fishermen get so excited about selling fishing that they catch way too many! But then the ocean will run out of fish friends, and the balance will fall!"
+                "💡 Some fishermen get so excited about selling fishing that they catch way too many! \n But then the ocean will run out of fish friends, and the balance will fall!"
             ),
             // Item/Fun Fact 5
             new Trash(
                 "Plastic bag",
                 "A white plastic bag has descended from the surface.",
-                "💡 Sea turtles often confuse plastic bags for jellyfish, which are their favorite food. But when they eat plastic, they can get sick and even die."
+                "💡 Sea turtles often confuse plastic bags for jellyfish, which are their favorite food. \n But when they eat plastic, they can get sick and even die."
             )
         };
 

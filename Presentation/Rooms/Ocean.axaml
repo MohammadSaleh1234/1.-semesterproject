@@ -68,8 +68,8 @@
                 </Button>
             
                 <Button x:Name="Net4Button"
-                		Width="150"
-                        Height="150"
+                		Width="120"
+                        Height="120"
                 		Background="Transparent"
                         BorderBrush="Transparent"
 						VerticalAlignment="Bottom"
@@ -82,8 +82,8 @@
                 </Button>
                    
                 <Button x:Name="Net5Button"
- 						Width="200"
-                        Height="200"
+ 						Width="130"
+                        Height="130"
                 		HorizontalAlignment="Left"
 						VerticalAlignment="Bottom"
                 		Margin="100"
@@ -97,10 +97,17 @@
 
 
         <Button x:Name="BoatButton"
-                Content="Activate sirens"
+                Width="330"
+                Height="150"
+				Background="Transparent"
+				Margin="0,300"
                 HorizontalAlignment="Center"
-				VerticalAlignment="Bottom"
-                Grid.Row="0"/>
+				VerticalAlignment="Top"
+                Grid.Row="0">
+
+				<Image Source="avares://Presentation/Assets/Rooms/boat.png"
+				Stretch="UniformToFill" />
+		</Button>
         
         <Button x:Name="GoQuizButton"
                 Content="Go to the Quiz"
