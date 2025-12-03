@@ -125,34 +125,37 @@ namespace Domain
         };
 
         // Hovedmetoden: Vælger den korrekte liste ud fra rummet
-        public void CollectTrash(string currentRoomName)
+        public string CollectTrash(string currentRoomName)
         {
             currentRoomName = currentRoomName.ToLower();
 
             if (currentRoomName == "beach")
             {
-                DisplaySequentialFact(beachTrashList, ref strandFunFactIndex);
+                return DisplaySequentialFact(beachTrashList, ref strandFunFactIndex);
+                
             }
             else if (currentRoomName == "coralreef")
             {
-                DisplaySequentialFact(coralReefTrashList, ref coralReefFunFactIndex);
+               return DisplaySequentialFact(coralReefTrashList, ref coralReefFunFactIndex);
             }
             else if (currentRoomName == "ocean")
             {
-                DisplaySequentialFact(deepSeaTrashList, ref deepSeaFunFactIndex);
+               return DisplaySequentialFact(deepSeaTrashList, ref deepSeaFunFactIndex);
             }
+
+            return "no fact found";
+
+
+
         }
 
         // Hjælpemetoden: Håndterer den sekventielle visning
         private string DisplaySequentialFact(List<Trash> trashList, ref int funFactIndex)
         {
-            
             int indexToShow = funFactIndex % trashList.Count;
-
-            Trash currentTrash = trashList[indexToShow];
-            
-            return currentTrash.FunFact;
             funFactIndex++;
+
+            return trashList[indexToShow].FunFact;
         }
     }
 }

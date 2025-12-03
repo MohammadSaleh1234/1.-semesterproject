@@ -38,14 +38,10 @@ namespace Domain
                 context.GetCurrent().RemoveItem("fishing net");
                 Space current = context.GetCurrent();
                 Game.trashManager.CollectTrash(current.GetName());
-
-                if (!context.GetCurrent().HasTrash())
-                {
-                    return
-                        "✨You cut all the nets in the area! You may now move on to the quiz. Type 'go quiz' to continue. ✨";
-                }
-
-                return "sucess";
+                
+                string roomName = "Ocean";
+                string line = Game.trashManager.CollectTrash(roomName);
+                return line;
 
 
             }
