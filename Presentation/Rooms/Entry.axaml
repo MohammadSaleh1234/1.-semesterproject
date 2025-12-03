@@ -14,7 +14,9 @@
         <Button x:Name="GoBeachButton"
                 Content="Go to the Beach"
                 HorizontalAlignment="Center"
+				VerticalAlignment="Bottom"
+				Margin="0,50"
                 Grid.Row="0"
-                Margin="0,700,0,0"/>
+                />
     </Grid>
 </UserControl>
