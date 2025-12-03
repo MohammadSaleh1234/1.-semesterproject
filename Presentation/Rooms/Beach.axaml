@@ -24,10 +24,16 @@
                 Grid.Row="1"/>
         
                <Button x:Name="Plastic1Button"
-                Content="Plastic1"
+                Background="Transparent"
+				Height="200"
+				Width="200"
                 HorizontalAlignment="Center"
                 Margin="150,20"
-                Grid.Row="2"/>
+                Grid.Row="2">
+
+				<Image Source="avares://Presentation/Assets/Rooms/net.png"
+                Stretch="UniformToFill"/>
+				 </Button>
                 
                 <Button x:Name="Plastic2Button"
                 Content="Plastic2"

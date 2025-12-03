@@ -1,35 +1,38 @@
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="Avalonia.Rooms.Ocean">
-    <Grid RowDefinitions="*,Auto, Auto, Auto">
+    <Grid RowDefinitions="*">
         
         <TextBlock x:Name="room"
                    Text="Ocean Room"
                    HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
+                   VerticalAlignment="Top"
                    FontSize="22"
                    Grid.Row="0"/>
 
         <TextBlock x:Name="OutputTextFact"
                    HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
+                   VerticalAlignment="Top"
                    FontSize="22"
+				   Margin="0,100"
                    Grid.Row="0"/>
         
+		
 
         <TextBlock x:Name="OutputTextInventory"
-               VerticalAlignment="Top"
-               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Right"
                FontSize="24"/>
 
                 <Button x:Name="Net1Button"
-                        Width="200"
-                        Height="200"
+                        Width="100"
+                        Height="100"
                         Background="Transparent"
                         BorderBrush="Transparent"
+						VerticalAlignment="Bottom"
                         HorizontalAlignment="Center"
-                        Margin="150,20"
-                        Grid.Row="2">
+                        Margin="100"
+                        Grid.Row="0">
 
                     	<Image Source="avares://Presentation/Assets/Rooms/net.png"
                     	 Stretch="UniformToFill" />
@@ -37,14 +40,14 @@
 
                 
                 <Button x:Name="Net2Button"
-                		 Width="200"
-                        Height="200"
-                		Content="Net2"
+                		Width="100"
+                        Height="100"
                 		HorizontalAlignment="Left"
-                		Margin="150,20"
+						VerticalAlignment="Top"
+                		Margin="20"
                 		Background="Transparent"
                 		BorderBrush="Transparent"
-                		Grid.Row="2">
+                		Grid.Row="0">
                 		
                 		<Image Source="avares://Presentation/Assets/Rooms/net.png"
                     	Stretch="UniformToFill" />
@@ -53,52 +56,57 @@
                 
                 <Button x:Name="Net3Button"
                 		Width="200"
-                		Height="200"
+               			Height="200"
                 		Background="Transparent"
                 		BorderBrush="Transparent"
+						VerticalAlignment="Top"
                 		HorizontalAlignment="Right"
-                		Margin="150,20"
-                		Grid.Row="2">
+                		Margin="100"
+               			Grid.Row="0">
 
  						<Image Source="avares://Presentation/Assets/Rooms/net.png"
-                     	Stretch="UniformToFill" />
+                		Stretch="UniformToFill" />
                 </Button>
             
                 <Button x:Name="Net4Button"
-                 		Width="200"
-                        Height="200"
+                		Width="150"
+                        Height="150"
                 		Background="Transparent"
-                		BorderBrush="Transparent"
-                		Margin="10,30"
+                        BorderBrush="Transparent"
+						VerticalAlignment="Bottom"
+						HorizontalAlignment="Right"
+                        Margin="250,50"
                 		Grid.Row="0">
 
  						<Image Source="avares://Presentation/Assets/Rooms/net.png"
-                     	Stretch="UniformToFill" />
+                        Stretch="UniformToFill" />
                 </Button>
                    
                 <Button x:Name="Net5Button"
  						Width="200"
                         Height="200"
-                		HorizontalAlignment="Right"
-               			Margin="250,30"
+                		HorizontalAlignment="Left"
+						VerticalAlignment="Bottom"
+                		Margin="100"
                 		Background="Transparent"
                 		BorderBrush="Transparent"
-                		Grid.Row="3">
+                		Grid.Row="0">
 
  						<Image Source="avares://Presentation/Assets/Rooms/net.png"
-                     	Stretch="UniformToFill" />
+                    	Stretch="UniformToFill" />
                 </Button>
 
 
         <Button x:Name="BoatButton"
                 Content="Activate sirens"
                 HorizontalAlignment="Center"
-                Grid.Row="2"/>
+				VerticalAlignment="Bottom"
+                Grid.Row="0"/>
         
         <Button x:Name="GoQuizButton"
                 Content="Go to the Quiz"
                 HorizontalAlignment="Center"
                 Margin="0,20"
-                Grid.Row="3"/>
+                Grid.Row="0"/>
     </Grid>
 </UserControl>
