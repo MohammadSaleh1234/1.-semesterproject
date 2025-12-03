@@ -15,6 +15,7 @@ namespace Avalonia.Rooms
         {
             InitializeComponent();
             OutputTextFact.IsVisible = false;
+            GoQuizButton.IsVisible = false;
             
             GoQuizButton.Click += OnQuizClick;
             BoatButton.Click += OnBoatClick;
@@ -57,6 +58,11 @@ namespace Avalonia.Rooms
             if (sender is Button button)
             {
                 button.IsVisible = false;
+            }
+
+            if (Game.context.GetCurrent().HasTrash() == false)
+            {
+                GoQuizButton.IsVisible = true;
             }
         }
 
