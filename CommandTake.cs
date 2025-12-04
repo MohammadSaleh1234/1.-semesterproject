@@ -25,12 +25,7 @@ class CommandTake : BaseCommand, ICommand
         var wanted = parameters[0];
         var space = context.CurrentSpace;
         var inventory = Player.inventory;
-
-        // (valgfri whitelist – kan fjernes hvis I kun vil styre via rummet)
-        if (!allowedTools.Contains(wanted)) {
-             Console.WriteLine($"You cannot take '{wanted}'.");
-             return;
-         }
+        
 
         // Trash kræver affaldssæk
         if (ToolRegistry.IsTrash(wanted) && !inventory.HasType(ToolType.Bag))
