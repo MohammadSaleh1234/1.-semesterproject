@@ -70,13 +70,6 @@
         <!-- ⭐ EXTRA GRID BAGERST I LAYOUTET -->
         <Grid RowDefinitions="*,Auto">
 
-   
-
-            <TextBlock Text="Quiz Room"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       FontSize="48"
-                       Grid.Row="0"/>
 
            
         </Grid>
