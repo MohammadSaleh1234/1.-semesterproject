@@ -16,9 +16,11 @@ namespace Avalonia.Rooms
             InitializeComponent();
             OutputTextFact.IsVisible = false;
             GoQuizButton.IsVisible = false;
+			ScissorButton.IsVisible = false;
             
             GoQuizButton.Click += OnQuizClick;
             BoatButton.Click += OnBoatClick;
+            ScissorButton.Click += OnScissorClick;
             
             Net1Button.Click += OnNetClick;
             Net2Button.Click += OnNetClick;
@@ -44,12 +46,17 @@ namespace Avalonia.Rooms
             Game.player.ExecuteCommand("activate sirens");
             BoatButton.IsVisible = false;
             ShowNet();
+			ScissorButton.IsVisible = true;
 
+        }
+
+         void OnScissorClick(object? sender, RoutedEventArgs e)
+        {
+            ScissorButton.IsVisible = false;
         }
 
         private void OnNetClick(object? sender, RoutedEventArgs e)
         {
-            room.IsVisible = false;
 
             string result = Game.player.ExecuteCommand("cut net");
             OutputTextFact.Text = result;

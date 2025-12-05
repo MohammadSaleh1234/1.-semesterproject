@@ -2,13 +2,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="Avalonia.Rooms.Ocean">
     <Grid RowDefinitions="*">
+	 <Image Source="avares://Presentation/Assets/Rooms/Havoverflade.png"
+	 Stretch="UniformToFill"
+	 />
         
-        <TextBlock x:Name="room"
-                   Text="Ocean Room"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Top"
-                   FontSize="22"
-                   Grid.Row="0"/>
+       
 
         <TextBlock x:Name="OutputTextFact"
                    HorizontalAlignment="Center"
@@ -94,6 +92,20 @@
  						<Image Source="avares://Presentation/Assets/Rooms/net.png"
                     	Stretch="UniformToFill" />
                 </Button>
+                
+                <Button x:Name="ScissorButton"
+                		Width="100"
+                		Height="50"
+                		Margin="50"
+						HorizontalAlignment="Right"
+						VerticalAlignment="Bottom"
+                		Background="Transparent"
+						BorderBrush="Transparent"
+						Grid.Row="0">
+						
+						<Image Source="avares://Presentation/Assets/Rooms/scissor.png"
+						Stretch="UniformToFill" />
+				</Button>
 
 
         <Button x:Name="BoatButton"
