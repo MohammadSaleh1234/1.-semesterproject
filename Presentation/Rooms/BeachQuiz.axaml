@@ -7,7 +7,7 @@
         <!-- 🌊 Baggrund -->
         <Image Source="avares://Presentation/Assets/Rooms/Strand.png"
                Stretch="UniformToFill"
-               Opacity="0.90"/>
+               />
 
         <StackPanel Margin="40" Spacing="25">
 
@@ -70,14 +70,7 @@
         <!-- ⭐ EXTRA GRID BAGERST I LAYOUTET -->
         <Grid RowDefinitions="*,Auto">
 
-            <!-- Billede i room (skabelon) -->
-            <Grid Grid.Row="0">
-                <Image Source="avares://Presentation/Assets/Rooms/strandskrald.jpg"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       Width="350"
-                       Height="300"/>
-            </Grid>
+   
 
             <TextBlock Text="Quiz Room"
                        HorizontalAlignment="Center"
@@ -85,11 +78,7 @@
                        FontSize="48"
                        Grid.Row="0"/>
 
-            <Button x:Name="GoCoralButton"
-                    Content="Go to the coralreef"
-                    HorizontalAlignment="Center"
-                    Margin="0,20"
-                    Grid.Row="1"/>
+           
         </Grid>
 
     </Grid>
