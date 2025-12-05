@@ -72,7 +72,6 @@ namespace Avalonia.Rooms
 	       {
 		       button.IsVisible = false;
 	       }
-	       
 	       OutputTextFact.IsVisible = true;
 	       
        }
