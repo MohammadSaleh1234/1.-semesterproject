@@ -1,27 +1,97 @@
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="Avalonia.Rooms.BeachQuiz">
-    <Grid RowDefinitions="*,Auto">
 
-    <Grid> <!-- det her er skabelonen til at lave et billede i et room -->
-    <Image Source="avares://Presentation/Assets/Rooms/strandskrald.jpg"
-           HorizontalAlignment="Center"
-           VerticalAlignment="Center"
-           Width="350"
-           Height="300"/>
+    <Grid>
 
-</Grid>
-      
-        <TextBlock Text="Quiz Room"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
-                   FontSize="48"
-                   Grid.Row="0"/>
-        
-        <Button x:Name="GoCoralButton"
-                Content="Go to the coralreef"
-                HorizontalAlignment="Center"
-                Margin="0,20"
-                Grid.Row="1"/>
+        <!-- 🌊 Baggrund -->
+        <Image Source="avares://Presentation/Assets/Rooms/Strand.png"
+               Stretch="UniformToFill"
+               Opacity="0.90"/>
+
+        <StackPanel Margin="40" Spacing="25">
+
+            <!-- 🐟 Quiz-figuren med talebobbel -->
+            <Grid Height="330">
+
+                <!-- FISKEN TIL HØJRE -->
+                <Image Source="avares://Presentation/Assets/Rooms/Quizchef.png"
+                       HorizontalAlignment="Right"
+                       Width="290"
+                       Margin="0,0,30,0"/>
+
+                <!-- TEKST I TALEBOBBEL -->
+                <TextBlock x:Name="QuestionText"
+                           Text="Loading question..."
+                           FontSize="28"
+                           FontWeight="Bold"
+                           Foreground="Black"
+                           TextWrapping="Wrap"
+                           MaxWidth="600"
+                           HorizontalAlignment="Right"
+                           Margin="0,65,270,0"/>
+            </Grid>
+
+            <!-- 🔹 Svar knapper -->
+            <StackPanel Spacing="15" HorizontalAlignment="Center" Margin="0,10,0,0">
+
+                <Button x:Name="AnswerAButton"
+                        FontSize="24"
+                        Width="380"
+                        Background="#004080"
+                        Foreground="White"/>
+
+                <Button x:Name="AnswerBButton"
+                        FontSize="24"
+                        Width="380"
+                        Background="#004080"
+                        Foreground="White"/>
+
+                <Button x:Name="AnswerCButton"
+                        FontSize="24"
+                        Width="380"
+                        Background="#004080"
+                        Foreground="White"/>
+            </StackPanel>
+
+            <!-- 🏁 Vises når quiz er gennemført -->
+            <Button x:Name="NextButton"
+                    Content="Continue"
+                    Width="260"
+                    FontSize="26"
+                    HorizontalAlignment="Center"
+                    Margin="0,30,0,0"
+                    IsVisible="False"
+                    Click="OnNextClick"/>
+
+        </StackPanel>
+
+
+        <!-- ⭐ EXTRA GRID BAGERST I LAYOUTET -->
+        <Grid RowDefinitions="*,Auto">
+
+            <!-- Billede i room (skabelon) -->
+            <Grid Grid.Row="0">
+                <Image Source="avares://Presentation/Assets/Rooms/strandskrald.jpg"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Width="350"
+                       Height="300"/>
+            </Grid>
+
+            <TextBlock Text="Quiz Room"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="48"
+                       Grid.Row="0"/>
+
+            <Button x:Name="GoCoralButton"
+                    Content="Go to the coralreef"
+                    HorizontalAlignment="Center"
+                    Margin="0,20"
+                    Grid.Row="1"/>
+        </Grid>
+
     </Grid>
+
 </UserControl>
