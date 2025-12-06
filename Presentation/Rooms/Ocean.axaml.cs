@@ -9,14 +9,15 @@ namespace Avalonia.Rooms
     public partial class Ocean : UserControl
     {
         private Context context;
-        private Game game;
+        private Tool scissor;
+        private int ClickCounter;
         
         public Ocean()
         {
             InitializeComponent();
-            OutputTextFact.IsVisible = false;
             GoQuizButton.IsVisible = false;
 			ScissorButton.IsVisible = false;
+			OutputTextQuiz.IsVisible = false;
             
             GoQuizButton.Click += OnQuizClick;
             BoatButton.Click += OnBoatClick;
@@ -30,8 +31,14 @@ namespace Avalonia.Rooms
 
             HideNet();
             
+            scissor = new Tool("Scissors");
+            ClickCounter = 0;
+            
             string result = Game.player.ExecuteCommand("show inventory");
             OutputTextInventory.Text = result;
+
+            OutputTextFact.Text = "Activate your sirens to scare away the rogue vessels!";
+            
         }
 		
         private void OnQuizClick (object? sender, RoutedEventArgs e) {
@@ -43,33 +50,54 @@ namespace Avalonia.Rooms
 
         private void OnBoatClick(object? sender, RoutedEventArgs e)
         {
-            Game.player.ExecuteCommand("activate sirens");
-            BoatButton.IsVisible = false;
-            ShowNet();
-			ScissorButton.IsVisible = true;
 
+            if (ClickCounter < 1)
+            {
+                Game.player.ExecuteCommand("activate sirens");
+                //BoatButton.IsVisible = false;
+                ShowNet();
+                ScissorButton.IsVisible = true;
+                OutputTextFact.Text =
+                    "The rogue vessels sail away but leave behind their fishing nets \n Cut the fishing nets using a pair of scissors";
+                
+                ClickCounter++;
+				RogueBoatLeft.IsVisible = false;
+				RogueBoatRight.IsVisible = false;
+            }
+            
         }
 
          void OnScissorClick(object? sender, RoutedEventArgs e)
-        {
-            ScissorButton.IsVisible = false;
+         { 
+             Game.player.ExecuteCommand("take Scissors");
+             ScissorButton.IsVisible = false;
+		     
+             
+             string result = Game.player.ExecuteCommand("show inventory");
+             OutputTextInventory.Text = result;       
         }
 
         private void OnNetClick(object? sender, RoutedEventArgs e)
         {
-
+            
             string result = Game.player.ExecuteCommand("cut net");
+			if (result == "fail")
+            {
+                OutputTextFact.Text = "You need scissors to cut the fishing net. \n Search for them in this area";
+                return;
+            }
+
             OutputTextFact.Text = result;
-            OutputTextFact.IsVisible = true;
             
             if (sender is Button button)
             {
                 button.IsVisible = false;
             }
 
-            if (Game.context.GetCurrent().HasTrash() == false)
+            if (!Game.context.GetCurrent().items.ContainsKey("Fishing net"))
             {
                 GoQuizButton.IsVisible = true;
+				OutputTextQuiz.IsVisible = true;
             }
         }
 

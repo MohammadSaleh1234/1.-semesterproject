@@ -13,7 +13,7 @@ namespace Domain
                 ["Plasticbottle"] = ToolType.Trash,
                 ["Cigarette"] = ToolType.Trash,
                 ["Algae covered corals"] = ToolType.Trash,
-                ["Coral"] = ToolType.Trash,
+                ["coral"] = ToolType.Trash,
                 ["Brush"] = ToolType.Brush,
                 ["Scissors"] = ToolType.Scissors,
                 ["Fishing net"] = ToolType.Trash,

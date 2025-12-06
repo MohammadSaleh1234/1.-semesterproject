@@ -10,10 +10,15 @@ namespace Domain {
                 return "Take what?";
             }
             string toolName = parameters[0];
-            Tool newTool = new Tool(toolName);
-            Game.player.inventory.AddTool(newTool);
-
-            return $"You picked up: {toolName}";
+			
+			if (toolName == "plastic")
+			{
+				if (Game.player.inventory.tools.Contains("Trashbag")) {
+				Game.context.GetCurrent().RemoveItem(toolName); return null; }
+				return "fail";
+			}
+            Game.player.inventory.AddTool(toolName);
+	        return $"You picked up: {toolName}";
         }
     }
 }

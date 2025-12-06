@@ -1,37 +1,42 @@
-namespace Domain;
+namespace Domain
+{
 
 class CommandClean : BaseCommand, ICommand
 {
+
 public CommandClean()
 {
     description = "Clean the coral reef using a brush";
+
 }
 
 public string Execute(Context context, string command, string[] parameters)
 {
     
-    var wanted = parameters[0];
-    var inventory = Game.player.inventory;
+       if (GuardEq(parameters, 1))
+                {
+                    return "Type 'clean coral' to clean the coralreef.";
+                }
 
-    if (ToolRegistry.IsTrash(wanted) && !inventory.HasType(ToolType.Brush))
-    {
-        return "You need a brush to clean the corals!";
-    }
+                var wanted = parameters[0];
+				if (!Game.player.inventory.tools.Contains("Brush"))
+                {
+					return "fail";
+				}
+                var items = context.GetCurrent().items;
 
+                if (!wanted.Equals("coral") && !items.ContainsKey("coral"))
+                {
 
-    var items = context.GetCurrent().items;
-    
-    context.GetCurrent().RemoveItem("Algae covered corals");
-    Space current = context.GetCurrent();
-    Game.trashManager.CollectTrash(current.GetName());
+                    return "You couldn't seem to find a brush in your inventory'.";
 
-    if (!context.GetCurrent().HasTrash())
-    {
-        return "You may now move on to the quiz!";
-    }
+                }
 
-    return "Not Empty";
+                context.GetCurrent().RemoveItem("coral");
+				string roomName = "Coralreef";
+                string line = Game.trashManager.CollectTrash(roomName);
+                return line;
 
-
+}
 }
 }

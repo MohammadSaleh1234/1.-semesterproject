@@ -18,24 +18,23 @@ namespace Domain {
       Quiz2 coralquiz = new Quiz2("Quiz", "");
       Quiz3 oceanquiz = new Quiz3("Quiz", "");
 
-      entry.AddEdge("Beach", strand);
-      strand.AddEdge("Quiz", beachquiz);
-      beachquiz.AddEdge("Coralreef", coralrevet);
-      coralrevet.AddEdge("Quiz", coralquiz);
-      coralquiz.AddEdge("Ocean", dybhavet);
-      dybhavet.AddEdge("Quiz", oceanquiz);
+      entry.AddEdge("beach", strand);
+      strand.AddEdge("quiz", beachquiz);
+      beachquiz.AddEdge("coralreef", coralrevet);
+      coralrevet.AddEdge("quiz", coralquiz);
+      coralquiz.AddEdge("ocean", dybhavet);
+      dybhavet.AddEdge("quiz", oceanquiz);
 
 
       this.entry = entry;
 
       // tilføj items til et rum
-      entry.AddItem("trashbag", 1);
-      strand.AddItem("trashbag", 1);
+      strand.AddItem("Trashbag", 1);
       strand.AddItem("plastic", 5);
       strand.SetDirty(true);
 
       coralrevet.AddItem("Brush", 1);
-      coralrevet.AddItem("Algae covered corals", 5);
+      coralrevet.AddItem("coral", 5);
       coralrevet.SetDirty(true);
 
       dybhavet.AddItem("illegal fishing boats", 5);

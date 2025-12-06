@@ -1,74 +1,127 @@
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="Avalonia.Rooms.Beach">
-    <Grid RowDefinitions="*,Auto, Auto, Auto">
-     
-
-        <TextBlock Text="Beach Room"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
-                   FontSize="48"
-                   Grid.Row="0"/>
-
-        <TextBlock x:Name="OutputTextInventory"
-               VerticalAlignment="Top"
-               HorizontalAlignment="Center"
-               FontSize="24"
-               Grid.Row="0"/>
-               
+    <Grid RowDefinitions="*">
+        <Image Source="avares://Presentation/Assets/Rooms/Strand.png"
+               Stretch="UniformToFill"
+               x:Name="BackgroundBefore"/>
 
         <TextBlock x:Name="OutputTextFact"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"
-                FontSize="48"
-                Grid.Row="1"/>
-        
-               <Button x:Name="Plastic1Button"
-                Background="Transparent"
-				Height="200"
-				Width="200"
-                HorizontalAlignment="Center"
-                Margin="150,20"
-                Grid.Row="2">
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Top"
+                   FontSize="32"
+                   FontWeight="ExtraBold"
+                   Foreground="#002F5F"
+                   Margin="0,100"/>
 
-				<Image Source="avares://Presentation/Assets/Rooms/net.png"
-                Stretch="UniformToFill"/>
-				 </Button>
-                
-                <Button x:Name="Plastic2Button"
-                Content="Plastic2"
-                HorizontalAlignment="Left"
-                Margin="150,20"
-                Grid.Row="2"/>
-                
-                <Button x:Name="Plastic3Button"
-                Content="Plastic3"
-                HorizontalAlignment="Right"
-                Margin="150,20"
-                Grid.Row="2"/>
-            
-                <Button x:Name="Plastic4Button"
-                Content="Plastic4"
-                Margin="10,30"
-                Grid.Row="1"/>
-                   
-                <Button x:Name="Plastic5Button"
-                Content="Plastic5"
-                HorizontalAlignment="Right"
-                Margin="250,30"
-                Grid.Row="3"/>
-        
-       
+        <TextBlock x:Name="OutputTextQuiz"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Text="Great job! You may now continue to the quiz"
+                   FontSize="32"
+                   FontWeight="ExtraBold"
+                   Foreground="#002F5F"
+                   Margin="0,100"/>
+
+        <Grid Width="280"
+              Height="300"
+              HorizontalAlignment="Right"
+              VerticalAlignment="Center">
+            <Image Source="avares://Presentation/Assets/Rooms/inventory.png"/>
+
+            <TextBlock x:Name="OutputTextInventory"
+                       FontSize="18"
+                       HorizontalAlignment="Right"
+                       VerticalAlignment="Top"
+                       Foreground="White"
+                       Margin="70,90"
+                       FontWeight="Bold"/>
+        </Grid>
+
         <Button x:Name="GoQuizButton"
                 Content="Go to the Quiz"
                 HorizontalAlignment="Center"
-                Margin="0,20"
+				VerticalAlignment="Bottom"
+                Margin="0,300"
                 Grid.Row="1"/>
-        
-        <Button x:Name="ToolButton"
-                Content="Take Trashbag"
+
+        <Button x:Name="Plastic1Button"
+                Width="100"
+                Height="100"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Center"
+                Margin="100"
+                Grid.Row="0">
+            <Image Source="avares://Presentation/Assets/Rooms/TrashStrand.png"
+                   Stretch="UniformToFill"/>
+        </Button>
+
+        <Button x:Name="Plastic2Button"
+                Width="100"
+                Height="100"
                 HorizontalAlignment="Left"
-                Margin="0,20"
-                Grid.Row="0"/>
+                VerticalAlignment="Center"
+                Margin="20"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                Grid.Row="0">
+            <Image Source="avares://Presentation/Assets/Rooms/TrashStrand.png"
+                   Stretch="UniformToFill"/>
+        </Button>
+
+        <Button x:Name="Plastic3Button"
+                Width="100"
+                Height="100"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Margin="100"
+                Grid.Row="0">
+            <Image Source="avares://Presentation/Assets/Rooms/TrashStrand.png"
+                   Stretch="UniformToFill"/>
+        </Button>
+
+        <Button x:Name="Plastic4Button"
+                Width="120"
+                Height="120"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Right"
+                Margin="250,50"
+                Grid.Row="0">
+            <Image Source="avares://Presentation/Assets/Rooms/TrashStrand.png"
+                   Stretch="UniformToFill"/>
+        </Button>
+
+        <Button x:Name="Plastic5Button"
+                Width="130"
+                Height="130"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Bottom"
+                Margin="100"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                Grid.Row="0">
+            <Image Source="avares://Presentation/Assets/Rooms/TrashStrand.png"
+                   Stretch="UniformToFill"/>
+        </Button>
+
+        <Button x:Name="TrashbagButton"
+                Width="100"
+                Height="100"
+                Margin="300,100"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Bottom"
+                Background="Transparent"
+				BorderBrush="Transparent"
+				Grid.Row="0">
+						
+				<Image Source="avares://Presentation/Assets/Rooms/trashbag.png"
+				Stretch="UniformToFill" />
+		</Button>
     </Grid>
 </UserControl>

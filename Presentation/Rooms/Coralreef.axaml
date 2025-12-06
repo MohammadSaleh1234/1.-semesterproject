@@ -1,30 +1,130 @@
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="Avalonia.Rooms.Coralreef">
-    <Grid RowDefinitions="*,Auto">
+    <Grid RowDefinitions="*">
+        <Image Source="avares://Presentation/Assets/Rooms/KoralrevetBefore.png"
+               Stretch="UniformToFill"
+               x:Name="BackgroundBefore"/>
+        <Image Source="avares://Presentation/Assets/Rooms/KoralrevetAfter.png"
+               Stretch="UniformToFill"
+               x:Name="BackgroundAfter"/>
 
-        <TextBlock Text="Coralreef Room"
+        <TextBlock x:Name="OutputTextFact"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Top"
+                   FontSize="32"
+                   FontWeight="ExtraBold"
+                   Foreground="#002F5F"
+                   Margin="0,100"/>
+
+        <TextBlock x:Name="OutputTextQuiz"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"
-                   FontSize="48"
-                   Grid.Row="0"/>
+                   Text="Great job! You may now continue to the quiz"
+                   FontSize="32"
+                   FontWeight="ExtraBold"
+                   Foreground="#002F5F"
+                   Margin="0,100"/>
 
-         <TextBlock x:Name="OutputTextInventory"
-               VerticalAlignment="Top"
-               HorizontalAlignment="Center"
-               FontSize="24"/>
-        
-       
+        <Grid Width="280"
+              Height="300"
+              HorizontalAlignment="Right"
+              VerticalAlignment="Center">
+            <Image Source="avares://Presentation/Assets/Rooms/inventory.png"/>
+
+            <TextBlock x:Name="OutputTextInventory"
+                       FontSize="18"
+                       HorizontalAlignment="Right"
+                       VerticalAlignment="Top"
+                       Foreground="White"
+                       Margin="70,90"
+                       FontWeight="Bold"/>
+        </Grid>
+
         <Button x:Name="GoQuizButton"
                 Content="Go to the Quiz"
                 HorizontalAlignment="Center"
-                Margin="0,20"
+				VerticalAlignment="Bottom"
+                Margin="0,300"
                 Grid.Row="1"/>
-        
-        <Button x:Name="ToolButton"
-                Content="Take Brush"
+
+        <Button x:Name="Trash1Button"
+                Width="100"
+                Height="100"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Center"
+                Margin="100"
+                Grid.Row="0">
+            <Image Source="avares://Presentation/Assets/Rooms/TrashKoral.png"
+                   Stretch="UniformToFill"/>
+        </Button>
+
+        <Button x:Name="Trash2Button"
+                Width="100"
+                Height="100"
                 HorizontalAlignment="Left"
-                Margin="0,20"
-                Grid.Row="0"/>
+                VerticalAlignment="Center"
+                Margin="20"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                Grid.Row="0">
+            <Image Source="avares://Presentation/Assets/Rooms/TrashKoral.png"
+                   Stretch="UniformToFill"/>
+        </Button>
+
+        <Button x:Name="Trash3Button"
+                Width="100"
+                Height="100"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Margin="100"
+                Grid.Row="0">
+            <Image Source="avares://Presentation/Assets/Rooms/TrashKoral.png"
+                   Stretch="UniformToFill"/>
+        </Button>
+
+        <Button x:Name="Trash4Button"
+                Width="120"
+                Height="120"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Right"
+                Margin="250,50"
+                Grid.Row="0">
+            <Image Source="avares://Presentation/Assets/Rooms/TrashKoral.png"
+                   Stretch="UniformToFill"/>
+        </Button>
+
+        <Button x:Name="Trash5Button"
+                Width="130"
+                Height="130"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Bottom"
+                Margin="100"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                Grid.Row="0">
+            <Image Source="avares://Presentation/Assets/Rooms/TrashKoral.png"
+                   Stretch="UniformToFill"/>
+        </Button>
+
+        <Button x:Name="ToolButton"
+                Width="100"
+                Height="100"
+                Margin="200,100"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Bottom"
+                Background="Transparent"
+				BorderBrush="Transparent"
+				Grid.Row="0">
+						
+				<Image Source="avares://Presentation/Assets/Rooms/brush.png"
+				Stretch="UniformToFill" />
+		</Button>
     </Grid>
 </UserControl>

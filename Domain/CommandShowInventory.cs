@@ -9,18 +9,19 @@ namespace Domain {
             description = "Follow an exit";
         }
 
-        public string Execute (Context context, string command, string[] parameters) {
+        public string Execute (Context context, string command, string[] parameters)
+        {
 
             System.Text.StringBuilder sb = new
-                System.Text.StringBuilder("=== Inventory ==="+"\n");
+                System.Text.StringBuilder();
 
             if (Game.player.inventory.tools.Count == 0) {
                 sb.AppendLine("Empty");
             }
             else
             {
-                foreach (Tool tool in Game.player.inventory.tools) {
-                    sb.AppendLine(string.Format(" - "+tool.GetName()));
+                foreach (string tool in Game.player.inventory.tools) {
+                    sb.AppendLine(string.Format(" - "+tool));
                 }
             }
 

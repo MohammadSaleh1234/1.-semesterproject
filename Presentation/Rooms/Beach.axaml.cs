@@ -8,72 +8,67 @@ namespace Avalonia.Rooms
 {
     public partial class Beach : UserControl
     {
-	    private Context context;
-
-	    private Game game;
-	    
-	    private Tool trashbag;
+        
         public Beach()
         {
             InitializeComponent();
-
-            OutputTextFact.IsVisible = false;
+            GoQuizButton.IsVisible = false;
+            OutputTextQuiz.IsVisible = false;
             
-            //buttons
-	        GoQuizButton.Click += OnQuizClick;
-	        ToolButton.Click += OnToolClick;
-	        
-	        //buttons til plastic
-	        Plastic1Button.Click += OnPlasticClick;
-	        Plastic2Button.Click += OnPlasticClick;
-	        Plastic3Button.Click += OnPlasticClick;
-	        Plastic4Button.Click += OnPlasticClick;
-	        Plastic5Button.Click += OnPlasticClick;
-	        
-	        //tools in the room
-			trashbag = new Tool("trashbag");
-	        
-	        //shows inventory when entering room
-	        string result = Game.player.ExecuteCommand("show inventory");
-	        OutputTextInventory.Text = result;
-
+            GoQuizButton.Click += OnQuizClick;
+            TrashbagButton.Click += OnTrashbagClick;
+            
+            Plastic1Button.Click += OnPlasticClick;
+            Plastic2Button.Click += OnPlasticClick;
+            Plastic3Button.Click += OnPlasticClick;
+            Plastic4Button.Click += OnPlasticClick;
+            Plastic5Button.Click += OnPlasticClick;
+            
+            
+			OutputTextFact.Text = "The beach needs cleaning!";
+            
+            string result = Game.player.ExecuteCommand("show inventory");
+            OutputTextInventory.Text = result;
         }
 		
-		private void OnQuizClick (object? sender, RoutedEventArgs e)
-		{
+        private void OnQuizClick(object? sender, RoutedEventArgs e) 
+        {
+            Game.player.ExecuteCommand("go quiz");
+            MainWindow.ActiveWindow.Content = new BeachQuiz();
+        }
 
-			Game.player.ExecuteCommand("go quiz");
-			MainWindow.ActiveWindow.Content = new BeachQuiz();
-		
-       }
-		
-       private void OnToolClick(object? sender, RoutedEventArgs e)
-       {
-	       //add tool
-	       Game.player.inventory.AddTool(trashbag);
-
-	       //fjerner knappen efter man har trykket
-	       ToolButton.IsVisible = false;
-	       
-	       //refresh inventory
-	       string result = Game.player.ExecuteCommand("show inventory");
-	       OutputTextInventory.Text = result;                                                  
-
+        private void OnTrashbagClick(object? sender, RoutedEventArgs e)
+        {
+            Game.player.ExecuteCommand("take Trashbag");
             
-       }
+            string result = Game.player.ExecuteCommand("show inventory");
+            OutputTextInventory.Text = result;
+			TrashbagButton.IsVisible = false;
+        }
+        
+        private void OnPlasticClick(object? sender, RoutedEventArgs e)
+        {
+            
+            string result = Game.player.ExecuteCommand("take plastic");
 
-       private void OnPlasticClick(object? sender, RoutedEventArgs e)
-       {
-	       
-	       string result = Game.player.ExecuteCommand("take plastic");
-	       OutputTextFact.Text = result;
-	       
-	       if (sender is Button button)
-	       {
-		       button.IsVisible = false;
-	       }
-	       OutputTextFact.IsVisible = true;
-	       
-       }
-	}
+            if (result == "fail")
+            {
+                OutputTextFact.Text = "You need a trashbag to collect plastic. \n Search for one in this area";
+                return;
+            }
+            OutputTextFact.Text = result;
+            
+            if (sender is Button button)
+            {
+                button.IsVisible = false;
+            }
+
+            if (!Game.context.GetCurrent().items.ContainsKey("plastic")) // or use HasTrash()
+            {
+                GoQuizButton.IsVisible = true;
+                OutputTextQuiz.IsVisible = true;
+               
+            }
+        }
+    }
 }

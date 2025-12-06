@@ -17,11 +17,10 @@ namespace Domain
                 }
 
                 var wanted = parameters[0];
-                var inventory = Game.player.inventory;
 
-                if (ToolRegistry.IsTrash(wanted) && !inventory.HasType(ToolType.Scissors))
+                if (!Game.player.inventory.tools.Contains("Scissors"))
                 {
-                    return "You need scissors to cut the nets!";
+                    return "fail";
                 }
 
 
@@ -35,7 +34,7 @@ namespace Domain
 
                 }
 
-                context.GetCurrent().RemoveItem("fishing net");
+                context.GetCurrent().RemoveItem("Fishing net");
                 Space current = context.GetCurrent();
                 Game.trashManager.CollectTrash(current.GetName());
                 

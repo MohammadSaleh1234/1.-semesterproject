@@ -6,17 +6,17 @@ namespace Domain
 
     public class Inventory
     {
-        public List<Tool> tools = new List<Tool>();
+        public List<string> tools = new List<string>();
 
-        public string AddTool(Tool tool)
+        public string AddTool(string newTool)
         {
-            // Tjekker om værktøjet allerede er i inventaret baseret på navn
-            if (tools.Any(t => t.GetName().Equals(tool.GetName(), StringComparison.OrdinalIgnoreCase)))
+          
+            if (tools.Contains(newTool))
             {
-                return "You already have a that";
+                return "You already have that";
             }
             
-                tools.Add(tool);
+                tools.Add(newTool);
 
             return "added";
         }
@@ -30,21 +30,17 @@ namespace Domain
             }
             else
             {
-                foreach (Tool tool in tools)
-                    Console.WriteLine($"- {tool.GetName()}");
+                foreach (string tool in tools)
+                    Console.WriteLine($"- {tool}");
             }
         }
 
         // NY metode for at tjekke om et værktøj er i inventaret
         public bool HasTool(string toolName)
         {
-            return tools.Any(t => t.GetName().Equals(toolName, StringComparison.OrdinalIgnoreCase));
+            return tools.Contains(toolName);
         }
-        
-        public bool HasType(ToolType type)
-        {
-            return tools.Any(t => t.Type == type);
-        }
+  
         
     }
 }

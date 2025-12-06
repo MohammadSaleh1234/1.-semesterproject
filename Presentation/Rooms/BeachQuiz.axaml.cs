@@ -114,7 +114,7 @@ namespace Avalonia.Rooms
         private void OnNextClick(object? sender, RoutedEventArgs e)
         {
             // tekst-spil logik
-            Game.player.ExecuteCommand("go to the coralreef");
+            Game.player.ExecuteCommand("go coralreef");
 
             // skift Avalonia-view til Coralreef
 			MainWindow.ActiveWindow.Content = new Coralreef();
