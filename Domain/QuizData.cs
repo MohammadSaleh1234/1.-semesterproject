@@ -54,8 +54,23 @@ namespace Domain
                 Answers = new[]{ "50%", "5%", "25%" },
                 CorrectIndex = 2
             },
-            // ... osv. (du ved at jeg kan overføre ALLE dine spørgsmål 1:1)
-        };
+            new QuizQuestion {
+                Question = "How much of the world's oceans are protected as MPAs (Marine Protected Areas)?",
+                Answers = new[]{ "Only about 10%", "A full 90%", "50%" },
+                CorrectIndex = 0
+        
+             },
+            new QuizQuestion {
+                Question = "What percentage of the world's coral reefs could disappear by 2050 without intervention?",
+                Answers = new[]{ "30%", "54%", "90%" },
+                CorrectIndex = 2
+            },
+            new QuizQuestion {
+                Question = "What can we do to protect coral reefs?",
+                Answers = new[]{ "Throw more plastic into the sea so the fish have something to play with", "Reduce CO2 emissions and avoid pollution Avoid pollution and support sustainable fishing", "Catch more fish to stop them from destroying coral reefs" },
+                CorrectIndex = 1
+            }
+         };
 
         public static List<QuizQuestion> OceanQuiz = new()
         {
@@ -68,3 +83,5 @@ namespace Domain
         };
     }
 }
+
+ 
