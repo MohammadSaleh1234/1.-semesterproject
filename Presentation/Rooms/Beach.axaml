@@ -46,8 +46,8 @@
                 Grid.Row="1"/>
 
         <Button x:Name="Plastic1Button"
-                Width="100"
-                Height="100"
+                Width="200"
+                Height="150"
                 Background="Transparent"
                 BorderBrush="Transparent"
                 VerticalAlignment="Bottom"
@@ -59,8 +59,8 @@
         </Button>
 
         <Button x:Name="Plastic2Button"
-                Width="100"
-                Height="100"
+                Width="200"
+                Height="150"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Center"
                 Margin="20"
@@ -72,8 +72,8 @@
         </Button>
 
         <Button x:Name="Plastic3Button"
-                Width="100"
-                Height="100"
+                Width="200"
+                Height="150"
                 Background="Transparent"
                 BorderBrush="Transparent"
                 VerticalAlignment="Center"
@@ -85,8 +85,8 @@
         </Button>
 
         <Button x:Name="Plastic4Button"
-                Width="120"
-                Height="120"
+                Width="200"
+                Height="150"
                 Background="Transparent"
                 BorderBrush="Transparent"
                 VerticalAlignment="Bottom"
@@ -98,8 +98,8 @@
         </Button>
 
         <Button x:Name="Plastic5Button"
-                Width="130"
-                Height="130"
+                Width="200"
+                Height="150"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Bottom"
                 Margin="100"
@@ -113,7 +113,7 @@
         <Button x:Name="TrashbagButton"
                 Width="100"
                 Height="100"
-                Margin="300,100"
+                Margin="400,200"
 				HorizontalAlignment="Left"
 				VerticalAlignment="Bottom"
                 Background="Transparent"

@@ -22,7 +22,7 @@ namespace Domain
             new Trash(
                 "Plastic bottle",
                 "You find an empty plastic bottle in the sand.",
-                "💡 Plastic takes hundreds of years to decompose! (400-500 years) That is even longer than i can spend eating french fries! Teehee"
+                "💡 Plastic takes hundreds of years to decompose! (400-500 years) \n That is even longer than i can spend eating french fries! Teehee"
             ),
             // Item/Fun Fact 2
             new Trash(
@@ -59,31 +59,31 @@ namespace Domain
             new Trash(
                 "Fishing net",
                 "A piece of worn fishing net is stuck on a coral.",
-                "💡 Did you know, that coral reefs are not made of plants, but rather consist of thousands of tiny living animals called coral polyps"
+                "💡 Did you know, that coral reefs are not made of plants, \n but rather consist of thousands of tiny living animals called coral polyps"
             ),
             // Item/Fun Fact 2
             new Trash(
                 "Rusty can",
                 "A rusty can lies among some sea anemones.",
-                "💡 Did you know, that coral reefs only cover less than 1% of the sea floor, but they house over 25% of all sea life?"
+                "💡 Did you know, that coral reefs only cover less than 1% of the \n sea floor, but they house over 25% of all sea life?"
             ),
             // Item/Fun Fact 3
             new Trash(
                 "Plastic fragment",
                 "A small white plastic fragment is wrapped around a coral branch.",
-                "💡 Only about 10% of the worlds oceans, are protected as MPA (Marine Protected Areas) – the rest are vulnerable, and the sea life are completely unprotected."
+                "💡 Only about 10% of the worlds oceans, are protected as MPA (Marine Protected Areas) \n the rest are vulnerable, and the sea life are completely unprotected."
             ),
             // Item/Fun Fact 4
             new Trash(
                 "Old fishing line",
                 "A long nylon line floats lazily above the reef.",
-                "💡 Half of the worlds coral reefs have disappeared already, and up to 90% of coral reefs can disappear before 2050 without immediate help"
+                "💡 Half of the worlds coral reefs have disappeared already, and up to \n 90% of coral reefs  can disappear before 2050 without immediate help"
             ),
             // Item/Fun Fact 5
             new Trash(
                 "Disposable glove",
                 "A disposable glove lies trapped in the seaweed.",
-                "💡 To protect the coral reefs, we can reduce our CO2 emission. Avoid polluting, and support sustainable fishing!"
+                "💡 To protect the coral reefs, we can reduce our \n CO2 emission. Avoid polluting, and support sustainable fishing!"
             )
         };
 

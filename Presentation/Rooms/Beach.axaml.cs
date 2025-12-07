@@ -56,6 +56,7 @@ namespace Avalonia.Rooms
                 OutputTextFact.Text = "You need a trashbag to collect plastic. \n Search for one in this area";
                 return;
             }
+            
             OutputTextFact.Text = result;
             
             if (sender is Button button)

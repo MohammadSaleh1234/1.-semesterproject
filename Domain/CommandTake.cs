@@ -13,12 +13,16 @@ namespace Domain {
 			
 			if (toolName == "plastic")
 			{
-				if (Game.player.inventory.tools.Contains("Trashbag")) {
-				Game.context.GetCurrent().RemoveItem(toolName); return null; }
-				return "fail";
+                if (Game.player.inventory.tools.Contains("Trashbag")) {
+                    Game.context.GetCurrent().RemoveItem(toolName);
+                    string line = Game.trashManager.CollectTrash("Beach");
+                    return line;; 
+                }
+                return "fail";
 			}
             Game.player.inventory.AddTool(toolName);
-	        return $"You picked up: {toolName}";
+            return null;
+
         }
     }
 }
