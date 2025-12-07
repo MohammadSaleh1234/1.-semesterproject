@@ -19,35 +19,18 @@ public class Space : Node
   public virtual void Welcome()
   {
     Console.Clear();
-    /*string line = "You are now at the "+name;
-
-    int windowWidth = Console.WindowWidth;
-    int x = ((Console.WindowWidth - line.Length) / 2);
-    Console.SetCursorPosition(x, Console.CursorTop);
-    Console.WriteLine(line);
-
-
-
-    var exits = edges.Keys.ToHashSet();
-    Console.SetCursorPosition(x, Console.CursorTop);
-    Console.WriteLine("You can continue to: ");
-    foreach (var exit in exits) {
-      Console.SetCursorPosition(x, Console.CursorTop);
-      Console.WriteLine(" - " + exit);}
-    Console.WriteLine();*/
-
     string line = "=";
     int windowWidth = Console.WindowWidth;
-    for (int i = 0; i < windowWidth; i++){
+    
+    for (int i = 0; i < windowWidth; i++){ 
       Console.Write(line);
     }
+    
     Console.WriteLine();
-    // ====================================
     Console.WriteLine("Type 'help' to see the commands!");
     Console.WriteLine( );
     Console.WriteLine("You are now at the "+name);
-
-      // Items på gulvet
+    
       if (items.Count == 0)
       {
         Console.WriteLine();
@@ -59,11 +42,11 @@ public class Space : Node
         foreach (var pair in items) Console.WriteLine($" - {pair.Value} {pair.Key}");
       }
       Console.WriteLine();
-
-    //=====================================
+      
     for (int i = 0; i < windowWidth; i++){
       Console.Write(line);
     }
+    
     Console.WriteLine();
     Console.WriteLine();
 
@@ -93,7 +76,7 @@ public class Space : Node
 
       case "Ocean":
       {
-        if (IsDirty && items.ContainsKey("illegal fishing boats"))
+        if (IsDirty && items.ContainsKey("Illegal fishing boats"))
         {
           Console.WriteLine(Game.context.GetCurrent().GetDescription());
         }
@@ -115,8 +98,6 @@ public class Space : Node
   }
 
   public void Goodbye() { }
-
-  // go-case-insensitivt
   public override Space FollowEdge(string direction)
   {
     var exact = (Space)base.FollowEdge(direction);
@@ -128,8 +109,7 @@ public class Space : Node
 
     return null;
   }
-
-  // ---- items (case-insensitivt) ----
+  
   public void AddItem(string name, int value = 1)
   {
     var existing = items.Keys.FirstOrDefault(k =>

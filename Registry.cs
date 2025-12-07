@@ -29,9 +29,7 @@ class Registry {
   public string[] GetCommandNames () {
     return commands.Keys.ToArray();
   }
-
-  // helpers
-
+  
   private string[] GetParameters (string[] input) {
     string[] output = new string[input.Length-1];
     for (int i=0 ; i<output.Length ; i++) {

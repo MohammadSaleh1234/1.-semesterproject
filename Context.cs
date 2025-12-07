@@ -31,13 +31,6 @@ class Context {
   public bool IsDone () {
     return done;
   }
-  // Giv læse-adgang til nuværende rum
-  public Space CurrentSpace => current;   // <- hvis dit felt hedder noget andet, brug det navn
-
-  // (valgfrit – hvis du vil have både property og metode)
-  public Space GetCurrentSpace() => CurrentSpace;
-
-  // Gør inventory let tilgængelig via Context
-  //public Inventory Inventory => Player.inventory;
+  
 }
 

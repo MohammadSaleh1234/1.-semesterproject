@@ -23,7 +23,7 @@ class CommandTake : BaseCommand, ICommand
         }
 
         var wanted = parameters[0];
-        var space = context.CurrentSpace;
+        var space = context.GetCurrent();
         var inventory = Player.inventory;
         
 
