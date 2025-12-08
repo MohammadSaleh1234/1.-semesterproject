@@ -5,7 +5,7 @@
     <Grid>
 
         <!-- 🌊 Baggrund -->
-        <Image Source="avares://Presentation/Assets/Rooms/koralrev.jpg"
+        <Image Source="avares://Presentation/Assets/Rooms/Copilot_20251208_101608.png"
                Stretch="UniformToFill"
                />
 
