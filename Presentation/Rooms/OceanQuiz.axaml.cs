@@ -1,33 +1,100 @@
 using Avalonia.Controls;
 using Avalonia.Interactivity;
-using Avalonia.Rooms;
+using Avalonia.Media;
 using Domain;
-using Presentation; // if you need access to MainWindow
+using Presentation;
+using System.Collections.Generic;
+
 
 namespace Avalonia.Rooms
 {
     public partial class OceanQuiz : UserControl
     {
-        
+        private readonly List<QuizQuestion> _questions;
+        private int _index = 0;
+        private int _score = 0;
+
+        private readonly SolidColorBrush _defaultAnswerBrush =
+            new(Color.Parse("#004080"));
+
         public OceanQuiz()
         {
             InitializeComponent();
-            ExitButton.Click += OnExitClick;
-            Button1.Click += OnButton1Click;
 
-            Question2.IsVisible = false;
+            _questions = QuizData.OceanQuiz;
+
+            AnswerAButton.Click += OnAnswerClick;
+            AnswerBButton.Click += OnAnswerClick;
+            AnswerCButton.Click += OnAnswerClick;
+
+            LoadQuestion();
         }
 
-        private void OnExitClick(object? sender, RoutedEventArgs e)
+        private void LoadQuestion()
         {
-            MainWindow.ActiveWindow.Close();
+            var q = _questions[_index];
+
+            ResetButtons();
+
+            QuestionText.Text = q.Question;
+            AnswerAButton.Content = $"A: {q.Answers[0]}";
+            AnswerBButton.Content = $"B: {q.Answers[1]}";
+            AnswerCButton.Content = $"C: {q.Answers[2]}";
         }
 
-        private void OnButton1Click(object? sender, RoutedEventArgs e)
+        private void ResetButtons()
         {
-            Question1.IsVisible = false;
-            Question2.IsVisible = true;
-            Button1.IsVisible = false;
+            foreach (var btn in new[] { AnswerAButton, AnswerBButton, AnswerCButton })
+            {
+                btn.IsEnabled = true;
+                btn.Background = _defaultAnswerBrush;
+            }
+        }
+
+        private void OnAnswerClick(object? sender, RoutedEventArgs e)
+        {
+            if (sender is not Button btn) return;
+
+            int chosen =
+                btn == AnswerAButton ? 0 :
+                btn == AnswerBButton ? 1 : 2;
+
+            var q = _questions[_index];
+
+            AnswerAButton.IsEnabled = AnswerBButton.IsEnabled = AnswerCButton.IsEnabled = false;
+
+            if (chosen == q.CorrectIndex)
+            {
+                btn.Background = Brushes.Green;
+                _score += 2;
+            }
+            else
+            {
+                btn.Background = Brushes.DarkRed;
+                _score = System.Math.Max(0, _score - 1);
+
+            }
+
+            _index++;
+
+            if (_index >= _questions.Count)
+            {
+                QuestionText.Text = $"Quiz Complete! Score: {_score}/{_questions.Count * 2}";
+                AnswerAButton.IsVisible = AnswerBButton.IsVisible = AnswerCButton.IsVisible = false;
+                NextButton.IsVisible = true;
+            }
+            else
+            {
+                LoadQuestion();
+            }
+        }
+
+        private void OnNextClick(object? sender, RoutedEventArgs e)
+        {
+            // >>> Edit destination view her <<<
+            Game.player.ExecuteCommand("go titlescreen");
+
+            MainWindow.ActiveWindow.Content = new Titlescreen(); // <-- skift til dit næste view
         }
     }
 }

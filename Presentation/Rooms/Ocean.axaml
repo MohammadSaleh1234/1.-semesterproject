@@ -169,7 +169,8 @@
                 Content="Go to the Quiz"
                 HorizontalAlignment="Center"
 				VerticalAlignment="Bottom"
-                Margin="0,250"
+                Background="#004080"
+                Margin="0,100"
                 Grid.Row="0"/>
     </Grid>
 </UserControl>

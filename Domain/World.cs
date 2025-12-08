@@ -13,6 +13,7 @@ namespace Domain {
       Space strand    = new Space("Beach", "The beach is littered with trash - use the trashbag to collect plastic");
       Space coralrevet = new Space("Coralreef", "The coralreef is dirty – use the brush to clean the corals.");
       Space dybhavet     = new Space("Ocean", "The boats are not allowed to fish here - use your sirens to scare them away");
+      Space titlescreen = new Space("titlescreen", "Titlescreen");
 
       Quiz beachquiz = new Quiz("Quiz", "");
       Quiz2 coralquiz = new Quiz2("Quiz", "");
@@ -24,6 +25,7 @@ namespace Domain {
       coralrevet.AddEdge("quiz", coralquiz);
       coralquiz.AddEdge("ocean", dybhavet);
       dybhavet.AddEdge("quiz", oceanquiz);
+      oceanquiz.AddEdge("titlescreen", titlescreen);
 
 
       this.entry = entry;

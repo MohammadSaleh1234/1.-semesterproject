@@ -45,8 +45,9 @@
                 Content="Go to the Quiz"
                 HorizontalAlignment="Center"
 				VerticalAlignment="Bottom"
-                Margin="0,300"
-                Grid.Row="1"/>
+                Margin="0,100"
+				Background="#004080"
+                Grid.Row="0"/>
 
         <Button x:Name="Trash1Button"
                 Width="100"

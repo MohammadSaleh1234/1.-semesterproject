@@ -28,8 +28,7 @@
                            Foreground="Black"
                            TextWrapping="Wrap"
                            MaxWidth="600"
-                           HorizontalAlignment="Right"
-                           Margin="0,65,270,0"/>
+                           HorizontalAlignment="Center"/>
             </Grid>
 
             <!-- 🔹 Svar knapper -->
@@ -59,6 +58,7 @@
                     Content="Continue"
                     Width="260"
                     FontSize="26"
+                    Background="#004080"
                     HorizontalAlignment="Center"
                     Margin="0,30,0,0"
                     IsVisible="False"

@@ -1,33 +1,79 @@
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="Avalonia.Rooms.OceanQuiz">
-    <Grid RowDefinitions="*,Auto, Auto">
-     
-        <TextBlock x:Name="Question1"
-                   Text="Question 1"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
-                   FontSize="48"
-                   Grid.Row="0"/>
 
-        <TextBlock x:Name="Question2"
-                   Text="Question 2"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
-                   FontSize="48"
-                   Grid.Row="0"/>
+    <Grid>
+        <!-- Baggrundsbillede -->
+        <Image Source="/Assets/Rooms/KoralrevetBefore.png"
+               Stretch="UniformToFill"/>
 
+        <!-- Overlay + Padding flyttet her -->
+        <Border Background="#AA001f3f" Padding="40">
+            
+            <Grid ColumnDefinitions="*,Auto"
+                  RowDefinitions="Auto,*,Auto">
 
-        <Button x:Name="Button1"
-                Content="A"
-                HorizontalAlignment="Center"
-                Margin="0,20"
-                Grid.Row="1"/>
-        
-        <Button x:Name="ExitButton"
-                Content="Exit Game"
-                HorizontalAlignment="Center"
-                Margin="0,20"
-                Grid.Row="2"/>
+                <!-- Spørgsmål -->
+                <TextBlock x:Name="QuestionText"
+                           Grid.ColumnSpan="2"
+                           HorizontalAlignment="Center"
+                           FontSize="32"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           TextWrapping="Wrap"
+                           TextAlignment="Center"/>
+
+                <!-- Svar knapper -->
+                <StackPanel Spacing="15"
+                            Width="350"
+                            VerticalAlignment="Center">
+
+                    <Button x:Name="AnswerAButton"
+                            FontSize="20"
+                            Background="#004080"
+                            Foreground="White"
+                            Padding="12"
+                            HorizontalAlignment="Stretch"/>
+
+                    <Button x:Name="AnswerBButton"
+                            FontSize="20"
+                            Background="#004080"
+                            Foreground="White"
+                            Padding="12"
+                            HorizontalAlignment="Stretch"/>
+
+                    <Button x:Name="AnswerCButton"
+                            FontSize="20"
+                            Background="#004080"
+                            Foreground="White"
+                            Padding="12"
+                            HorizontalAlignment="Stretch"/>
+
+                </StackPanel>
+
+                <!-- Maskot -->
+                <Image Grid.Column="1"
+                       Source="/Assets/Rooms/Quizchef.png"
+                       Width="280"
+                       Margin="40 0 0 0"
+                       VerticalAlignment="Center"/>
+
+                <!-- Næste-knap -->
+                <Button x:Name="NextButton"
+                        Content="Continue"
+                        Grid.Row="2"
+                        Grid.ColumnSpan="2"
+                        IsVisible="False"
+                        Background="#00a8ff"
+                        Foreground="White"
+                        FontSize="22"
+                        Padding="10 6"
+                        HorizontalAlignment="Center"
+                        Margin="0 25 0 0"
+                        Click="OnNextClick"/>
+                
+            </Grid>
+        </Border>
     </Grid>
+
 </UserControl>
