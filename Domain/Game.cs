@@ -11,6 +11,8 @@ namespace Domain
     static Registry registry = new Registry(context, fallback);
     public static Player player = new Player(registry);
 
+    
+
     static Game()
     {
       InitRegistry();
@@ -27,6 +29,25 @@ namespace Domain
       registry.Register("activate", new CommandActivate());
       registry.Register("cut", new CommandCut());
       registry.Register("clean", new CommandClean());
+    }
+
+    public static void NewGame()
+    {
+      // Genopbyg world
+      world = new World();
+
+      // Ny context baseret på entry-rummet
+      context = new Context(world.GetEntry());
+
+      // Ny fallback og registry
+      fallback = new CommandUnknown();
+      registry = new Registry(context, fallback);
+
+      // Helt ny player
+      player = new Player(registry);
+
+      // Registrér alle commands igen
+      InitRegistry();
     }
   }
 }  

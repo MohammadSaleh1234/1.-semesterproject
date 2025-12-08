@@ -13,6 +13,7 @@ namespace Avalonia.Rooms
         {
             InitializeComponent();
             QuitGameButton.Click += OnQuitClick;
+            PlayAgainButton.Click += OnPlayAgainClick;
 
             //Highscore = beachQuiz.BeachScore();
             HighscoreText.Text = $"Highscore: {BeachQuiz.score + CoralQuiz.score + OceanQuiz.score } / 30 ";
@@ -28,5 +29,10 @@ namespace Avalonia.Rooms
 
         }
 
+       private void OnPlayAgainClick(object? sender, RoutedEventArgs e)
+        {
+            Game.NewGame();
+            MainWindow.ActiveWindow.Content = new Entry();
+        }
     }
 }
