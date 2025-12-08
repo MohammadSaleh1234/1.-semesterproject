@@ -56,7 +56,7 @@
                         Margin="100"
                         Grid.Row="0">
 
-                    	<Image Source="avares://Presentation/Assets/Rooms/net.png"
+                    	<Image Source="avares://Presentation/Assets/Rooms/net.jpg"
                     	 Stretch="UniformToFill" />
                 </Button>
 
@@ -71,7 +71,7 @@
                 		BorderBrush="Transparent"
                 		Grid.Row="0">
                 		
-                		<Image Source="avares://Presentation/Assets/Rooms/net.png"
+                		<Image Source="avares://Presentation/Assets/Rooms/net.jpg"
                     	Stretch="UniformToFill" />
                 </Button>
 
@@ -86,7 +86,7 @@
                 		Margin="100"
                			Grid.Row="0">
 
- 						<Image Source="avares://Presentation/Assets/Rooms/net.png"
+ 						<Image Source="avares://Presentation/Assets/Rooms/net.jpg"
                 		Stretch="UniformToFill" />
                 </Button>
             
@@ -100,7 +100,7 @@
                         Margin="250,50"
                 		Grid.Row="0">
 
- 						<Image Source="avares://Presentation/Assets/Rooms/net.png"
+ 						<Image Source="avares://Presentation/Assets/Rooms/net.jpg"
                         Stretch="UniformToFill" />
                 </Button>
                    
@@ -114,7 +114,7 @@
                 		BorderBrush="Transparent"
                 		Grid.Row="0">
 
- 						<Image Source="avares://Presentation/Assets/Rooms/net.png"
+ 						<Image Source="avares://Presentation/Assets/Rooms/net.jpg"
                     	Stretch="UniformToFill" />
                 </Button>
                 
@@ -169,7 +169,7 @@
                 Content="Go to the Quiz"
                 HorizontalAlignment="Center"
 				VerticalAlignment="Bottom"
-                Margin="0,250"
+                Margin="0,100"
                 Grid.Row="0"/>
     </Grid>
 </UserControl>
