@@ -6,10 +6,20 @@
                Stretch="UniformToFill"
                x:Name="BackgroundBefore"/>
 
+               <Image Source="avares://Presentation/Assets/Rooms/Skattekort.png"
+               x:Name="Skattekort"
+
+               Stretch="UniformToFill"
+               Width="600"
+               Height="550"
+               VerticalAlignment="Top"
+               Margin="0, 40, 0, 0"/>
+
         <TextBlock x:Name="OutputTextFact"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Top"
-                   FontSize="32"
+                   FontSize="20"
+                   TextAlignment="Center"
                    FontWeight="ExtraBold"
                    Foreground="#002F5F"
                    Margin="0,100"/>
@@ -77,9 +87,9 @@
                 Height="150"
                 Background="Transparent"
                 BorderBrush="Transparent"
-                VerticalAlignment="Center"
+                VerticalAlignment="Bottom"
                 HorizontalAlignment="Center"
-                Margin="100"
+                Margin="0,250"
                 Grid.Row="0">
             <Image Source="avares://Presentation/Assets/Rooms/TrashStrand.png"
                    Stretch="UniformToFill"/>
