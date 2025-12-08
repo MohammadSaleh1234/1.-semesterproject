@@ -15,8 +15,17 @@ namespace Avalonia.Rooms
         public Titlescreen()
         {
             InitializeComponent();
-           
+            QuitGameButton.Click += OnQuitClick;
+
             
+        }
+
+    
+
+private void OnQuitClick(object? sender, RoutedEventArgs e)
+        {
+            MainWindow.ActiveWindow.Close();
+
         }
 
     }

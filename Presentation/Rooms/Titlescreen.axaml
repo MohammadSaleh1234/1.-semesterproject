@@ -2,10 +2,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="Avalonia.Rooms.Titlescreen">
     <Grid RowDefinitions="*">
-	 <Image Source="avares://Presentation/Assets/Rooms/Havoverflade.png"
+	 <Image Source="avares://Presentation/Assets/Rooms/Tittlescreen.png"
 	 Stretch="UniformToFill"
 	 />
-        
+        <Button x:Name="QuitGameButton"
+                Content="Quit Game"
+                HorizontalAlignment="Center"
+				VerticalAlignment="Bottom"
+                Margin="0,100"
+				Background="#004080"
+                Grid.Row="0"/>
        
 
     </Grid>
