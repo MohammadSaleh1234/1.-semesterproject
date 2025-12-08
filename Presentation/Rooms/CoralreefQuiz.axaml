@@ -60,6 +60,7 @@
                     FontSize="26"
                     HorizontalAlignment="Center"
                     Margin="0,30,0,0"
+                    Background="#004080"
                     IsVisible="False"
                     Click="OnNextClick"/>
 

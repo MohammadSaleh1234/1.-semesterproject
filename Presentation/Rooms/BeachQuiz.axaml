@@ -58,6 +58,7 @@
                     Content="Continue"
                     Width="260"
                     FontSize="26"
+                    Background="#004080"
                     HorizontalAlignment="Center"
                     Margin="0,30,0,0"
                     IsVisible="False"
