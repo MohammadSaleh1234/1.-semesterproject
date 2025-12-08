@@ -9,7 +9,7 @@
                Stretch="UniformToFill"
                />
 
-        <StackPanel Margin="40" Spacing="25">
+        <StackPanel Margin="100" Spacing="25">
 
             <!-- 🐟 Quiz-figuren med talebobbel -->
             <Grid Height="330">
@@ -36,19 +36,19 @@
 
                 <Button x:Name="AnswerAButton"
                         FontSize="24"
-                        Width="380"
+                        Width="420"
                         Background="#004080"
                         Foreground="White"/>
 
                 <Button x:Name="AnswerBButton"
                         FontSize="24"
-                        Width="380"
+                        Width="420"
                         Background="#004080"
                         Foreground="White"/>
 
                 <Button x:Name="AnswerCButton"
                         FontSize="24"
-                        Width="380"
+                        Width="420"
                         Background="#004080"
                         Foreground="White"/>
             </StackPanel>

@@ -37,6 +37,7 @@ namespace Avalonia.Rooms
 
         private void OnTrashbagClick(object? sender, RoutedEventArgs e)
         {
+            Skattekort.IsVisible = false;
             Game.player.ExecuteCommand("take Trashbag");
             OutputTextFact.Text = "The beach needs cleaning!";
             

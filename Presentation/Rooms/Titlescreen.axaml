@@ -5,6 +5,16 @@
 	 <Image Source="avares://Presentation/Assets/Rooms/Tittlescreen.png"
 	 Stretch="UniformToFill"
 	 />
+
+		<TextBlock x:Name="HighscoreText"
+           HorizontalAlignment="Center"
+           VerticalAlignment="Center"
+           FontSize="20"
+           FontWeight="ExtraBold"
+           Foreground="#002F5F"
+           Margin="0,100"/>
+
+
         <Button x:Name="QuitGameButton"
                 Content="Quit Game"
                 HorizontalAlignment="Center"

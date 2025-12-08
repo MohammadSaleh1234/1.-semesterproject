@@ -11,13 +11,20 @@ namespace Avalonia.Rooms
         private Context context;
         private Tool scissor;
         private int ClickCounter;
+        private int Highscore;
+
+        private BeachQuiz beachQuiz;
+        
         
         public Titlescreen()
         {
             InitializeComponent();
             QuitGameButton.Click += OnQuitClick;
 
-            
+            //Highscore = beachQuiz.BeachScore();
+            HighscoreText.Text = $"Highscore: {BeachQuiz._score}";
+
+
         }
 
     

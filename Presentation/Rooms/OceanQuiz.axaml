@@ -7,73 +7,65 @@
         <Image Source="/Assets/Rooms/KoralrevetBefore.png"
                Stretch="UniformToFill"/>
 
-        <!-- Overlay + Padding flyttet her -->
-        <Border Background="#AA001f3f" Padding="40">
-            
-            <Grid ColumnDefinitions="*,Auto"
-                  RowDefinitions="Auto,*,Auto">
+        <StackPanel Margin="100" Spacing="25">
 
-                <!-- Spørgsmål -->
+            <!-- 🐟 Quiz-figuren med talebobbel -->
+            <Grid Height="330">
+
+                <!-- FISKEN TIL HØJRE -->
+                <Image Source="avares://Presentation/Assets/Rooms/Quizchef.png"
+                       HorizontalAlignment="Right"
+                       Width="290"
+                       Margin="0,0,30,0"/>
+
+                <!-- TEKST I TALEBOBBEL -->
                 <TextBlock x:Name="QuestionText"
-                           Grid.ColumnSpan="2"
-                           HorizontalAlignment="Center"
-                           FontSize="32"
+                           Text="Loading question..."
+                           FontSize="28"
                            FontWeight="Bold"
-                           Foreground="White"
+                           Foreground="Black"
                            TextWrapping="Wrap"
-                           TextAlignment="Center"/>
+                           MaxWidth="600"
+                           HorizontalAlignment="Center"/>
+            </Grid>
 
-                <!-- Svar knapper -->
-                <StackPanel Spacing="15"
-                            Width="350"
-                            VerticalAlignment="Center">
+            <!-- 🔹 Svar knapper -->
+            <StackPanel Spacing="15" HorizontalAlignment="Center" Margin="0,10,0,0">
 
-                    <Button x:Name="AnswerAButton"
-                            FontSize="20"
-                            Background="#004080"
-                            Foreground="White"
-                            Padding="12"
-                            HorizontalAlignment="Stretch"/>
+                <Button x:Name="AnswerAButton"
+                        FontSize="24"
+                        Width="380"
+                        Background="#004080"
+                        Foreground="White"/>
 
-                    <Button x:Name="AnswerBButton"
-                            FontSize="20"
-                            Background="#004080"
-                            Foreground="White"
-                            Padding="12"
-                            HorizontalAlignment="Stretch"/>
+                <Button x:Name="AnswerBButton"
+                        FontSize="24"
+                        Width="380"
+                        Background="#004080"
+                        Foreground="White"/>
 
-                    <Button x:Name="AnswerCButton"
-                            FontSize="20"
-                            Background="#004080"
-                            Foreground="White"
-                            Padding="12"
-                            HorizontalAlignment="Stretch"/>
+                <Button x:Name="AnswerCButton"
+                        FontSize="24"
+                        Width="380"
+                        Background="#004080"
+                        Foreground="White"/>
+            </StackPanel>
 
-                </StackPanel>
+            <!-- 🏁 Vises når quiz er gennemført -->
+            <Button x:Name="NextButton"
+                    Content="Continue"
+                    Width="260"
+                    FontSize="26"
+                    HorizontalAlignment="Center"
+                    Margin="0,30,0,0"
+                    Background="#004080"
+                    IsVisible="False"
+                    Click="OnNextClick"/>
 
-                <!-- Maskot -->
-                <Image Grid.Column="1"
-                       Source="/Assets/Rooms/Quizchef.png"
-                       Width="280"
-                       Margin="40 0 0 0"
-                       VerticalAlignment="Center"/>
+        </StackPanel>
 
-                <!-- Næste-knap -->
-                <Button x:Name="NextButton"
-                        Content="Continue"
-                        Grid.Row="2"
-                        Grid.ColumnSpan="2"
-                        IsVisible="False"
-                        Background="#00a8ff"
-                        Foreground="White"
-                        FontSize="22"
-                        Padding="10 6"
-                        HorizontalAlignment="Center"
-                        Margin="0 25 0 0"
-                        Click="OnNextClick"/>
+           
                 
             </Grid>
-        </Border>
-    </Grid>
 
 </UserControl>

@@ -12,6 +12,7 @@ namespace Avalonia.Rooms
         private readonly List<QuizQuestion> _questions;
         private int _index = 0;
         private int _score = 0;
+        public int coralreefScore = 0;
 
         // standard-farve til svar-knapper (samme som i XAML)
         private readonly SolidColorBrush _defaultAnswerBrush =
@@ -92,10 +93,11 @@ private void OnAnswerClick(object? sender, RoutedEventArgs e)
 
     // Hvis vi er færdige, så vis quiz-slut
     if (_index >= _questions.Count)
-            {
+    {
+                coralreefScore = _score;
                 // quiz færdig
                 QuestionText.Text =
-                    $"Quiz completed! Your score: {_score}/{_questions.Count * 2}";
+                    $"Quiz completed! Your score: {coralreefScore}";
 
                 AnswerAButton.IsVisible =
                     AnswerBButton.IsVisible =
