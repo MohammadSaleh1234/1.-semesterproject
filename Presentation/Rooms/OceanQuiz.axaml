@@ -34,19 +34,19 @@
 
                 <Button x:Name="AnswerAButton"
                         FontSize="24"
-                        Width="380"
+                        Width="450"
                         Background="#004080"
                         Foreground="White"/>
 
                 <Button x:Name="AnswerBButton"
                         FontSize="24"
-                        Width="380"
+                        Width="450"
                         Background="#004080"
                         Foreground="White"/>
 
                 <Button x:Name="AnswerCButton"
                         FontSize="24"
-                        Width="380"
+                        Width="450"
                         Background="#004080"
                         Foreground="White"/>
             </StackPanel>

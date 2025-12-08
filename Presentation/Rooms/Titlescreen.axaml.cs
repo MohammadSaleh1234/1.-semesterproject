@@ -8,28 +8,21 @@ namespace Avalonia.Rooms
 {
     public partial class Titlescreen : UserControl
     {
-        private Context context;
-        private Tool scissor;
-        private int ClickCounter;
-        private int Highscore;
-
-        private BeachQuiz beachQuiz;
-        
-        
+     
         public Titlescreen()
         {
             InitializeComponent();
             QuitGameButton.Click += OnQuitClick;
 
             //Highscore = beachQuiz.BeachScore();
-            HighscoreText.Text = $"Highscore: {BeachQuiz._score}";
+            HighscoreText.Text = $"Highscore: {BeachQuiz.score + CoralQuiz.score + OceanQuiz.score } / 30 ";
 
 
         }
 
     
 
-private void OnQuitClick(object? sender, RoutedEventArgs e)
+        private void OnQuitClick(object? sender, RoutedEventArgs e)
         {
             MainWindow.ActiveWindow.Close();
 

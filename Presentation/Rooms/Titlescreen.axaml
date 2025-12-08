@@ -9,7 +9,7 @@
 		<TextBlock x:Name="HighscoreText"
            HorizontalAlignment="Center"
            VerticalAlignment="Center"
-           FontSize="20"
+           FontSize="32"
            FontWeight="ExtraBold"
            Foreground="#002F5F"
            Margin="0,100"/>
