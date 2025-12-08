@@ -120,7 +120,7 @@
                 
                 <Button x:Name="ScissorButton"
                 		Width="100"
-                		Height="50"
+                		Height="75"
                 		Margin="50"
 						HorizontalAlignment="Right"
 						VerticalAlignment="Bottom"
