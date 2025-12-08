@@ -7,12 +7,13 @@ namespace Domain
     public class QuizQuestion
     {
         public string Question { get; set; }
-        public string[] Answers { get; set; }   // A, B, C
+        public string[] Answers { get; set; }   // A,B,C
         public int CorrectIndex { get; set; }   // 0,1,2
     }
 
     public static class QuizData
     {
+        // ------------------- BEACH QUIZ -------------------
         public static List<QuizQuestion> BeachQuiz = new()
         {
             new QuizQuestion {
@@ -42,6 +43,8 @@ namespace Domain
             }
         };
 
+
+        // ------------------- CORAL QUIZ -------------------
         public static List<QuizQuestion> CoralQuiz = new()
         {
             new QuizQuestion {
@@ -58,28 +61,50 @@ namespace Domain
                 Question = "How much of the world's oceans are protected as MPAs (Marine Protected Areas)?",
                 Answers = new[]{ "Only about 10%", "A full 90%", "50%" },
                 CorrectIndex = 0
-        
-             },
+                
+            },
             new QuizQuestion {
-                Question = "What percentage of the world's coral reefs could disappear by 2050 without intervention?",
+                Question = "What percentage of coral reefs could disappear by 2050?",
                 Answers = new[]{ "30%", "54%", "90%" },
                 CorrectIndex = 2
             },
             new QuizQuestion {
-                Question = "What can we do to protect coral reefs?",
-                Answers = new[]{ "Throw more plastic into the sea so the fish have something to play with", "Reduce CO2 emissions and avoid pollution Avoid pollution and support sustainable fishing", "Catch more fish to stop them from destroying coral reefs" },
+
+                Question = "How can we protect coral reefs?",
+                Answers = new[]{ "Throw more plastic", "Reduce CO2 & avoid pollution", "Catch more fish" },
                 CorrectIndex = 1
             }
-         };
+        };
 
+
+        // ------------------- OCEAN QUIZ -------------------
         public static List<QuizQuestion> OceanQuiz = new()
         {
             new QuizQuestion {
                 Question = "What percentage of fish in the sea are overfished?",
-                Answers = new[]{ "10%", "30%", "70%" },
+                Answers = new[]{ "10% - almost none", "30% - almost every third fish", "70% almost all fish" },
                 CorrectIndex = 1
             },
-            // ... resten af dine ocean-spørgsmål
+            new QuizQuestion {
+                Question = "How much waste ends up in the sea every day?",
+                Answers = new[]{ "A handful of plastic bags", "1,440 trucks filled with waste", "Enough plastic to fill 50 swimming pools" },
+                CorrectIndex = 1
+            },
+            new QuizQuestion {
+                Question = "Average of 13,000 plastic pieces per km² in ocean. What is it like?",
+                Answers = new[]{ "Swimming in trash", "Crystal clear water", "Pool of gold coins" },
+                CorrectIndex = 0
+            },
+            new QuizQuestion {
+                Question = "Why do some people fish illegally?",
+                Answers = new[]{ "Earn extra money", "Extra fish as pets", "Zoos want shark food" },
+                CorrectIndex = 0
+            },
+            new QuizQuestion {
+                Question = "What happens when turtles eat plastic bags?",
+                Answers = new[]{ "Grow stronger", "Get sick and may die", "Use it as shield" },
+                CorrectIndex = 1
+            }
         };
     }
 }
