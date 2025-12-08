@@ -6,10 +6,14 @@
                Stretch="UniformToFill"
                x:Name="BackgroundBefore"/>
 
+               <Image Source="avares://Presentation/Assets/Rooms/Skattekort.png"
+               x:Name="Skattekort"/>
+
         <TextBlock x:Name="OutputTextFact"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Top"
-                   FontSize="32"
+                   FontSize="20"
+                   TextAlignment="Center"
                    FontWeight="ExtraBold"
                    Foreground="#002F5F"
                    Margin="0,100"/>

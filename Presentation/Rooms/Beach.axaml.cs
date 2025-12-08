@@ -25,8 +25,6 @@ namespace Avalonia.Rooms
             Plastic5Button.Click += OnPlasticClick;
             
             
-			OutputTextFact.Text = "The beach needs cleaning!";
-            
             string result = Game.player.ExecuteCommand("show inventory");
             OutputTextInventory.Text = result;
         }
@@ -40,6 +38,7 @@ namespace Avalonia.Rooms
         private void OnTrashbagClick(object? sender, RoutedEventArgs e)
         {
             Game.player.ExecuteCommand("take Trashbag");
+            OutputTextFact.Text = "The beach needs cleaning!";
             
             string result = Game.player.ExecuteCommand("show inventory");
             OutputTextInventory.Text = result;
