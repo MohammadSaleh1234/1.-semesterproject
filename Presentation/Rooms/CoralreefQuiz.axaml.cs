@@ -20,6 +20,8 @@ namespace Avalonia.Rooms
 
         public CoralQuiz()
         {
+
+            score = 0;
             InitializeComponent();
 
             // hent dine beach-spørgsmål fra Domain.QuizData

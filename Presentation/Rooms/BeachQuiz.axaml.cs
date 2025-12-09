@@ -18,6 +18,7 @@ namespace Avalonia.Rooms
 
         public BeachQuiz()
         {
+            score = 0;
             InitializeComponent();
 
             // hent dine beach-spørgsmål fra Domain.QuizData
