@@ -2,11 +2,42 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="Avalonia.Rooms.Titlescreen">
     <Grid RowDefinitions="*">
-	 <Image Source="avares://Presentation/Assets/Rooms/Havoverflade.png"
+	 <Image Source="avares://Presentation/Assets/Rooms/Tittlescreen.png"
 	 Stretch="UniformToFill"
 	 />
-        
        
+       <TextBlock x:Name="HighscoreText"
+           HorizontalAlignment="Center"
+           VerticalAlignment="Center"
+           FontSize="32"
+           FontWeight="ExtraBold"
+           Foreground="#002F5F"
+           Margin="0,100"/>
+       
+        <StackPanel Spacing="15" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,100">
+        <Button x:Name="QuitGameButton"
+                Content="Quit Game"
+                HorizontalAlignment="Left"
+				Width="150"
+				Height="50"
+				VerticalAlignment="Bottom"
+				FontWeight="Bold"
+				Background="#004080"
+                />
+       
+       <Button x:Name="PlayAgainButton"
+                Content="Play Again"
+                HorizontalAlignment="Right"
+				Width="150"
+				Height="50"
+				FontWeight="Bold"
+				VerticalAlignment="Bottom"
+				Background="#004080"
+                />
+		</StackPanel>
+
+
+
 
     </Grid>
 </UserControl>

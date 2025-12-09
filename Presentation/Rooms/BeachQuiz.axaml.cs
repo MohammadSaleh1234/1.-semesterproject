@@ -11,14 +11,14 @@ namespace Avalonia.Rooms
     {
         private readonly List<QuizQuestion> _questions;
         private int _index = 0;
-        private int _score = 0;
-
+        public static int score = 0;
         // standard-farve til svar-knapper (samme som i XAML)
         private readonly SolidColorBrush _defaultAnswerBrush =
             new SolidColorBrush(Color.Parse("#004080"));
 
         public BeachQuiz()
         {
+            score = 0;
             InitializeComponent();
 
             // hent dine beach-spørgsmål fra Domain.QuizData
@@ -78,13 +78,13 @@ namespace Avalonia.Rooms
             if (chosenIndex == current.CorrectIndex)
             {
                 btn.Background = Brushes.Green;
-                _score += 2;
+                score += 2;
             }
             else
             {
                 btn.Background = Brushes.DarkRed;
-                if (_score > 0)
-                    _score--;
+                if (score > 0)
+                    score--;
             }
 
             _index++;
@@ -93,7 +93,7 @@ namespace Avalonia.Rooms
             {
                 // quiz færdig
                 QuestionText.Text =
-                    $"Quiz completed! Your score: {_score}/{_questions.Count * 2}";
+                    $"Quiz completed! Your score: {score}";
 
                 AnswerAButton.IsVisible =
                     AnswerBButton.IsVisible =
@@ -120,6 +120,7 @@ namespace Avalonia.Rooms
 			MainWindow.ActiveWindow.Content = new Coralreef();
 
 		}
+        
        
     }
 }

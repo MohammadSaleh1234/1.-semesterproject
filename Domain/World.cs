@@ -26,6 +26,7 @@ namespace Domain {
       coralquiz.AddEdge("ocean", dybhavet);
       dybhavet.AddEdge("quiz", oceanquiz);
       oceanquiz.AddEdge("titlescreen", titlescreen);
+      titlescreen.AddEdge("beach", strand);
 
 
       this.entry = entry;
@@ -51,5 +52,4 @@ namespace Domain {
       return entry;
     }
   }
-
 }

@@ -87,7 +87,7 @@ namespace Domain
             },
             new QuizQuestion {
                 Question = "How much waste ends up in the sea every day?",
-                Answers = new[]{ "A handful of plastic bags", "1,440 trucks filled with waste", "Enough plastic to fill 50 swimming pools" },
+                Answers = new[]{ "A handful of plastic bags", "1,440 trucks filled with waste", "50 swimming pools of trash" },
                 CorrectIndex = 1
             },
             new QuizQuestion {

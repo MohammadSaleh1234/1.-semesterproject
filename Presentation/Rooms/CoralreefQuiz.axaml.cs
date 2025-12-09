@@ -11,7 +11,8 @@ namespace Avalonia.Rooms
     {
         private readonly List<QuizQuestion> _questions;
         private int _index = 0;
-        private int _score = 0;
+        public static int score = 0;
+        public int coralreefScore = 0;
 
         // standard-farve til svar-knapper (samme som i XAML)
         private readonly SolidColorBrush _defaultAnswerBrush =
@@ -19,6 +20,8 @@ namespace Avalonia.Rooms
 
         public CoralQuiz()
         {
+
+            score = 0;
             InitializeComponent();
 
             // hent dine beach-spørgsmål fra Domain.QuizData
@@ -78,13 +81,13 @@ private void OnAnswerClick(object? sender, RoutedEventArgs e)
     if (chosenIndex == current.CorrectIndex)
     {
         btn.Background = Brushes.Green;
-        _score += 2;
+        score += 2;
     }
     else
     {
         btn.Background = Brushes.DarkRed;
-        if (_score > 0)
-            _score--;
+        if (score > 0)
+            score--;
     }
 
     // Gør klar til næste spørgsmål (men gør det først ved klik på Continue)
@@ -92,10 +95,11 @@ private void OnAnswerClick(object? sender, RoutedEventArgs e)
 
     // Hvis vi er færdige, så vis quiz-slut
     if (_index >= _questions.Count)
-            {
+    {
+             
                 // quiz færdig
                 QuestionText.Text =
-                    $"Quiz completed! Your score: {_score}/{_questions.Count * 2}";
+                    $"Quiz completed! Your score: {score}";
 
                 AnswerAButton.IsVisible =
                     AnswerBButton.IsVisible =

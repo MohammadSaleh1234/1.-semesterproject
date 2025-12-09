@@ -12,13 +12,14 @@ namespace Avalonia.Rooms
     {
         private readonly List<QuizQuestion> _questions;
         private int _index = 0;
-        private int _score = 0;
+        public static int score = 0;
 
         private readonly SolidColorBrush _defaultAnswerBrush =
             new(Color.Parse("#004080"));
 
         public OceanQuiz()
         {
+            score = 0;
             InitializeComponent();
 
             _questions = QuizData.OceanQuiz;
@@ -66,12 +67,12 @@ namespace Avalonia.Rooms
             if (chosen == q.CorrectIndex)
             {
                 btn.Background = Brushes.Green;
-                _score += 2;
+               	score += 2;
             }
             else
             {
                 btn.Background = Brushes.DarkRed;
-                _score = System.Math.Max(0, _score - 1);
+                score = System.Math.Max(0, score - 1);
 
             }
 
@@ -79,7 +80,7 @@ namespace Avalonia.Rooms
 
             if (_index >= _questions.Count)
             {
-                QuestionText.Text = $"Quiz Complete! Score: {_score}/{_questions.Count * 2}";
+                QuestionText.Text = $"Quiz Complete! Score: {score}";
                 AnswerAButton.IsVisible = AnswerBButton.IsVisible = AnswerCButton.IsVisible = false;
                 NextButton.IsVisible = true;
             }
