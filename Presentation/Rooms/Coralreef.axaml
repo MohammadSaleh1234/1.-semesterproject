@@ -117,7 +117,7 @@
         <Button x:Name="ToolButton"
                 Width="100"
                 Height="100"
-                Margin="200,100"
+                Margin="250,100"
 				HorizontalAlignment="Left"
 				VerticalAlignment="Bottom"
                 Background="Transparent"
