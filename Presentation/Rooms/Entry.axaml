@@ -1,7 +1,7 @@
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="Avalonia.Rooms.Entry">
-             
+
     <Grid RowDefinitions="*,Auto">
         <!-- Background image fills the first row -->
         <Image Source="avares://Presentation/Assets/Rooms/TheOceanCode.jpeg"
@@ -20,3 +20,5 @@
                 />
     </Grid>
 </UserControl>
+
+

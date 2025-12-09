@@ -19,6 +19,7 @@ namespace Avalonia.Rooms
 
         public OceanQuiz()
         {
+            score = 0;
             InitializeComponent();
 
             _questions = QuizData.OceanQuiz;

@@ -14,23 +14,27 @@
            Foreground="#002F5F"
            Margin="0,100"/>
        
-        
+        <StackPanel Spacing="15" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,100">
         <Button x:Name="QuitGameButton"
                 Content="Quit Game"
                 HorizontalAlignment="Left"
+				Width="150"
+				Height="50"
 				VerticalAlignment="Bottom"
-                Margin="0,100"
+				FontWeight="Bold"
 				Background="#004080"
-                Grid.Row="0"/>
+                />
        
        <Button x:Name="PlayAgainButton"
                 Content="Play Again"
                 HorizontalAlignment="Right"
+				Width="150"
+				Height="50"
+				FontWeight="Bold"
 				VerticalAlignment="Bottom"
-                Margin="0,100"
 				Background="#004080"
-                Grid.Row="0"/>
-
+                />
+		</StackPanel>
 
 
 

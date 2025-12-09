@@ -8,12 +8,20 @@
 
                <Image Source="avares://Presentation/Assets/Rooms/skattekorts.png"
                x:Name="Skattekort"
-
                Stretch="UniformToFill"
                Width="600"
                Height="550"
                VerticalAlignment="Top"
                Margin="0, 40, 0, 0"/>
+
+               <Image Source="avares://Presentation/Assets/Rooms/Pæl.png"
+               x:Name="Pæl"
+               Stretch="UniformToFill"
+               Width="150"
+               Height="400"
+               VerticalAlignment="Top"
+               HorizontalAlignment="Right"
+               Margin="300, 190"/>
 
         <TextBlock x:Name="OutputTextFact"
                    HorizontalAlignment="Center"
@@ -32,9 +40,8 @@
                    FontWeight="ExtraBold"
                    Foreground="#002F5F"
                    Margin="0,100"/>
-
-        <Grid Width="280"
-              Height="300"
+        <Grid Width="340"
+              Height="400"
               HorizontalAlignment="Right"
               VerticalAlignment="Center">
             <Image Source="avares://Presentation/Assets/Rooms/inventory.png"/>
@@ -44,7 +51,7 @@
                        HorizontalAlignment="Right"
                        VerticalAlignment="Top"
                        Foreground="White"
-                       Margin="70,90"
+                       Margin="100,150"
                        FontWeight="Bold"/>
         </Grid>
 
