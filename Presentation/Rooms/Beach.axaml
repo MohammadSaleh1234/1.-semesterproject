@@ -6,11 +6,11 @@
                Stretch="UniformToFill"
                x:Name="BackgroundBefore"/>
 
-               <Image Source="avares://Presentation/Assets/Rooms/skattekorts.png"
+               <Image Source="avares://Presentation/Assets/Rooms/Skattekort.png"
                x:Name="Skattekort"
                Stretch="UniformToFill"
                Width="600"
-               Height="550"
+               Height="450"
                VerticalAlignment="Top"
                Margin="0, 40, 0, 0"/>
 
@@ -31,6 +31,16 @@
                VerticalAlignment="Top"
                HorizontalAlignment="Right"
                Margin="300, 190"/>
+
+                <Image Source="avares://Presentation/Assets/Rooms/Muslinger.png"
+               x:Name="muslinger"
+               Stretch="UniformToFill"
+               Width="80"
+               Height="120"
+               VerticalAlignment="Bottom"
+               HorizontalAlignment="Right"
+               Margin="50,100"/>
+
 
         <TextBlock x:Name="OutputTextFact"
                    HorizontalAlignment="Center"
