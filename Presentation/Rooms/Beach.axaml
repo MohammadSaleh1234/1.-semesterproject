@@ -6,7 +6,7 @@
                Stretch="UniformToFill"
                x:Name="BackgroundBefore"/>
 
-               <Image Source="avares://Presentation/Assets/Rooms/Skattekort.png"
+               <Image Source="avares://Presentation/Assets/Rooms/skattekorts.png"
                x:Name="Skattekort"
                Stretch="UniformToFill"
                Width="600"
