@@ -14,6 +14,15 @@
                VerticalAlignment="Top"
                Margin="0, 40, 0, 0"/>
 
+               <Image Source="avares://Presentation/Assets/Rooms/Skattekiste.png"
+               x:Name="Skattekiste"
+               Stretch="UniformToFill"
+               Width="220"
+               Height="220"
+               VerticalAlignment="Bottom"
+               HorizontalAlignment="Left"
+               Margin="50,175"/>
+
                <Image Source="avares://Presentation/Assets/Rooms/Pæl.png"
                x:Name="Pæl"
                Stretch="UniformToFill"
@@ -120,7 +129,7 @@
                 Height="150"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Bottom"
-                Margin="100"
+                Margin="140,70"
                 Background="Transparent"
                 BorderBrush="Transparent"
                 Grid.Row="0">
