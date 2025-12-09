@@ -27,24 +27,20 @@
            Margin="0,100"/>
 
         
-				<Grid
-      			Width="280"
-     			Height="300"
-				HorizontalAlignment="Right"
-				VerticalAlignment="Center"
-				
-				>
-    			<Image Source="avares://Presentation/Assets/Rooms/inventory.png"/>
-    			<TextBlock x:Name="OutputTextInventory"
-                FontSize="18"
-                HorizontalAlignment="Right"
-                VerticalAlignment="Top"
-                Foreground="White"
-				Margin="70,90"
-				FontWeight="Bold"
-          
-				/>
-				</Grid>
+				        <Grid Width="340"
+              Height="400"
+              HorizontalAlignment="Right"
+              VerticalAlignment="Center">
+            <Image Source="avares://Presentation/Assets/Rooms/inventory.png"/>
+
+            <TextBlock x:Name="OutputTextInventory"
+                       FontSize="18"
+                       HorizontalAlignment="Right"
+                       VerticalAlignment="Top"
+                       Foreground="White"
+                       Margin="100,150"
+                       FontWeight="Bold"/>
+        </Grid>
 
                 <Button x:Name="Net1Button"
                         Width="100"
