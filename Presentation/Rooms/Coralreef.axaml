@@ -26,8 +26,8 @@
                    Foreground="#002F5F"
                    Margin="0,100"/>
 
-        <Grid Width="280"
-              Height="300"
+                <Grid Width="340"
+              Height="400"
               HorizontalAlignment="Right"
               VerticalAlignment="Center">
             <Image Source="avares://Presentation/Assets/Rooms/inventory.png"/>
@@ -37,7 +37,7 @@
                        HorizontalAlignment="Right"
                        VerticalAlignment="Top"
                        Foreground="White"
-                       Margin="70,90"
+                       Margin="100,150"
                        FontWeight="Bold"/>
         </Grid>
 
