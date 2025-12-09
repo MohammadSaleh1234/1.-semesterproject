@@ -21,7 +21,7 @@ namespace Domain {
             else
             {
                 foreach (string tool in Game.player.inventory.tools) {
-                    sb.AppendLine(string.Format(" - "+tool));
+                    sb.AppendLine(string.Format(tool));
                 }
             }
 
