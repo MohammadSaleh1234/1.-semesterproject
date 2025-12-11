@@ -14,12 +14,6 @@
             <!-- 🐟 Quiz-figuren med talebobbel -->
             <Grid Height="330">
 
-                <!-- FISKEN TIL HØJRE -->
-                <Image Source="avares://Presentation/Assets/Rooms/Quizchef.png"
-                       HorizontalAlignment="Right"
-                       Width="290"
-                       Margin="0,0,30,0"/>
-
                 <!-- TEKST I TALEBOBBEL -->
                 <TextBlock x:Name="QuestionText"
                            Text="Loading question..."
