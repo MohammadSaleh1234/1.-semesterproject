@@ -58,8 +58,8 @@
                 Grid.Row="0"/>
 
         <Button x:Name="Plastic1Button"
-                Width="200"
-                Height="150"
+                Width="150"
+                Height="100"
                 Background="Transparent"
                 BorderBrush="Transparent"
                 VerticalAlignment="Bottom"
@@ -71,8 +71,8 @@
         </Button>
 
         <Button x:Name="Plastic2Button"
-                Width="200"
-                Height="150"
+                Width="150"
+                Height="100"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Center"
                 Margin="20"
@@ -84,8 +84,8 @@
         </Button>
 
         <Button x:Name="Plastic3Button"
-                Width="200"
-                Height="150"
+                Width="150"
+                Height="100"
                 Background="Transparent"
                 BorderBrush="Transparent"
                 VerticalAlignment="Bottom"
@@ -97,8 +97,8 @@
         </Button>
 
         <Button x:Name="Plastic4Button"
-                Width="200"
-                Height="150"
+                Width="150"
+                Height="100"
                 Background="Transparent"
                 BorderBrush="Transparent"
                 VerticalAlignment="Bottom"
@@ -110,8 +110,8 @@
         </Button>
 
         <Button x:Name="Plastic5Button"
-                Width="200"
-                Height="150"
+                Width="150"
+                Height="100"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Bottom"
                 Margin="140,70"

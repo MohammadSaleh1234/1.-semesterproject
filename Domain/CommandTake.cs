@@ -21,7 +21,7 @@ namespace Domain {
                 return "fail";
 			}
             Game.player.inventory.AddTool(toolName);
-            return null;
+            return "success";
 
         }
     }
