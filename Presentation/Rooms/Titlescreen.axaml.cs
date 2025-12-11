@@ -14,8 +14,7 @@ namespace Avalonia.Rooms
             InitializeComponent();
             QuitGameButton.Click += OnQuitClick;
             PlayAgainButton.Click += OnPlayAgainClick;
-
-            //Highscore = beachQuiz.BeachScore();
+            
             HighscoreText.Text = $"Highscore: {BeachQuiz.score + CoralQuiz.score + OceanQuiz.score } / 30 ";
 
 

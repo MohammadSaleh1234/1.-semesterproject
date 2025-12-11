@@ -36,9 +36,9 @@ namespace Avalonia.Rooms
             LoadQuestion();
         }
 
-        /// <summary>
-        /// Loader det aktuelle spørgsmål og nulstiller knapperne.
-        /// </summary>
+    
+        // Loader det aktuelle spørgsmål og nulstiller knapperne.
+
         private void LoadQuestion()
         {
             var q = _questions[_index];
@@ -51,9 +51,9 @@ namespace Avalonia.Rooms
             AnswerCButton.Content = $"C: {q.Answers[2]}";
         }
 
-        /// <summary>
-        /// Nulstiller farve og aktivering på alle svar-knapper.
-        /// </summary>
+    
+        // Nulstiller farve og aktivering på alle svar-knapper.
+
         private void ResetAnswerButtons()
         {
             foreach (var btn in new[] { AnswerAButton, AnswerBButton, AnswerCButton })
@@ -115,9 +115,8 @@ private void OnAnswerClick(object? sender, RoutedEventArgs e)
 }
 
 
-        /// <summary>
-        /// Kaldes når Continue-knappen trykkes efter quiz-slut.
-        /// </summary>
+
+        // Kaldes når Continue-knappen trykkes efter quiz-slut.
        private void OnNextClick(object? sender, RoutedEventArgs e)
 {
     // hvis der stadig er flere spørgsmål:

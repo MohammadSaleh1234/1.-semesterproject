@@ -3,14 +3,14 @@
              x:Class="Avalonia.Rooms.Entry">
 
     <Grid RowDefinitions="*,Auto">
-        <!-- Background image fills the first row -->
+
         <Image Source="avares://Presentation/Assets/Rooms/TheOceanCode.jpeg"
                Grid.Row="0"
                HorizontalAlignment="Stretch"
                VerticalAlignment="Stretch"
                Stretch="UniformToFill"/>
 
-        <!-- Button stays at the bottom row -->
+    
         <Button x:Name="GoBeachButton"
                 Content="Go to the Beach"
                 HorizontalAlignment="Center"

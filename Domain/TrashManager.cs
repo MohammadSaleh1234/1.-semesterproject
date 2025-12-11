@@ -8,14 +8,13 @@ namespace Domain
 
     public class TrashManager
     {
-        // 🔥 Tællere for hvert område (sikrer sekventiel rækkefølge pr. rum)
+        //  Tællere for hvert område
         private int strandFunFactIndex = 0;
         private int coralReefFunFactIndex = 0;
         private int deepSeaFunFactIndex = 0;
 
-        // =================================================================
+        
         // LISTE 1: STRANDEN (5 FACTS)
-        // =================================================================
         private List<Trash> beachTrashList = new List<Trash>()
         {
             // Item/Fun Fact 1
@@ -50,9 +49,8 @@ namespace Domain
             )
         };
 
-        // =================================================================
+ 
         // LISTE 2: KORALREVET (5 FACTS)
-        // =================================================================
         private List<Trash> coralReefTrashList = new List<Trash>()
         {
             // Item/Fun Fact 1
@@ -86,10 +84,8 @@ namespace Domain
                 "💡 To protect the coral reefs, we can reduce our \n CO2 emission. Avoid polluting, and support sustainable fishing!"
             )
         };
-
-        // =================================================================
+        
         // LISTE 3: DYBHAVET (5 FACTS)
-        // =================================================================
         private List<Trash> deepSeaTrashList = new List<Trash>()
         {
             // Item/Fun Fact 1

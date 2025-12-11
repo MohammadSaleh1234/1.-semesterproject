@@ -2,7 +2,7 @@ using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Media;
 using Domain;
-using Presentation;            // for MainWindow
+using Presentation;           
 using System.Collections.Generic;
 
 namespace Avalonia.Rooms
@@ -33,9 +33,8 @@ namespace Avalonia.Rooms
             LoadQuestion();
         }
 
-        /// <summary>
-        /// Loader det aktuelle spørgsmål og nulstiller knapperne.
-        /// </summary>
+      
+        // Loader det aktuelle spørgsmål og nulstiller knapperne.
         private void LoadQuestion()
         {
             var q = _questions[_index];
@@ -48,9 +47,8 @@ namespace Avalonia.Rooms
             AnswerCButton.Content = $"C: {q.Answers[2]}";
         }
 
-        /// <summary>
-        /// Nulstiller farve og aktivering på alle svar-knapper.
-        /// </summary>
+        // Nulstiller farve og aktivering på alle svar-knapper.
+        
         private void ResetAnswerButtons()
         {
             foreach (var btn in new[] { AnswerAButton, AnswerBButton, AnswerCButton })
@@ -108,9 +106,8 @@ namespace Avalonia.Rooms
             }
         }
 
-        /// <summary>
-        /// Kaldes når Continue-knappen trykkes efter quiz-slut.
-        /// </summary>
+
+        // Kaldes når Continue-knappen trykkes efter quiz-slut.
         private void OnNextClick(object? sender, RoutedEventArgs e)
         {
             // tekst-spil logik

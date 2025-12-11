@@ -9,10 +9,6 @@ namespace Avalonia.Rooms
     public partial class Entry : UserControl
     {
         
-        private Context context;
-        private CommandShowInventory inventoryCommand;
-        
-        
         public Entry()
         {
             InitializeComponent();

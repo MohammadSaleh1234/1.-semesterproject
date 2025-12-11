@@ -4,18 +4,12 @@
 
     <Grid>
 
-        <!-- 🌊 Baggrund -->
         <Image Source="avares://Presentation/Assets/Rooms/Strand.png"
                Stretch="UniformToFill"
                />
 
         <StackPanel Margin="100" Spacing="25">
-
-            <!-- 🐟 Quiz-figuren med talebobbel -->
             <Grid Height="330">
-
-
-                <!-- TEKST I TALEBOBBEL -->
                 <TextBlock x:Name="QuestionText"
                            Text="Loading question..."
                            FontSize="28"
@@ -25,8 +19,6 @@
                            MaxWidth="600"
                            HorizontalAlignment="Center"/>
             </Grid>
-
-            <!-- 🔹 Svar knapper -->
             <StackPanel Spacing="15" HorizontalAlignment="Center" Margin="0,10,0,0">
 
                 <Button x:Name="AnswerAButton"
@@ -47,8 +39,6 @@
                         Background="#004080"
                         Foreground="White"/>
             </StackPanel>
-
-            <!-- 🏁 Vises når quiz er gennemført -->
             <Button x:Name="NextButton"
                     Content="Continue"
                     Width="260"
@@ -60,15 +50,5 @@
                     Click="OnNextClick"/>
 
         </StackPanel>
-
-
-        <!-- ⭐ EXTRA GRID BAGERST I LAYOUTET -->
-        <Grid RowDefinitions="*,Auto">
-
-
-           
-        </Grid>
-
     </Grid>
-
 </UserControl>

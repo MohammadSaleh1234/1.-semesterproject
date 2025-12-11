@@ -64,7 +64,7 @@ namespace Avalonia.Rooms
                 button.IsVisible = false;
             }
 
-            if (!Game.context.GetCurrent().items.ContainsKey("plastic")) // or use HasTrash()
+            if (!Game.context.GetCurrent().items.ContainsKey("plastic")) 
             {
                 GoQuizButton.IsVisible = true;
                 OutputTextQuiz.IsVisible = true;

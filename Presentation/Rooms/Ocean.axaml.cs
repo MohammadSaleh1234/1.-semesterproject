@@ -8,7 +8,7 @@ namespace Avalonia.Rooms
 {
     public partial class Ocean : UserControl
     {
-        private Context context;
+     
         private Tool scissor;
         private int ClickCounter;
         
@@ -54,7 +54,6 @@ namespace Avalonia.Rooms
             if (ClickCounter < 1)
             {
                 Game.player.ExecuteCommand("activate sirens");
-                //BoatButton.IsVisible = false;
                 ShowNet();
                 ScissorButton.IsVisible = true;
                 OutputTextFact.Text =

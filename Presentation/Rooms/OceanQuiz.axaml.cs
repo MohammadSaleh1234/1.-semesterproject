@@ -92,10 +92,8 @@ namespace Avalonia.Rooms
 
         private void OnNextClick(object? sender, RoutedEventArgs e)
         {
-            // >>> Edit destination view her <<<
             Game.player.ExecuteCommand("go titlescreen");
-
-            MainWindow.ActiveWindow.Content = new Titlescreen(); // <-- skift til dit næste view
+            MainWindow.ActiveWindow.Content = new Titlescreen(); 
         }
     }
 }

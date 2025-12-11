@@ -1,10 +1,7 @@
 namespace Domain
 {
-
-// ====================================================================
-// 1. TRASH DATAKLASSEN (NY)
 //    Definerer strukturen for et stykke affald
-// ====================================================================
+
     public class Trash
     {
         public string Name { get; }
