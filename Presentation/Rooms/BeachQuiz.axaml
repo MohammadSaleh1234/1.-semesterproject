@@ -4,7 +4,7 @@
 
     <Grid>
 
-        <Image Source="avares://Presentation/Assets/Rooms/Strand.png"
+        <Image Source="avares://Presentation/Assets/Rooms/beachchef.png"
                Stretch="UniformToFill"
                />
 
