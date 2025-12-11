@@ -20,7 +20,9 @@
                            Foreground="Black"
                            TextWrapping="Wrap"
                            MaxWidth="600"
-                           HorizontalAlignment="Center"/>
+                           HorizontalAlignment="Center"
+                           TextAlignment="Center"/>
+
             </Grid>
 
   
