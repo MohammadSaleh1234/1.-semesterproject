@@ -4,7 +4,7 @@
 
     <Grid>
         <!-- Baggrundsbillede -->
-        <Image Source="/Assets/Rooms/KoralrevetBefore.png"
+        <Image Source="/Assets/Rooms/oceanchef.png"
                Stretch="UniformToFill"/>
 
         <StackPanel Margin="100" Spacing="25">
