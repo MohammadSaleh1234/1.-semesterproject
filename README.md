@@ -8,6 +8,7 @@ I The Ocean Code får du rollen som havets beskytter, hvor du skal navigere genn
 * Samle plastik 🗑️
 * Rense koralrev 🐠
 * Klippe fiskenet ✂️
+
 Under din rejse vil du støde på quizzer, der udfordrer og tester din viden om havmiljøet og dets forureningsproblematikker. Spillet leverer en unik kombination af underholdning og uddannelse, der hjælper dig med at forstå, hvordan vi aktivt kan beskytte vores havområder.
 
 🎯 Formål og Læringsmål
